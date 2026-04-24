@@ -1,11 +1,14 @@
 import { Link } from "@tanstack/react-router";
-import { ThemeToggle } from "./DarkModeSwitch";
+import Logo from "./Logo";
+import { ThemeToggle } from "./ThemeToggle";
 
 export default function Navigation() {
 	return (
 		<nav className="flex items-center justify-between">
 			<div className="flex items-center">
-				{/* <img src="/logo.png" alt="logo" className="h-8 w-8" /> */}
+				{/* <img src="/icon.svg" alt="logo" className="h-24 w-auto" />
+				 */}
+				<Logo className="h-24 w-auto text-primary" />
 				<h1 className="text-2xl font-bold">Pranish Chaulagain</h1>
 			</div>
 			<div className="flex items-center gap-4">
