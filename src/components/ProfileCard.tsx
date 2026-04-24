@@ -63,7 +63,7 @@ export default function ProfileCard() {
 			</div>
 
 			<Card>
-				<CardHeader className="pb-3">
+				<CardHeader className="pb-3 pr-16 sm:pr-20">
 					<CardTitle className="text-2xl font-heading">
 						Pranish Chaulagain
 					</CardTitle>
