@@ -1,5 +1,3 @@
-"use client";
-
 import { cn } from "@/lib/utils";
 import { MoonIcon, SunMediumIcon } from "lucide-react";
 import { Switch as SwitchPrimitive } from "radix-ui";
@@ -30,81 +28,51 @@ const Switch = React.forwardRef<
 		</SwitchPrimitive.Thumb>
 	</SwitchPrimitive.Root>
 ));
-Switch.displayName = SwitchPrimitive.Root.displayName;
 
-type ThemeMode = "light" | "dark" | "auto";
+function applyTheme(isDark: boolean) {
+	const root = document.documentElement;
 
-function getInitialMode(): ThemeMode {
-	if (typeof window === "undefined") {
-		return "auto";
-	}
+	root.classList.remove("light", "dark");
+	root.classList.add(isDark ? "dark" : "light");
 
-	const stored = window.localStorage.getItem("theme");
-	if (stored === "light" || stored === "dark" || stored === "auto") {
-		return stored;
-	}
-
-	return "auto";
-}
-
-function applyThemeMode(mode: ThemeMode) {
-	const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-	const resolved = mode === "auto" ? (prefersDark ? "dark" : "light") : mode;
-
-	document.documentElement.classList.remove("light", "dark");
-	document.documentElement.classList.add(resolved);
-
-	if (mode === "auto") {
-		document.documentElement.removeAttribute("data-theme");
-	} else {
-		document.documentElement.setAttribute("data-theme", mode);
-	}
-
-	document.documentElement.style.colorScheme = resolved;
+	root.style.colorScheme = isDark ? "dark" : "light";
 }
 
 export function ThemeToggle() {
-	const [mode, setMode] = React.useState<ThemeMode>("auto");
+	const [isDark, setIsDark] = React.useState(true); // default DARK
 
+	// set correct theme after mount (no flicker)
 	React.useEffect(() => {
-		const initialMode = getInitialMode();
-		setMode(initialMode);
-		applyThemeMode(initialMode);
+		const prefersLight = window.matchMedia(
+			"(prefers-color-scheme: light)",
+		).matches;
+
+		const initialIsDark = !prefersLight;
+
+		setIsDark(initialIsDark);
+		applyTheme(initialIsDark);
 	}, []);
 
-	React.useEffect(() => {
-		if (mode !== "auto") {
-			return;
-		}
-
-		const media = window.matchMedia("(prefers-color-scheme: dark)");
-		const onChange = () => applyThemeMode("auto");
-
-		media.addEventListener("change", onChange);
-		return () => {
-			media.removeEventListener("change", onChange);
-		};
-	}, [mode]);
-
-	function toggleMode() {
-		const nextMode: ThemeMode = mode === "light" ? "dark" : "light";
-		setMode(nextMode);
-		applyThemeMode(nextMode);
-		window.localStorage.setItem("theme", nextMode);
+	function toggle() {
+		setIsDark((prev) => {
+			const next = !prev;
+			applyTheme(next);
+			return next;
+		});
 	}
 
 	return (
 		<Switch
-			checked={mode === "dark"}
+			checked={isDark}
 			className="h-7 w-12"
 			icon={
-				mode === "dark" ? (
+				isDark ? (
 					<MoonIcon className="h-4 w-4" />
 				) : (
 					<SunMediumIcon className="h-4 w-4" />
 				)
 			}
-			onCheckedChange={() => toggleMode()}
+			onCheckedChange={toggle}
 			thumbClassName=" duration-300 ease-in-out data-[state=checked]:translate-x-6"
 		/>
 	);

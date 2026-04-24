@@ -70,11 +70,11 @@ export default function ProfileCard() {
 					<CardDescription className="flex flex-col gap-1.5 pt-1">
 						<span className="flex items-center gap-1.5">
 							<GraduationCap className="size-3.5 shrink-0" />
-							BSc Computing · London Metropolitan University
+							BSc (Hons) in Computing · London Metropolitan University
 						</span>
 						<span className="flex items-center gap-1.5">
 							<Briefcase className="size-3.5 shrink-0" />
-							Frontend & Fullstack Engineer
+							Software Engineer
 						</span>
 						<span className="flex items-center gap-1.5">
 							<MapPin className="size-3.5 shrink-0" />
@@ -88,7 +88,8 @@ export default function ProfileCard() {
 				<CardContent className="pt-4 space-y-4">
 					<p className="text-sm text-muted-foreground leading-relaxed">
 						Final-year CS student building production-grade full-stack apps.
-						Focused on clean architecture, scalable systems, and great UX.
+						Focused on clean architecture, performance optimization, and great
+						UX.
 					</p>
 
 					<div className="space-y-2">
