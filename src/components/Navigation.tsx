@@ -8,7 +8,7 @@ export default function Navigation() {
 			<div className="flex items-center">
 				{/* <img src="/icon.svg" alt="logo" className="h-24 w-auto" />
 				 */}
-				<Logo className="h-24 w-auto text-primary" />
+				<Logo className="h-24 w-auto text-primary transition-colors duration-300" />
 				<h1 className="text-2xl font-bold">Pranish Chaulagain</h1>
 			</div>
 			<div className="flex items-center gap-4">

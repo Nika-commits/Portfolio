@@ -35,7 +35,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 				<HeadContent />
 			</head>
 			<body>
-				<main className="container mx-auto max-w-4xl px-4">
+				<main className="container mx-auto max-w-4xl px-4 transition">
 					<Navigation />
 					{children}
 				</main>

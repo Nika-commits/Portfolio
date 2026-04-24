@@ -105,7 +105,7 @@ export function ThemeToggle() {
 				)
 			}
 			onCheckedChange={() => toggleMode()}
-			thumbClassName="h-6 w-6 data-[state=checked]:translate-x-5"
+			thumbClassName=" duration-300 ease-in-out data-[state=checked]:translate-x-6"
 		/>
 	);
 }
