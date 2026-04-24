@@ -5,12 +5,7 @@ import { ThemeToggle } from "./ThemeToggle";
 export default function Navigation() {
 	return (
 		<nav className="flex items-center justify-between">
-			<div className="flex items-center">
-				{/* <img src="/icon.svg" alt="logo" className="h-24 w-auto" />
-				 */}
-				<Logo className="h-24 w-auto text-primary transition-colors duration-300" />
-				<h1 className="text-2xl font-bold">Pranish Chaulagain</h1>
-			</div>
+			<Logo className="h-14  lg:h-24 w-auto py-3 text-primary transition-colors duration-300" />
 			<div className="flex items-center gap-4">
 				<Link to="/" className="text-sm font-medium text-muted-foreground">
 					Home
@@ -25,6 +20,7 @@ export default function Navigation() {
 					Projects
 				</Link>
 			</div>
+			{/* <img className="h-14 lg:h-24 w-auto" alt="cat" src="/icons8-cat.gif" /> */}
 			<ThemeToggle />
 		</nav>
 	);
