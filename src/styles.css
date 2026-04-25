@@ -143,17 +143,10 @@ body {
   }
   html {
     @apply font-serif;
-    transition:
-    background-color 250ms ease,
-    color 200ms ease;
+
 }
 
-* {
-  transition:
-    background-color 200ms ease,
-    color 200ms ease,
-    border-color 200ms ease;
-}
+
 }
 
 /* * {

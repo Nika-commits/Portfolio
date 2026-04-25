@@ -4,7 +4,6 @@ export default function Logo({ className }: { className?: string }) {
 			className={className}
 			xmlns="http://www.w3.org/2000/svg"
 			// width="677"
-			// height="369"
 			viewBox="0 0 677 369"
 			role="img"
 			aria-labelledby="logoTitle"

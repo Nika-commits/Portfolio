@@ -34,7 +34,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			<head>
 				<HeadContent />
 			</head>
-			<body className="relative min-h-screen">
+			<body className="relative min-h-screen antialiased">
 				{/* Background layer */}
 				<div className="fixed inset-0 -z-10 overflow-hidden">
 					<div className="absolute top-[-20%] left-[10%] w-150 h-150 rounded-full bg-primary/10 blur-[120px]" />
