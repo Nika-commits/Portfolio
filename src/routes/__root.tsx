@@ -4,15 +4,9 @@ import {
 	HeadContent,
 	Outlet,
 	Scripts,
-	useLocation,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
-import {
-	TabsContent,
-	TabsContents,
-} from "#/components/animate-ui/components/animate/tabs";
-import Navigation from "#/components/Navigation";
-import NavigationTabs from "#/components/NavigationTabs";
+import Navigation from "#/components/Navbar/Navigation";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({

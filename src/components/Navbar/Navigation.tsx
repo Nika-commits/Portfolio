@@ -1,6 +1,6 @@
+import { ThemeToggle } from "./ThemeToggle";
 import Logo from "./Logo";
 import NavigationTabs from "./NavigationTabs";
-import { ThemeToggle } from "./ThemeToggle";
 
 export default function Navigation() {
 	return (

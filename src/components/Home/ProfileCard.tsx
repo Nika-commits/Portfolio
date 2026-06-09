@@ -13,18 +13,18 @@ import {
 	GraduationCap,
 	LinkedinIcon,
 	MapPin,
-	TowerControl, // TanStack placeholder — no official icon exists
+	TowerControl,
 } from "lucide-react";
-import Oggy from "./Oggy";
-import { Badge } from "./ui/badge";
+import { Badge } from "../ui/badge";
 import {
 	Card,
 	CardContent,
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "./ui/card";
-import { Separator } from "./ui/separator";
+} from "../ui/card";
+import { Separator } from "../ui/separator";
+import Oggy from "./Oggy";
 
 type Skill = {
 	title: string;

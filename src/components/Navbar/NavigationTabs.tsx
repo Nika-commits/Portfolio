@@ -4,7 +4,7 @@ import {
 	TabsList,
 	TabsTrigger,
 } from "@/components/animate-ui/components/animate/tabs";
-import { TabsHighlightItem } from "./animate-ui/primitives/animate/tabs";
+import { TabsHighlightItem } from "../animate-ui/primitives/animate/tabs";
 
 const NavLinks: Record<string, string> = {
 	Home: "/",
