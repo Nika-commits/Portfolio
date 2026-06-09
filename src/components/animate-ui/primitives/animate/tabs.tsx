@@ -118,19 +118,6 @@ function TabsHighlight({
 }: TabsHighlightProps) {
 	const { activeValue } = useTabs();
 
-	const [ready, setReady] = React.useState(false);
-
-	React.useLayoutEffect(() => {
-		const obs = new ResizeObserver(() => {
-			setReady(true);
-		});
-
-		obs.observe(document.body);
-		return () => obs.disconnect();
-	}, []);
-
-	if (!ready) return null;
-
 	return (
 		<Highlight
 			data-slot="tabs-highlight"
