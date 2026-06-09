@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import {
 	Tabs,
 	TabsList,
@@ -17,11 +18,13 @@ export default function NavigationTabs() {
 	const navigate = useNavigate();
 	const { pathname } = useLocation();
 
-	// const [mounted, setMounted] = useState(false);
+	const [mounted, setMounted] = useState(false);
 
-	// useEffect(() => {
-	// 	setMounted(true);
-	// }, []);
+	useEffect(() => {
+		setMounted(true);
+	}, []);
+
+	if (!mounted) return null;
 
 	const currentTab = pathname === "/" ? "/" : pathname;
 
