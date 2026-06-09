@@ -10,7 +10,7 @@ function Home() {
 			<div className="pt-4 md:pt-10 lg:pt-16">
 				<MyName loop={true} holdDelay={2500} />
 			</div>
-			<Separator className="my-8" />
+			<Separator className="my-4 md:my-8 " />
 		</main>
 	);
 }
