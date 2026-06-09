@@ -18,9 +18,13 @@ export default function NavigationTabs() {
 	const navigate = useNavigate();
 	const { pathname } = useLocation();
 	return (
-		<div className="fixed bottom-[3dvh] left-1/2 -translate-x-1/2 lg:static lg:translate-x-0">
-			<Tabs onValueChange={(value) => navigate({ to: value })} value={pathname}>
-				<TabsList>
+		<div className="flex fixed bottom-[3dvh] lg:static">
+			<Tabs
+				onValueChange={(value) => navigate({ to: value })}
+				value={pathname}
+				className="w-full bg-background border-2 border-primary/20 rounded"
+			>
+				<TabsList className="p-2 gap-2 md:gap-4 bg-secondary ">
 					{Object.entries(NavLinks).map(([label, path]) => (
 						<TabsHighlightItem key={path} value={path}>
 							<TabsTrigger key={path} value={path}>

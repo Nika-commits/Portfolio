@@ -62,7 +62,7 @@ body {
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
-  --font-sans: 'Inter Variable', sans-serif;
+  --font-sans: 'Lora', sans-serif;
 }
 
 :root {
@@ -76,7 +76,7 @@ body {
   --popover-foreground: oklch(0.141 0.005 285.823);
   --primary: oklch(0.508 0.118 165.612);
   --primary-foreground: oklch(0.979 0.021 166.113);
-  --secondary: oklch(0.967 0.001 286.375);
+  --secondary: oklch(0.935 0.003 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.967 0.001 286.375);
   --muted-foreground: oklch(0.552 0.016 285.938);

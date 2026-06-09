@@ -34,19 +34,14 @@ function MorphingText({
 		opacity: 0,
 		scale: 0.8,
 		filter: "blur(10px)",
-		transition: {
-			duration: 0.6,
-			ease: "anticipate",
-			type: "inertia",
-		},
 	},
 	variants,
 	transition = {
-		type: "keyframes",
+		type: "tween",
 		stiffness: 100,
 		damping: 25,
 		mass: 0.4,
-		duration: 0.5,
+		duration: 0.6,
 	},
 	delay = 0,
 	inView = false,
@@ -123,7 +118,7 @@ function MorphingText({
 
 	return (
 		<motion.span ref={localRef} aria-label={currentText} {...props}>
-			<AnimatePresence mode="popLayout" initial={true}>
+			<AnimatePresence mode="wait" initial={true}>
 				{chars.map((char) => (
 					<motion.span
 						key={char.layoutId}

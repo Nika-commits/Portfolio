@@ -1,11 +1,9 @@
-import { TanStackDevtools } from "@tanstack/react-devtools";
 import {
 	createRootRoute,
 	HeadContent,
 	Outlet,
 	Scripts,
 } from "@tanstack/react-router";
-import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import Navigation from "#/components/Navbar/Navigation";
 import appCss from "../styles.css?url";
 
@@ -49,7 +47,7 @@ function RootDocument() {
 					<Navigation />
 					<Outlet />
 				</main>
-				<TanStackDevtools
+				{/* <TanStackDevtools
 					config={{
 						position: "bottom-right",
 					}}
@@ -59,7 +57,7 @@ function RootDocument() {
 							render: <TanStackRouterDevtoolsPanel />,
 						},
 					]}
-				/>
+				/> */}
 				<Scripts />
 			</body>
 		</html>
