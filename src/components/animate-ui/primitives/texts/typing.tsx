@@ -90,7 +90,7 @@ function TypingText({
 				if (currentIndex >= 0) {
 					setDisplayedText(str.substring(0, currentIndex));
 					currentIndex--;
-					const id = setTimeout(erase, duration);
+					const id = setTimeout(erase, duration / 3);
 					timeoutIds.push(id);
 				} else {
 					setIsTyping(false);

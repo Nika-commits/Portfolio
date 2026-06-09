@@ -9,7 +9,7 @@ import {
 const texts = [
 	"Full-Stack Software Engineer",
 	"Specializing in Frontend",
-	"Focused on Performance ",
+	"Focused on Performance Optimizations",
 	"And Clean Architecture",
 ];
 
