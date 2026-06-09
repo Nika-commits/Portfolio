@@ -9,6 +9,7 @@ export default function Navigation() {
 			<div className="flex items-center justify-center">
 				<NavigationTabs />
 			</div>
+
 			<div className="flex justify-end">
 				<ThemeToggle />
 			</div>

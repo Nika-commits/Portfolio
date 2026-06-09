@@ -1,7 +1,18 @@
-import Navigation from "#/components/Navigation";
 import { TanStackDevtools } from "@tanstack/react-devtools";
-import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import {
+	createRootRoute,
+	HeadContent,
+	Outlet,
+	Scripts,
+	useLocation,
+} from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import {
+	TabsContent,
+	TabsContents,
+} from "#/components/animate-ui/components/animate/tabs";
+import Navigation from "#/components/Navigation";
+import NavigationTabs from "#/components/NavigationTabs";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -28,22 +39,21 @@ export const Route = createRootRoute({
 	shellComponent: RootDocument,
 });
 
-function RootDocument({ children }: { children: React.ReactNode }) {
+function RootDocument() {
 	return (
 		<html lang="en">
 			<head>
 				<HeadContent />
 			</head>
 			<body className="relative min-h-screen antialiased">
-				{/* Background layer */}
 				<div className="fixed inset-0 -z-10 overflow-hidden">
 					<div className="absolute top-[-20%] left-[10%] w-150 h-150 rounded-full bg-primary/10 blur-[120px]" />
 					<div className="absolute bottom-[-10%] right-[5%] w-125 h-125 rounded-full bg-ring/20 blur-[100px]" />
 					<div className="absolute top-[40%] left-[50%] w-100 h-100 rounded-full bg-muted-foreground/10 blur-[80px]" />
 				</div>
-				<main className="container mx-auto max-w-4xl px-4 transition-colors duration-300 ease-linear ">
+				<main className="container mx-auto max-w-4xl px-4 ">
 					<Navigation />
-					{children}
+					<Outlet />
 				</main>
 				<TanStackDevtools
 					config={{
