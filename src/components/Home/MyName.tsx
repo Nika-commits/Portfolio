@@ -30,6 +30,7 @@ export const MyName = ({ loop, holdDelay }: MorphingTextDemoProps) => {
 				variant={"crosshair"}
 				color="currentColor"
 				size={160}
+                
 			>
 				<div className="flex flex-col items-start gap-1 md:gap-2 px-4">
 					<GradientText
@@ -39,7 +40,7 @@ export const MyName = ({ loop, holdDelay }: MorphingTextDemoProps) => {
 						gradient="linear-gradient(135deg, #6ee7b7 0%, #34d399 20%, #10b981 50%, #059669 80%, #6ee7b7 100%)"
 						neon
 					/>
-					<text className="flex justify-start">
+					<span className="flex justify-start">
 						<TypingText
 							className="text-base md:text-lg lg:text-xl font-bold tracking-wide text-muted-foreground "
 							text={texts}
@@ -47,7 +48,7 @@ export const MyName = ({ loop, holdDelay }: MorphingTextDemoProps) => {
 						>
 							<TypingTextCursor />
 						</TypingText>
-					</text>
+					</span>
 				</div>
 			</Click>
 		</div>
