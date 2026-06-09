@@ -34,7 +34,11 @@ function MorphingText({
 		opacity: 0,
 		scale: 0.8,
 		filter: "blur(10px)",
-		transition: { duration: 0.6, ease: "linear", type: "inertia" },
+		transition: {
+			duration: 0.6,
+			ease: "anticipate",
+			type: "inertia",
+		},
 	},
 	variants,
 	transition = {
