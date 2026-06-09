@@ -7,7 +7,7 @@ import {
 } from "../animate-ui/primitives/texts/typing";
 
 const texts = [
-	"Full-Stack Software Engineer 👨🏽‍💻 ",
+	"Full-Stack Software Engineer 💻 ",
 	"Specializing In Frontend 🌐 ",
 	"Focused On Performance ⚡ ",
 	"And Clean Architecture ⚙️ ",
