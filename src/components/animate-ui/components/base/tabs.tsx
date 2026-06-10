@@ -19,7 +19,7 @@ type TabsProps = TabsPrimitiveProps;
 function Tabs({ className, ...props }: TabsProps) {
 	return (
 		<TabsPrimitive
-			className={cn("flex flex-col gap-2", className)}
+			className={cn("flex flex-col gap-2 z-99", className)}
 			{...props}
 		/>
 	);
@@ -45,12 +45,12 @@ type TabsTabProps = TabsTabPrimitiveProps;
 
 function TabsTab({ className, ...props }: TabsTabProps) {
 	return (
-		<TabsHighlightItemPrimitive value={props.value} className="flex-1">
+		<TabsHighlightItemPrimitive value={props.value} className="flex-1 ">
 			<TabsTabPrimitive
 				className={cn(
 					"text-muted-foreground inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded w-full px-2 py-1 md:px-4 md:py-2 text-sm font-medium whitespace-nowrap transition-colors duration-500 ease-in-out",
 
-					"aria-selected:text-primary aria-selected:font-bold",
+					"aria-selected:text-primary aria-selected:font-bold z-999",
 
 					"focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:outline-ring",
 					"disabled:pointer-events-none disabled:opacity-50",

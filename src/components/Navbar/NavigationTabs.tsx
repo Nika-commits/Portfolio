@@ -5,7 +5,7 @@ import { GradientText } from "../animate-ui/primitives/texts/gradient";
 const NavLinks: Record<string, string> = {
 	Home: "/",
 	Projects: "/projects",
-	Resume: "/resume",
+	// Resume: "/resume",
 	Blogs: "/blogs",
 	Work: "/work",
 };
@@ -15,7 +15,7 @@ export default function NavigationTabs() {
 	const { pathname } = useLocation();
 
 	return (
-		<div className="flex fixed bottom-[3dvh] lg:static ">
+		<div className="flex fixed bottom-[3dvh] lg:static z-99">
 			{
 				<Tabs
 					defaultValue={"/"}
@@ -56,3 +56,4 @@ export default function NavigationTabs() {
 		</div>
 	);
 }
+
