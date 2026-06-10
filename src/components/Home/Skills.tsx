@@ -69,22 +69,21 @@ export default function Skills() {
 	return (
 		<section className="w-full space-y-4">
 			<h2 className="text-2xl font-semibold">Skills</h2>
-			<div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+			<div className="flex flex-col gap-4">
 				{SKILL_DOMAINS.map(({ domain, skills }) => (
 					<Card key={domain}>
-						<CardHeader className="pb-3">
+						<CardHeader>
 							<CardTitle className="text-base">{domain}</CardTitle>
 						</CardHeader>
 						<CardContent className="flex flex-wrap gap-4">
 							{skills.map(({ label, icon }) => (
-								<Badge
+								<span
 									key={label}
-									variant="outline"
-									className="flex items-center gap-1.5 px-3 py-2 text-xs"
+									className="flex items-center gap-2 px-4 py-2 text-xs bg-secondary rounded-3xl select-none"
 								>
 									<SkillIcon icon={icon} />
 									{label}
-								</Badge>
+								</span>
 							))}
 						</CardContent>
 					</Card>
