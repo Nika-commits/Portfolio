@@ -30,7 +30,6 @@ export const MyName = ({ loop, holdDelay }: MorphingTextDemoProps) => {
 				variant={"crosshair"}
 				color="currentColor"
 				size={160}
-                
 			>
 				<div className="flex flex-col items-start gap-1 md:gap-2 px-4">
 					<GradientText

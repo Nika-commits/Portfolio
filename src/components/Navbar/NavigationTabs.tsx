@@ -1,10 +1,6 @@
 import { useLocation, useNavigate } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
-import {
-	Tabs,
-	TabsList,
-	TabsTrigger,
-} from "@/components/animate-ui/components/animate/tabs";
+import { Tabs, TabsList, TabsTab } from "../animate-ui/components/base/tabs";
+import { GradientText } from "../animate-ui/primitives/texts/gradient";
 
 const NavLinks: Record<string, string> = {
 	Home: "/",
@@ -18,24 +14,26 @@ export default function NavigationTabs() {
 	const navigate = useNavigate();
 	const { pathname } = useLocation();
 
-	const [mounted, setMounted] = useState(false);
+	// const [mounted, setMounted] = useState(false);
 
-	useEffect(() => {
-		setMounted(true);
-	}, []);
+	// useEffect(() => {
+	// 	setMounted(true);
+	// }, []);
 
-	if (!mounted) return null;
+	// if (!mounted) return null;
 
 	return (
-		<div className="flex fixed bottom-[3dvh] lg:static">
+		<div className="flex fixed bottom-[3dvh] lg:static ">
 			{
 				<Tabs
+					defaultValue={"/"}
 					value={pathname}
-					className="w-full bg-background border-2 border-primary/20 rounded"
+					className="w-full bg-background border-2 border-primary/30 rounded-3xl"
 				>
-					<TabsList className="p-2 gap-2 md:gap-4 bg-secondary">
+					<TabsList className="p-2 gap-2 md:gap-6 bg-secondary rounded-3xl">
 						{Object.entries(NavLinks).map(([label, path]) => (
-							<TabsTrigger
+							<TabsTab
+								className="rounded-3xl"
 								key={label}
 								value={path}
 								onClick={() => {
@@ -54,8 +52,11 @@ export default function NavigationTabs() {
 									});
 								}}
 							>
-								{label}
-							</TabsTrigger>
+								<GradientText
+									gradient="linear-gradient(135deg, #6ee7b7 0%, #34d399 20%, #10b981 50%, #059669 80%, #6ee7b7 100%)"
+									text={label}
+								/>
+							</TabsTab>
 						))}
 					</TabsList>
 				</Tabs>
