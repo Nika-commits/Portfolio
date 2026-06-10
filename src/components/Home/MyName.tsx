@@ -34,7 +34,7 @@ export const MyName = ({ loop, holdDelay }: MorphingTextDemoProps) => {
 				<div className="flex flex-col items-start gap-1 md:gap-2 px-4">
 					<GradientText
 						key={`${loop}-${holdDelay}`}
-						className="text-3xl md:text-4xl lg:text-5xl text-left font-extrabold tracking-normal "
+						className="text-3xl md:text-4xl lg:text-5xl text-left font-extrabold tracking-normal shadow-none "
 						text="Pranish Chaulagain"
 						gradient="linear-gradient(135deg, #6ee7b7 0%, #34d399 20%, #10b981 50%, #059669 80%, #6ee7b7 100%)"
 						neon

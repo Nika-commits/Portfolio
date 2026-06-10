@@ -14,14 +14,6 @@ export default function NavigationTabs() {
 	const navigate = useNavigate();
 	const { pathname } = useLocation();
 
-	// const [mounted, setMounted] = useState(false);
-
-	// useEffect(() => {
-	// 	setMounted(true);
-	// }, []);
-
-	// if (!mounted) return null;
-
 	return (
 		<div className="flex fixed bottom-[3dvh] lg:static ">
 			{
