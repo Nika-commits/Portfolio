@@ -30,24 +30,30 @@ export default function NavigationTabs() {
 		<div className="flex fixed bottom-[3dvh] lg:static">
 			{
 				<Tabs
-					onValueChange={(value) => {
-						const currentIndex = Object.values(NavLinks).indexOf(pathname);
-						const nextIndex = Object.values(NavLinks).indexOf(value);
-
-						navigate({
-							to: value,
-							viewTransition: {
-								types:
-									currentIndex > nextIndex ? ["slide-right"] : ["slide-left"],
-							},
-						});
-					}}
 					value={pathname}
 					className="w-full bg-background border-2 border-primary/20 rounded"
 				>
 					<TabsList className="p-2 gap-2 md:gap-4 bg-secondary">
 						{Object.entries(NavLinks).map(([label, path]) => (
-							<TabsTrigger key={label} value={path}>
+							<TabsTrigger
+								key={label}
+								value={path}
+								onClick={() => {
+									const currentIndex =
+										Object.values(NavLinks).indexOf(pathname);
+									const nextIndex = Object.values(NavLinks).indexOf(path);
+
+									navigate({
+										to: path,
+										viewTransition: {
+											types:
+												currentIndex > nextIndex
+													? ["slide-right"]
+													: ["slide-left"],
+										},
+									});
+								}}
+							>
 								{label}
 							</TabsTrigger>
 						))}

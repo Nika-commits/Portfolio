@@ -5,6 +5,7 @@ import {
 	Scripts,
 } from "@tanstack/react-router";
 import Navigation from "#/components/Navbar/Navigation";
+import { Separator } from "#/components/ui/separator";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -29,6 +30,7 @@ export const Route = createRootRoute({
 		],
 	}),
 	shellComponent: RootDocument,
+	notFoundComponent: NotFound,
 });
 
 function RootDocument() {
@@ -72,5 +74,17 @@ function BackgroundGradients() {
 
 			<div className="absolute inset-0 text-foreground/8 dark:text-foreground/6 bg-[radial-gradient(currentColor_1px,transparent_1px)] bg-size-[4px_4px] transition-colors duration-500 ease-in-out" />
 		</div>
+	);
+}
+
+function NotFound() {
+	return (
+		<main className="flex flex-col ">
+			<div className="pt-4 md:pt-6 lg:pt-8">
+				<h1 className="text-4xl font-bold">404</h1>
+				<p className="text-xl">Page not found</p>
+			</div>
+			<Separator className="my-4 md:my-8 " />
+		</main>
 	);
 }
