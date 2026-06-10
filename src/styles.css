@@ -206,3 +206,13 @@ html:active-view-transition-type(slide-right) {
     animation: none;
   }
 }
+
+.myNav {
+	/* position: fixed; */
+	view-transition-name: nav;
+}
+
+::view-transition-group(nav) {
+	z-index: 100;
+}
+

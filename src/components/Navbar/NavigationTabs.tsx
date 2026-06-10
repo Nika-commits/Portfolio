@@ -30,19 +30,19 @@ export default function NavigationTabs() {
 	const paths = Object.values(NavLinks).map((v) => v.path);
 
 	return (
-		<div className="flex fixed bottom-[3dvh] lg:static z-99">
+		<div className="flex fixed bottom-[3dvh] lg:static myNav z-50">
 			<Tabs
 				value={pathname}
 				className="w-full bg-background border-2 border-primary/30 rounded-3xl"
 			>
-				<TabsList className="p-2 gap-4 md:gap-6 bg-secondary rounded-3xl  pacity-100 data-[state=inactive]:opacity-100 ">
+				<TabsList className="p-2 gap-6 md:gap-6 rounded-3xl ">
 					{Object.entries(NavLinks).map(([label, { path, icon }]) => {
 						const isActive = pathname === path;
 
 						return (
 							<motion.div
 								key={label}
-								className="flex h-9 w-full items-center justify-center gap-1.5 px-2 opacity-100"
+								className="flex h-9  items-center justify-center  rounded-3xl "
 								onClick={() => {
 									const currentIndex = paths.indexOf(pathname);
 									const nextIndex = paths.indexOf(path);
@@ -60,13 +60,16 @@ export default function NavigationTabs() {
 								animate={{ width: isActive ? 110 : 36 }}
 								transition={{ type: "spring", stiffness: 400, damping: 30 }}
 							>
-								<TabsTrigger value={path} asChild>
-									<motion.div className="flex h-9 w-full items-center justify-center ">
+								<TabsTrigger
+									value={path}
+									asChild
+									className="text-foreground h-9 w-full border-2 "
+								>
+									<motion.div className="flex h-9 w-full items-center justify-center gap-1.5 px-2 text-foreground dark:text-foreground opacity-100">
 										{icon}
 										<AnimatePresence initial={false}>
 											{isActive && (
 												<motion.span
-													className="overflow-hidden whitespace-nowrap"
 													initial={{ opacity: 0, width: 0 }}
 													animate={{ opacity: 1, width: "auto" }}
 													exit={{ opacity: 0, width: 0 }}
