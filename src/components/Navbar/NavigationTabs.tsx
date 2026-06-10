@@ -12,6 +12,11 @@ import { GradientText } from "../animate-ui/primitives/texts/gradient";
 const NAV_LINKS = [
 	{ label: "Home", path: "/", icon: <HomeIcon className="size-4 shrink-0" /> },
 	{
+		label: "Work",
+		path: "/work",
+		icon: <BriefcaseIcon className="size-4 shrink-0" />,
+	},
+	{
 		label: "Projects",
 		path: "/projects",
 		icon: <FolderKanbanIcon className="size-4 shrink-0" />,
@@ -20,11 +25,6 @@ const NAV_LINKS = [
 		label: "Blogs",
 		path: "/blogs",
 		icon: <NotebookPenIcon className="size-4 shrink-0" />,
-	},
-	{
-		label: "Work",
-		path: "/work",
-		icon: <BriefcaseIcon className="size-4 shrink-0" />,
 	},
 ];
 

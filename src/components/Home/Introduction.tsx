@@ -1,9 +1,7 @@
 export default function Introduction() {
 	return (
 		<div className="flex flex-col items-start justify-start gap-4">
-			<h1 className="text-sm md:text-base font-medium tracking-normal text-foreground">
-				Hi,
-			</h1>
+			<h1 className="text-base md:text-lg font-bold">Hi,</h1>
 
 			<p className="text-sm text-justify md:text-base leading-relaxed text-muted-foreground">
 				I'm a frontend-focused full-stack developer and final-year BSc Computing

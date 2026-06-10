@@ -2,7 +2,7 @@ import { GraduationCap, Mail, MapPinHouse } from "lucide-react";
 
 export default function QuickLinks() {
 	return (
-		<div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-3">
+		<div className="flex flex-col md:flex-row items-start justify-between gap-x-8 gap-y-3">
 			<div className="flex items-center gap-2">
 				<GraduationCap size={18} className="shrink-0 text-primary" />
 				<span className="text-xs md:text-sm text-muted-foreground">
