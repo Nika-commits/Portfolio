@@ -154,14 +154,55 @@ body {
 }
 
 
-/* * {
-  transition:
-    background-color 200ms ease,
-    color 200ms ease,
-    border-color 200ms ease,
-    fill 200ms ease,
-    stroke 200ms ease;
+@keyframes fade-out {
+  to { opacity: 0; }
 }
-.no-transition * {
-  transition: none !important;
-} */
+@keyframes fade-in {
+  from { opacity: 0; }
+}
+
+::view-transition-old(root) {
+  animation: 250ms ease-in fade-out;
+}
+::view-transition-new(root) {
+  animation: 250ms ease-out fade-in;
+}
+
+@keyframes slide-out-to-left {
+  to { transform: translateX(-50px); opacity: 0; }
+}
+@keyframes slide-in-from-right {
+  from { transform: translateX(50px); opacity: 0; }
+}
+
+html:active-view-transition-type(slide-left) {
+  &::view-transition-old(page-content) {
+    animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-out-to-left;
+  }
+  &::view-transition-new(page-content) {
+    animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-in-from-right;
+  }
+}
+
+@keyframes slide-out-to-right {
+  to { transform: translateX(50px); opacity: 0; }
+}
+@keyframes slide-in-from-left {
+  from { transform: translateX(-50px); opacity: 0; }
+}
+
+html:active-view-transition-type(slide-right) {
+  &::view-transition-old(page-content) {
+    animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-out-to-right;
+  }
+  &::view-transition-new(page-content) {
+    animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-in-from-left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(page-content),
+  ::view-transition-new(page-content) {
+    animation: none;
+  }
+}

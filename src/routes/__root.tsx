@@ -41,7 +41,9 @@ function RootDocument() {
 				<BackgroundGradients />
 				<main className="container mx-auto max-w-3xl px-4 ">
 					<Navigation />
-					<Outlet />
+					<div style={{ viewTransitionName: "page-content" }}>
+						<Outlet />
+					</div>
 				</main>
 				{/* <TanStackDevtools
 					config={{
@@ -68,7 +70,7 @@ function BackgroundGradients() {
 		>
 			<div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] min-w-75 rounded-full bg-primary/5 dark:bg-primary/10 blur-[120px] transition-colors duration-500 ease-in-out" />
 
-			<div className="absolute inset-0 text-foreground/8 dark:text-foreground/6 bg-[radial-gradient(currentColor_1px,transparent_1px)] bg-size-[6px_6px] transition-colors duration-500 ease-in-out" />
+			<div className="absolute inset-0 text-foreground/8 dark:text-foreground/6 bg-[radial-gradient(currentColor_1px,transparent_1px)] bg-size-[4px_4px] transition-colors duration-500 ease-in-out" />
 		</div>
 	);
 }

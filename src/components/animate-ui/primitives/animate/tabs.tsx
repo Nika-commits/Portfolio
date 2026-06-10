@@ -49,7 +49,7 @@ function Tabs({
 	...props
 }: TabsProps) {
 	const [activeValue, setActiveValue] = React.useState<string | undefined>(
-		defaultValue,
+		defaultValue ?? "/",
 	);
 	const triggersRef = React.useRef(new Map<string, HTMLElement>());
 	const initialSet = React.useRef(false);

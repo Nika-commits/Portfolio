@@ -1,7 +1,7 @@
-import { cn } from "@/lib/utils";
 import { MoonIcon, SunMediumIcon } from "lucide-react";
 import { Switch as SwitchPrimitive } from "radix-ui";
 import * as React from "react";
+import { cn } from "@/lib/utils";
 
 const Switch = React.forwardRef<
 	React.ElementRef<typeof SwitchPrimitive.Root>,
@@ -39,10 +39,9 @@ function applyTheme(isDark: boolean) {
 }
 
 export function ThemeToggle() {
-	const [isDark, setIsDark] = React.useState(true); // default DARK
+	const [isDark, setIsDark] = React.useState(true);
 
-	// set correct theme after mount (no flicker)
-	React.useEffect(() => {
+	React.useLayoutEffect(() => {
 		const prefersLight = window.matchMedia(
 			"(prefers-color-scheme: light)",
 		).matches;
