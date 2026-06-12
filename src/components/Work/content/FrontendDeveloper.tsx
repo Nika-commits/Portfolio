@@ -34,25 +34,35 @@ export default function FrontendDeveloper() {
 						<li>Maintaining test coverage as the dashboard grew in scope</li>
 					</ul>
 				</div>
-				<img
-					src="./Work/TodoDashboard.png"
-					alt="Resto Brain.ai Dashboard"
-					className="rounded-[10px]"
-				/>
-				<img
-					src="./Work/StoreSettings.png"
-					alt="Resto Brain.ai Dashboard"
-					className="rounded-[10px]"
-				/>
-
 				<Accordion
 					type="multiple"
 					className="-mt-4 mb-0 w-full border-none"
 					defaultValue={["item-1"]}
 				>
+					<AccordionItem value="item-0" className="bg-transparent">
+						<AccordionTrigger className="px-0 hover:no-underline [&>svg]:size-6!">
+							<Badge className="h-6 rounded-sm" variant={"default"}>
+								Screenshots
+							</Badge>
+						</AccordionTrigger>
+						<AccordionContent className="h-auto">
+							<div className="bg-muted space-y-2 rounded-[10px] p-2">
+								<img
+									src="./Work/TodoDashboard.png"
+									alt="Todo Dashboard"
+									className="w-full rounded-[7px] object-cover"
+								/>
+								<img
+									src="./Work/StoreSettings.png"
+									alt="Store Settings"
+									className="w-full rounded-[7px] object-cover"
+								/>
+							</div>
+						</AccordionContent>
+					</AccordionItem>
 					<AccordionItem value="item-1" className="bg-transparent">
 						<AccordionTrigger className="px-0 hover:no-underline [&>svg]:size-6!">
-							<Badge className="h-6 rounded-sm border-none bg-green-600/10 px-2 text-green-600 focus-visible:ring-green-600/20 focus-visible:outline-none dark:bg-green-400/10 dark:text-green-400 dark:focus-visible:ring-green-400/40 [a&]:hover:bg-green-600/5 dark:[a&]:hover:bg-green-400/5">
+							<Badge className="h-6 rounded-sm " variant={"default"}>
 								What I Did
 							</Badge>
 						</AccordionTrigger>
@@ -83,7 +93,7 @@ export default function FrontendDeveloper() {
 					</AccordionItem>
 					<AccordionItem value="item-2" className="bg-transparent">
 						<AccordionTrigger className="px-0 hover:no-underline [&>svg]:size-6!">
-							<Badge className="h-6 rounded-sm border-none bg-sky-600/10 px-2 text-sky-600 focus-visible:ring-sky-600/20 focus-visible:outline-none dark:bg-sky-400/10 dark:text-sky-400 dark:focus-visible:ring-sky-400/40 [a&]:hover:bg-sky-600/5 dark:[a&]:hover:bg-sky-400/5">
+							<Badge className="h-6 rounded-sm " variant={"default"}>
 								What I Learned
 							</Badge>
 						</AccordionTrigger>
@@ -110,7 +120,7 @@ export default function FrontendDeveloper() {
 					</AccordionItem>
 					<AccordionItem value="item-3" className="bg-transparent">
 						<AccordionTrigger className="px-0 hover:no-underline [&>svg]:size-6!">
-							<Badge className="h-6 rounded-sm border-none bg-amber-600/10 px-2 text-amber-600 focus-visible:ring-amber-600/20 focus-visible:outline-none dark:bg-orange-400/10 dark:text-orange-400 dark:focus-visible:ring-orange-400/40 [a&]:hover:bg-amber-600/5 dark:[a&]:hover:bg-orange-400/5">
+							<Badge className="h-6 rounded-sm " variant={"default"}>
 								Stack & Tools
 							</Badge>
 						</AccordionTrigger>
