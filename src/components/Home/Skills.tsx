@@ -57,7 +57,7 @@ const SKILL_DOMAINS = [
 	},
 ];
 
-function SkillIcon({ icon }: { icon: SimpleIcon }) {
+export function SkillIcon({ icon }: { icon: SimpleIcon }) {
 	return (
 		<svg
 			role="img"
