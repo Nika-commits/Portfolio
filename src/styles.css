@@ -208,7 +208,6 @@ html:active-view-transition-type(slide-right) {
 }
 
 .myNav {
-	/* position: fixed; */
 	view-transition-name: nav;
 }
 
