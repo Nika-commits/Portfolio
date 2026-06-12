@@ -41,7 +41,7 @@ function RootDocument() {
 			</head>
 			<body className="relative min-h-screen antialiased transition-colors duration-200 ease-linear">
 				<BackgroundGradients />
-				<main className="container mx-auto max-w-3xl px-4 ">
+				<main className="container mx-auto max-w-3xl px-4 pb-18">
 					<Navigation />
 					<div style={{ viewTransitionName: "page-content" }}>
 						<Outlet />
