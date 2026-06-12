@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import { Badge } from "#/components/ui/badge.tsx";
-import GlobalGradientText from "../Global/GradientText";
 
 export interface Timeline {
 	version: string;
@@ -15,14 +14,6 @@ interface ChangelogContentProps {
 export default function WorkTimeLine({ timelines }: ChangelogContentProps) {
 	return (
 		<>
-			<div className="mb-8 space-y-4 text-center md:mb-10 lg:mb-18">
-				<div className="pt-4 md:pt-6 lg:pt-8 flex flex-col items-start gap-1 md:gap-2 px-4" >
-					<GlobalGradientText text="My Work Experiences" />
-					<p className="text-muted-foreground text-base">
-						I am relatively new to the industry
-					</p>
-				</div>
-			</div>
 			{timelines.map((timeline, index) => (
 				<div
 					key={timeline.version}

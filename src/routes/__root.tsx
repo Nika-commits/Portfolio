@@ -6,6 +6,7 @@ import {
 } from "@tanstack/react-router";
 import Navigation from "#/components/Navbar/Navigation";
 import { Separator } from "#/components/ui/separator";
+import { TooltipProvider } from "#/components/ui/tooltip";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -44,7 +45,9 @@ function RootDocument() {
 				<main className="container mx-auto max-w-3xl px-4 pb-18">
 					<Navigation />
 					<div style={{ viewTransitionName: "page-content" }}>
-						<Outlet />
+						<TooltipProvider>
+							<Outlet />
+						</TooltipProvider>
 					</div>
 				</main>
 				{/* <TanStackDevtools

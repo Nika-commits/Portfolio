@@ -16,6 +16,7 @@ import {
 	siVercel,
 } from "simple-icons";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 type SimpleIcon = { path: string; hex: string; title: string };
 
@@ -82,15 +83,53 @@ export default function Skills() {
 							<CardTitle className="text-sm md:text-base">{domain}</CardTitle>
 						</CardHeader>
 						<CardContent className="flex flex-wrap gap-3 md:gap-4">
-							{skills.map(({ label, icon }) => (
-								<span
-									key={label}
-									className="flex items-center gap-2 px-2 py-1 md:px-4 md:py-2 text-xs bg-secondary rounded-3xl select-none"
-								>
-									<SkillIcon icon={icon} />
-									{label}
-								</span>
-							))}
+							{skills.map(({ label, icon }) => {
+								const isCloudflare = label === "Cloudflare";
+								const isTanstack = label === "TanStack Start";
+								return (
+									<>
+										{isCloudflare ? (
+											<Tooltip>
+												<TooltipTrigger>
+													<span
+														key={label}
+														className="flex items-center gap-2 px-2 py-1 md:px-4 md:py-2 text-xs bg-primary rounded-3xl select-none"
+													>
+														<SkillIcon icon={icon} />
+														{label}
+													</span>
+												</TooltipTrigger>
+												<TooltipContent>
+													This is hosted in Cloudflare btw. 😜
+												</TooltipContent>
+											</Tooltip>
+										) : isTanstack ? (
+											<Tooltip>
+												<TooltipTrigger>
+													<span
+														key={label}
+														className="flex items-center gap-2 px-2 py-1 md:px-4 md:py-2 text-xs bg-primary rounded-3xl select-none"
+													>
+														<SkillIcon icon={icon} />
+														{label}
+													</span>
+												</TooltipTrigger>
+												<TooltipContent>
+													This was built using Tanstack btw. 😜
+												</TooltipContent>
+											</Tooltip>
+										) : (
+											<span
+												key={label}
+												className="flex items-center gap-2 px-2 py-1 md:px-4 md:py-2 text-xs bg-secondary rounded-3xl select-none"
+											>
+												<SkillIcon icon={icon} />
+												{label}
+											</span>
+										)}
+									</>
+								);
+							})}
 						</CardContent>
 					</Card>
 				))}
