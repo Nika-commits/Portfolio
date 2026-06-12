@@ -1,0 +1,61 @@
+import type { ReactNode } from "react";
+import { Badge } from "#/components/ui/badge.tsx";
+import GlobalGradientText from "../Global/GradientText";
+
+export interface Timeline {
+	version: string;
+	date: string;
+	content: ReactNode;
+}
+
+interface ChangelogContentProps {
+	timelines: Timeline[];
+}
+
+export default function WorkTimeLine({ timelines }: ChangelogContentProps) {
+	return (
+		<>
+			<div className="mb-8 space-y-4 text-center md:mb-10 lg:mb-18">
+				<div className="pt-4 md:pt-6 lg:pt-8 flex flex-col items-start gap-1 md:gap-2 px-4" >
+					<GlobalGradientText text="My Work Experiences" />
+					<p className="text-muted-foreground text-base">
+						I am relatively new to the industry
+					</p>
+				</div>
+			</div>
+			{timelines.map((timeline, index) => (
+				<div
+					key={timeline.version}
+					id={String(index + 1)}
+					className="relative flex scroll-mt-18 justify-end gap-2"
+				>
+					<div className="sticky top-19 flex w-36 flex-col items-end gap-2 self-start pb-4 max-md:hidden">
+						<Badge className="flex size-6 w-auto justify-end rounded-sm text-sm font-medium">
+							{timeline.version}
+						</Badge>
+						<div className="text-muted-foreground text-right text-sm font-medium">
+							{timeline.date}
+						</div>
+					</div>
+					<div className="flex flex-col items-center">
+						<div className="sticky top-19 flex size-6 items-center justify-center max-sm:top-5">
+							<span className="bg-primary/20 flex size-4.5 shrink-0 items-center justify-center rounded-full">
+								<span className="bg-primary size-3 rounded-full" />
+							</span>
+						</div>
+						<span className="-mt-2.5 w-px flex-1 border" />
+					</div>
+					<div className="flex flex-1 flex-col gap-4 pb-11 pl-3 md:pl-6 lg:pl-9">
+						<div className="flex flex-col gap-2 md:hidden">
+							<Badge className="flex rounded-sm font-medium">
+								{timeline.version}
+							</Badge>
+							<div className="font-medium">{timeline.date}</div>
+						</div>
+						{timeline.content}
+					</div>
+				</div>
+			))}
+		</>
+	);
+}

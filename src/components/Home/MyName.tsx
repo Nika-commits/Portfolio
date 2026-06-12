@@ -1,10 +1,10 @@
 import { useRef } from "react";
 import { Click } from "../animate-ui/primitives/effects/click";
-import { GradientText } from "../animate-ui/primitives/texts/gradient";
 import {
 	TypingText,
 	TypingTextCursor,
 } from "../animate-ui/primitives/texts/typing";
+import GlobalGradientText from "../Global/GradientText";
 
 const texts = [
 	"Full-Stack Software Engineer 💻 ",
@@ -18,7 +18,7 @@ interface MorphingTextDemoProps {
 	holdDelay: number;
 }
 
-export const MyName = ({ loop, holdDelay }: MorphingTextDemoProps) => {
+export const MyName = ({ loop }: MorphingTextDemoProps) => {
 	const scope = useRef<HTMLDivElement>(null);
 	return (
 		<div
@@ -32,13 +32,7 @@ export const MyName = ({ loop, holdDelay }: MorphingTextDemoProps) => {
 				size={160}
 			>
 				<div className="flex flex-col items-start gap-1 md:gap-2 px-4">
-					<GradientText
-						key={`${loop}-${holdDelay}`}
-						className="text-3xl md:text-4xl lg:text-5xl text-left font-extrabold tracking-normal shadow-none "
-						text="Pranish Chaulagain"
-						gradient="linear-gradient(135deg, #6ee7b7 0%, #34d399 20%, #10b981 50%, #059669 80%, #6ee7b7 100%)"
-						neon
-					/>
+					<GlobalGradientText text="Pranish Chaulagain" />
 					<span className="flex justify-start">
 						<TypingText
 							className="text-base md:text-lg lg:text-xl font-bold tracking-wide text-muted-foreground "
