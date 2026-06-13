@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import GlobalGradientText from "#/components/Global/GradientText";
+import GlobalGradientText from "#/components/Global/GLobalGradientText";
 
 export const Route = createFileRoute("/projects")({
 	component: RouteComponent,

@@ -40,7 +40,7 @@ function RootDocument() {
 			<head>
 				<HeadContent />
 			</head>
-			<body className="relative min-h-screen antialiased transition-colors duration-200 ease-linear">
+			<body className="relative min-h-screen antialiased transition-colors duration-200 ease-linear scroll-smooth">
 				<BackgroundGradients />
 				<main className="container mx-auto max-w-3xl px-4 pb-18">
 					<Navigation />

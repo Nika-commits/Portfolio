@@ -4,7 +4,7 @@ import {
 	TypingText,
 	TypingTextCursor,
 } from "../animate-ui/primitives/texts/typing";
-import GlobalGradientText from "../Global/GradientText";
+import GlobalGradientText from "../Global/GLobalGradientText";
 
 const texts = [
 	"Full-Stack Software Engineer 💻 ",

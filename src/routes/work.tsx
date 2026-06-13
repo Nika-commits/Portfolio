@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import GlobalGradientText from "#/components/Global/GradientText";
+import GlobalGradientText from "#/components/Global/GLobalGradientText";
 import FrontendDeveloper from "#/components/Work/content/FrontendDeveloper";
 import FrontendDeveloperIntern from "#/components/Work/content/FrontendDeveloperIntern";
 import WorkTimeLine, { type Timeline } from "#/components/Work/WorkTimeLine";
