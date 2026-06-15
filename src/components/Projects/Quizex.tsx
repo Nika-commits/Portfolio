@@ -1,4 +1,4 @@
-import { Github, Globe, Link } from "lucide-react";
+import { Github, Link } from "lucide-react";
 import { useState } from "react";
 import { UnderlineLink } from "../Global/UnderlineLink";
 import { Button } from "../ui/button";

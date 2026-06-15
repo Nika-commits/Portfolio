@@ -23,7 +23,7 @@ export default function CustomHomepage() {
 					<CardTitle className="flex justify-between items-center">
 						<UnderlineLink to="/">
 							<span className="flex gap-4 items-center">
-								Quizex <Link size={14} />
+								Custom New Tab <Link size={14} />
 							</span>
 						</UnderlineLink>
 						<div>
@@ -40,7 +40,8 @@ export default function CustomHomepage() {
 						</div>
 					</CardTitle>
 					<CardDescription>
-						Tap Whole Sale AI is an AI-powered platform that
+						A simple custom new tab page extension that displays a search bar,
+						drag and droppable infinite shortcuts and other personal utilities.
 					</CardDescription>
 				</CardHeader>
 				<CardContent className="flex flex-col space-y-4">
@@ -54,6 +55,12 @@ export default function CustomHomepage() {
 							/>
 						</div>
 					</button>
+
+					<p>
+						I basically built this as I wanted more shortcuts in my new tab page
+						and chrome only provides a limited number of shortcuts. Other than
+						that, I think this just looks better haha.
+					</p>
 				</CardContent>
 			</Card>
 

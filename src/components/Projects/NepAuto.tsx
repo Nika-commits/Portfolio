@@ -9,6 +9,13 @@ import {
 	CardTitle,
 } from "../ui/card";
 
+const images = [
+	"https://gqtuuqsgkyffgcpbfltk.supabase.co/storage/v1/object/public/Portfolio/home.webp",
+	"https://gqtuuqsgkyffgcpbfltk.supabase.co/storage/v1/object/public/Portfolio/partss.webp",
+	"https://gqtuuqsgkyffgcpbfltk.supabase.co/storage/v1/object/public/Portfolio/sales.webp",
+	"https://gqtuuqsgkyffgcpbfltk.supabase.co/storage/v1/object/public/Portfolio/dashboard.webp",
+];
+
 export default function NepAuto() {
 	return (
 		<Card>
@@ -16,7 +23,7 @@ export default function NepAuto() {
 				<CardTitle className="flex justify-between items-center">
 					<UnderlineLink to="/">
 						<span className="flex gap-4 items-center">
-							Quizex <Link size={14} />
+							Nep Auto <Link size={14} />
 						</span>
 					</UnderlineLink>
 					<div>

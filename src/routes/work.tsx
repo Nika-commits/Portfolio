@@ -29,7 +29,8 @@ function RouteComponent() {
 				<div className="pt-4 md:pt-6 lg:pt-8 flex flex-col items-start gap-1 md:gap-2 px-4 py-12">
 					<GlobalGradientText text="My Work Experiences" />
 					<p className="text-muted-foreground text-base">
-						I am relatively new to the industry
+						I am relatively new to the industry with around 1 year of
+						experience. 🌱
 					</p>
 				</div>
 				<WorkTimeLine timelines={releases} />
