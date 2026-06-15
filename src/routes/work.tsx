@@ -6,19 +6,35 @@ import WorkTimeLine, { type Timeline } from "#/components/Work/WorkTimeLine";
 
 export const Route = createFileRoute("/work")({
 	component: RouteComponent,
+	pendingMs: 0,
 });
 
 function RouteComponent() {
 	return (
-		<div>
-			<div className="pt-4 md:pt-6 lg:pt-8 flex flex-col items-start gap-1 md:gap-2 px-4 py-12">
-				<GlobalGradientText text="My Work Experiences" />
-				<p className="text-muted-foreground text-base">
-					I am relatively new to the industry
-				</p>
+		<>
+			{/*<motion.div
+				id="scroll-indicator-home"
+				style={{
+					scaleX: scrollYProgress,
+					position: "fixed",
+					top: 0,
+					left: 0,
+					right: 0,
+					height: 8,
+					originX: 0,
+					backgroundColor: "var(--color-primary)",
+				}}
+			/>*/}
+			<div>
+				<div className="pt-4 md:pt-6 lg:pt-8 flex flex-col items-start gap-1 md:gap-2 px-4 py-12">
+					<GlobalGradientText text="My Work Experiences" />
+					<p className="text-muted-foreground text-base">
+						I am relatively new to the industry
+					</p>
+				</div>
+				<WorkTimeLine timelines={releases} />
 			</div>
-			<WorkTimeLine timelines={releases} />
-		</div>
+		</>
 	);
 }
 

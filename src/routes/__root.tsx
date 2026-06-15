@@ -1,3 +1,4 @@
+import { TanStackDevtools } from "@tanstack/react-devtools";
 import {
 	createRootRoute,
 	HeadContent,
@@ -5,6 +6,7 @@ import {
 	Scripts,
 	useNavigate,
 } from "@tanstack/react-router";
+import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import Navigation from "#/components/Navbar/Navigation";
 import { Button } from "#/components/ui/button";
 import { Separator } from "#/components/ui/separator";
@@ -52,7 +54,7 @@ function RootDocument() {
 						</TooltipProvider>
 					</div>
 				</main>
-				{/* <TanStackDevtools
+				<TanStackDevtools
 					config={{
 						position: "bottom-right",
 					}}
@@ -62,7 +64,7 @@ function RootDocument() {
 							render: <TanStackRouterDevtoolsPanel />,
 						},
 					]}
-				/> */}
+				/>
 				<Scripts />
 			</body>
 		</html>
