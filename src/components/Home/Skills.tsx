@@ -58,7 +58,7 @@ const SKILL_DOMAINS = [
 	},
 ];
 
-export function SkillIcon({
+export function SimpleIcon({
 	icon,
 	overrideColor,
 }: {
@@ -101,7 +101,7 @@ export default function Skills() {
 													key={label}
 													className="flex items-center gap-2 px-2 py-1 md:px-1 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-3xl select-none"
 												>
-													<SkillIcon icon={icon} />
+													<SimpleIcon icon={icon} />
 													{label}
 												</span>
 											</TooltipTrigger>
@@ -119,7 +119,7 @@ export default function Skills() {
 													key={label}
 													className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-3xl select-none"
 												>
-													<SkillIcon icon={icon} overrideColor={"green"} />
+													<SimpleIcon icon={icon} overrideColor={"green"} />
 													{label}
 												</span>
 											</TooltipTrigger>
@@ -135,7 +135,7 @@ export default function Skills() {
 										key={label}
 										className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-secondary rounded-3xl select-none"
 									>
-										<SkillIcon icon={icon} />
+										<SimpleIcon icon={icon} />
 										{label}
 									</span>
 								);

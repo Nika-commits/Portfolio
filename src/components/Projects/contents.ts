@@ -76,7 +76,7 @@ export const Projects: ProjectContent[] = [
 		liveUrl: null,
 		githubUrl: "https://github.com/hacket41/NepAuto",
 		techStack: [
-			{ name: "Tanstack Start", icon: siTanstack },
+			{ name: "Tanstack", icon: siTanstack },
 			{ name: "ASP.NET", icon: siDotnet },
 			{ name: "PostgreSQL", icon: siPostgresql },
 			{ name: "Docker", icon: siDocker },
