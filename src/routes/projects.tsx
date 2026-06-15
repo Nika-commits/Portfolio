@@ -76,17 +76,17 @@ function RouteComponent() {
 									<p className="text-justify">{project.description}</p>
 								</div>
 							</CardContent>
-							<CardFooter className="flex justify-between gap-5 py-2">
-								<div className="flex gap-4">
+							<CardFooter className="flex justify-between py-2">
+								<div className="flex flex-wrap gap-2 md:gap-4">
 									{project.techStack.map((tech) => (
 										<span
 											key={tech.name}
-											className="flex flex-col gap-2 items-center"
+											className="flex flex-col gap-2 items-center min-w-16"
 										>
-											<div className="bg-secondary rounded p-2">
+											<div className="bg-border rounded-lg p-1 md:p-2">
 												<SimpleIcon icon={tech.icon} />
 											</div>
-											<p className="text-xs text-muted-foreground wrap-break-word">
+											<p className="text-[10px] md:text-xs text-muted-foreground break-word">
 												{tech.name}
 											</p>
 										</span>
