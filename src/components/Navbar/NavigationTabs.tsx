@@ -66,7 +66,7 @@ export default function NavigationTabs() {
 								{icon}
 								{isActive && (
 									<GradientText
-										gradient="linear-gradient(135deg, #6ee7b7 0%, #34d399 20%, #10b981 50%, #059669 80%, #6ee7b7 100%)"
+										gradient="var(--gradient-primary)"
 										text={label}
 										className="text-sm font-medium whitespace-nowrap"
 									/>

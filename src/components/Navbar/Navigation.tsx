@@ -45,7 +45,7 @@ export default function Navigation() {
 				<NavigationTabs />
 			</div>
 
-			<div className="flex justify-end items-center sticky top-0 z-50">
+			<div className="flex justify-end items-center sticky top-0 z-50 social-links">
 				<ThemeToggle />
 			</div>
 		</nav>
