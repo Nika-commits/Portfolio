@@ -44,7 +44,7 @@ function RootDocument() {
 			</head>
 			<body className="relative min-h-screen antialiased transition-colors duration-200 ease-linear scroll-smooth">
 				{/*<BackgroundGradients />*/}
-				<main className="container mx-auto max-w-3xl px-4 pb-18">
+				<main className="container mx-auto max-w-2xl px-6 pb-18">
 					<Navigation />
 					<div style={{ viewTransitionName: "page-content" }}>
 						<TooltipProvider>
@@ -71,13 +71,8 @@ function RootDocument() {
 
 // function BackgroundGradients() {
 // 	return (
-// 		<div
-// 			className="fixed inset-0 -z-10 overflow-hidden pointer-events-none select-none"
-// 			aria-hidden="true"
-// 		>
-// 			<div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] min-w-75 rounded-full bg-primary/5 dark:bg-primary/10 blur-[120px] transition-colors duration-500 ease-in-out" />
-
-// 			<div className="absolute inset-0 text-foreground/8 dark:text-foreground/6 bg-[radial-gradient(currentColor_1px,transparent_1px)] bg-size-[4px_4px] transition-colors duration-500 ease-in-out" />
+// 		<div className="h-full  bg-linear-to-bl from-primary to-secondary">
+// 			<div className="relative w-full max-w-lg"></div>
 // 		</div>
 // 	);
 // }

@@ -35,7 +35,7 @@ export default function NavigationTabs() {
 	const { pathname } = useLocation();
 
 	return (
-		<div className="flex fixed bottom-[3dvh] lg:static myNav z-99">
+		<div className="flex fixed bottom-[3dvh] lg:static myNav ">
 			<Tabs
 				value={pathname}
 				className="w-full bg-background border-2 border-primary/30 rounded-3xl"
@@ -48,7 +48,7 @@ export default function NavigationTabs() {
 							<TabsTrigger
 								key={label}
 								value={path}
-								className="h-9 gap-1.5 rounded-3xl cursor-pointer border-2 border-secondary"
+								className="h-9 gap-1.5 rounded-3xl cursor-pointer border-2 border-secondary  "
 								onClick={() => {
 									const currentIndex = PATHS.indexOf(pathname);
 									const nextIndex = PATHS.indexOf(path);
@@ -66,7 +66,7 @@ export default function NavigationTabs() {
 								{icon}
 								{isActive && (
 									<GradientText
-										gradient="var(--gradient-primary)"
+										// gradient="var(--gradient-primary)"
 										text={label}
 										className="text-sm font-medium whitespace-nowrap"
 									/>

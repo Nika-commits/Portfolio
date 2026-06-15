@@ -76,10 +76,10 @@ function CopyCode({ code = "javascript" }: CopyCodeProps) {
 
 	return (
 		<div
-			className="bg-muted relative w-full overflow-hidden rounded-[14px] p-2.5"
+			className="bg-muted relative w-full overflow-hidden rounded-[14px] p-2"
 			style={{ fontFamily: "'Fira Code', monospace" }}
 		>
-			<div className="rounded-[10px] bg-white p-2 dark:bg-black">
+			<div className="rounded-[10px] bg-white p-1 dark:bg-black">
 				<pre className="overflow-x-auto">
 					<code
 						className="text-[10px] leading-relaxed"

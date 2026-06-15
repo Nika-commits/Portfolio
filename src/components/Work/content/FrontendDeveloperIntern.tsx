@@ -1,5 +1,6 @@
 import { siReact, siTanstack, siTypescript } from "simple-icons";
 import { SkillIcon } from "#/components/Home/Skills";
+import UnderlineWrapper from "#/components/Home/UnderlineWrapper";
 import {
 	Accordion,
 	AccordionContent,
@@ -22,16 +23,22 @@ const { data: dashboardData } = useQuery({
 		<div>
 			<div className="space-y-4">
 				<div className="space-y-3">
-					<h3 className="text-base md:text-lg font-semibold">
-						Frontend Developer Intern — Resto Brain.ai
+					<h3 className="text-base md:text-base font-semibold">
+						Frontend Developer Intern —{" "}
+						<UnderlineWrapper
+							href="https://restobrain.ai"
+							className="text-base md:text-lg font-bold "
+						>
+							RestoBrain.ai
+						</UnderlineWrapper>
 					</h3>
 					<p className="text-muted-foreground text-xs md:text-sm">
-						My first industry role. Joined as a frontend intern and was embedded
-						directly in the product team, shipping real features to a
-						data-driven dashboard used by actual clients from day one.
+						My first industry role. Joined as a frontend intern and worked with
+						the frontend team, shipping real features to a data-driven dashboard
+						used by actual clients.
 					</p>
 				</div>
-				<ul className="text-muted-foreground ml-2 list-inside list-disc space-y-3 text-xs md:text-sm">
+				{/*<ul className="text-muted-foreground ml-2 list-inside list-disc space-y-3 text-xs md:text-sm">
 					<li>
 						Built reusable React + TypeScript components under senior review
 					</li>
@@ -42,7 +49,7 @@ const { data: dashboardData } = useQuery({
 					<li>
 						Wrote my first production Cypress tests covering real user workflows
 					</li>
-				</ul>
+				</ul>*/}
 				<Separator className="my-4 md:my-6 " />
 				<div className="flex flex-wrap items-center gap-4">
 					<span className="flex gap-2 items-end ">
@@ -58,6 +65,8 @@ const { data: dashboardData } = useQuery({
 					</span>
 				</div>
 				<Separator className="my-4 md:my-6 " />
+
+				<h3>What I learnt on Day 1</h3>
 
 				<CopyCode code={codeExample} />
 				<p className="text-muted-foreground text-xs py-2">
@@ -93,7 +102,7 @@ const { data: dashboardData } = useQuery({
 									product.
 								</li>
 								<li>
-									Wired up form validation with React Hook Form + Zod, learning
+									Wired up form validation with React Hook Form and Zod, learning
 									how schema-level validation prevents bad data from ever
 									reaching the API.
 								</li>

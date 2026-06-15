@@ -12,10 +12,10 @@ export default function GlobalGradientText({
 	return (
 		<GradientText
 			className={cn(
-				"text-3xl md:text-4xl lg:text-5xl text-left font-extrabold tracking-wider",
+				"text-2xl md:text-3xl lg:text-4xl text-left font-extrabold tracking-wider",
 				className,
 			)}
-			gradient="var(--gradient-primary)"
+			// gradient="var(--gradient-primary)"
 			neon
 			text={text}
 		/>

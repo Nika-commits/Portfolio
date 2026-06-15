@@ -99,15 +99,13 @@ body {
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
 
-    --gradient-start: oklch(0.40 0 0);
-    --gradient-mid: var(--primary);
-    --gradient-end: oklch(0.1 0 0);
-
-    --gradient-primary: linear-gradient(
-        135deg,
-        var(--gradient-start) 0%,
-        var(--gradient-mid) 50%,
-        var(--gradient-end) 100%
+    --hero-gradient: linear-gradient(
+        90deg,
+        #111827 0%,
+        #374151 25%,
+        #6b7280 50%,
+        #374151 75%,
+        #111827 100%
     );
 }
 
@@ -143,16 +141,13 @@ body {
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
-
-    --gradient-start: oklch(0.95 0 0);
-    --gradient-mid: var(--primary);
-    --gradient-end: oklch(0.75 0 0);
-
-    --gradient-primary: linear-gradient(
-        135deg,
-        var(--gradient-start) 0%,
-        var(--gradient-mid) 50%,
-        var(--gradient-end) 100%
+    --hero-gradient: linear-gradient(
+        90deg,
+        #6b7280 0%,
+        #d1d5db 25%,
+        #f9fafb 50%,
+        #d1d5db 75%,
+        #6b7280 100%
     );
 }
 

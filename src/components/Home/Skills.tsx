@@ -40,7 +40,7 @@ const SKILL_DOMAINS = [
 		],
 	},
 	{
-		domain: "Database & Infra",
+		domain: "Database and Infrastructure",
 		skills: [
 			{ label: "PostgreSQL", icon: siPostgresql },
 			{ label: "MongoDB", icon: siMongodb },
@@ -58,13 +58,19 @@ const SKILL_DOMAINS = [
 	},
 ];
 
-export function SkillIcon({ icon }: { icon: SimpleIcon }) {
+export function SkillIcon({
+	icon,
+	overrideColor,
+}: {
+	icon: SimpleIcon;
+	overrideColor?: string;
+}) {
 	return (
 		<svg
 			role="img"
 			viewBox="0 0 24 24"
 			className="size-3 md:size-5 shrink-0"
-			fill={`#${icon.hex}`}
+			fill={overrideColor ?? `#${icon.hex}`}
 			aria-label={icon.title}
 		>
 			<path d={icon.path} />
@@ -110,7 +116,7 @@ export default function Skills() {
 														key={label}
 														className="flex items-center gap-2 px-2 py-1 md:px-4 md:py-2 text-xs bg-primary text-secondary text-pretty rounded-3xl select-none"
 													>
-														<SkillIcon icon={icon} />
+														<SkillIcon icon={icon} overrideColor={"green"} />
 														{label}
 													</span>
 												</TooltipTrigger>

@@ -40,7 +40,7 @@ export const MyName = ({ loop }: MorphingTextDemoProps) => {
 							loop={loop}
 						>
 							<TypingTextCursor />
-						</TypingText>
+					</TypingText>
 					</span>
 				</div>
 			</Click>
