@@ -92,48 +92,52 @@ export default function Skills() {
 							{skills.map(({ label, icon }) => {
 								const isCloudflare = label === "Cloudflare";
 								const isTanstack = label === "TanStack Start";
+
+								if (isCloudflare) {
+									return (
+										<Tooltip key={label}>
+											<TooltipTrigger>
+												<span
+													key={label}
+													className="flex items-center gap-2 px-2 py-1 md:px-1 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-3xl select-none"
+												>
+													<SkillIcon icon={icon} />
+													{label}
+												</span>
+											</TooltipTrigger>
+											<TooltipContent>
+												This is hosted in Cloudflare btw. 😜
+											</TooltipContent>
+										</Tooltip>
+									);
+								}
+								if (isTanstack) {
+									return (
+										<Tooltip key={label}>
+											<TooltipTrigger>
+												<span
+													key={label}
+													className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-3xl select-none"
+												>
+													<SkillIcon icon={icon} overrideColor={"green"} />
+													{label}
+												</span>
+											</TooltipTrigger>
+											<TooltipContent>
+												This was built using Tanstack btw. 😜
+											</TooltipContent>
+										</Tooltip>
+									);
+								}
+
 								return (
-									<>
-										{isCloudflare ? (
-											<Tooltip>
-												<TooltipTrigger>
-													<span
-														key={label}
-														className="flex items-center gap-2 px-2 py-1 md:px-1 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-3xl select-none"
-													>
-														<SkillIcon icon={icon} />
-														{label}
-													</span>
-												</TooltipTrigger>
-												<TooltipContent>
-													This is hosted in Cloudflare btw. 😜
-												</TooltipContent>
-											</Tooltip>
-										) : isTanstack ? (
-											<Tooltip>
-												<TooltipTrigger>
-													<span
-														key={label}
-														className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-3xl select-none"
-													>
-														<SkillIcon icon={icon} overrideColor={"green"} />
-														{label}
-													</span>
-												</TooltipTrigger>
-												<TooltipContent>
-													This was built using Tanstack btw. 😜
-												</TooltipContent>
-											</Tooltip>
-										) : (
-											<span
-												key={label}
-												className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-secondary rounded-3xl select-none"
-											>
-												<SkillIcon icon={icon} />
-												{label}
-											</span>
-										)}
-									</>
+									<span
+										key={label}
+										className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-secondary rounded-3xl select-none"
+									>
+										<SkillIcon icon={icon} />
+										{label}
+									</span>
 								);
 							})}
 						</CardContent>
