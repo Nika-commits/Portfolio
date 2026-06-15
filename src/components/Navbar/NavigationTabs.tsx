@@ -35,7 +35,7 @@ export default function NavigationTabs() {
 	const { pathname } = useLocation();
 
 	return (
-		<div className="flex fixed bottom-[3dvh] lg:static myNav ">
+		<div className="flex fixed items-center justify-center bottom-[2dvh] lg:static myNav">
 			<Tabs
 				value={pathname}
 				className="w-full bg-background border-2 border-primary/30 rounded-3xl"

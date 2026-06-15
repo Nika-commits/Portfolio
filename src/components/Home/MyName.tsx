@@ -31,7 +31,7 @@ export const MyName = ({ loop }: MorphingTextDemoProps) => {
 				color="currentColor"
 				size={160}
 			>
-				<div className="flex flex-col items-start gap-1 md:gap-2 px-4">
+				<div className="flex flex-col items-start gap-1 md:gap-2">
 					<GlobalGradientText text="Pranish Chaulagain" />
 					<span className="flex justify-start">
 						<TypingText
@@ -40,7 +40,7 @@ export const MyName = ({ loop }: MorphingTextDemoProps) => {
 							loop={loop}
 						>
 							<TypingTextCursor />
-					</TypingText>
+						</TypingText>
 					</span>
 				</div>
 			</Click>

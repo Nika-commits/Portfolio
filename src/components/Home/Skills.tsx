@@ -99,7 +99,7 @@ export default function Skills() {
 												<TooltipTrigger>
 													<span
 														key={label}
-														className="flex items-center gap-2 px-2 py-1 md:px-4 md:py-2 text-xs bg-primary text-secondary text-pretty rounded-3xl select-none"
+														className="flex items-center gap-2 px-2 py-1 md:px-1 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-3xl select-none"
 													>
 														<SkillIcon icon={icon} />
 														{label}
@@ -114,7 +114,7 @@ export default function Skills() {
 												<TooltipTrigger>
 													<span
 														key={label}
-														className="flex items-center gap-2 px-2 py-1 md:px-4 md:py-2 text-xs bg-primary text-secondary text-pretty rounded-3xl select-none"
+														className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-3xl select-none"
 													>
 														<SkillIcon icon={icon} overrideColor={"green"} />
 														{label}
@@ -127,7 +127,7 @@ export default function Skills() {
 										) : (
 											<span
 												key={label}
-												className="flex items-center gap-2 px-2 py-1 md:px-4 md:py-2 text-xs bg-secondary rounded-3xl select-none"
+												className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-secondary rounded-3xl select-none"
 											>
 												<SkillIcon icon={icon} />
 												{label}

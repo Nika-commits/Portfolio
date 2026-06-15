@@ -5,8 +5,8 @@ import { ThemeToggle } from "./ThemeToggle";
 
 export default function Navigation() {
 	return (
-		<nav className="flex justify-between items-center py-4 h-fit md:h-30 sticky top-0 z-50">
-			<div className="flex justfy-center items-center">
+		<nav className="grid grid-cols-8 items-center py-4 h-fit md:h-30 sticky top-0 z-50">
+			<div className="col-span-2 flex justify-start items-center">
 				<div className="social-links flex justify-center items-end gap-4 hover:underline">
 					<UnderlineWrapper href="https://www.linkedin.com/in/pranish-chaulagain-0a4833300/">
 						<LucideLinkedin
@@ -28,11 +28,12 @@ export default function Navigation() {
 					</UnderlineWrapper>
 				</div>
 			</div>
-			<div className="flex justify-center items-center sticky top-0 z-50">
+
+			<div className="col-span-4 flex justify-center items-center">
 				<NavigationTabs />
 			</div>
 
-			<div className="flex justify-end items-center sticky top-0 z-50 social-links">
+			<div className="col-span-2 flex justify-end items-center social-links">
 				<ThemeToggle />
 			</div>
 		</nav>
