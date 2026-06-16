@@ -26,6 +26,47 @@ export const Route = createRootRoute({
 			{
 				title: "Pranish Chaulagain",
 			},
+			{
+				name: "description",
+				content:
+					"Portfolio of Pranish Chaulagain, a software developer specializing in React, TypeScript, Java, Python, and modern web applications.",
+			},
+			{
+				name: "keywords",
+				content:
+					"Pranish Chaulagain, software developer, React developer, TypeScript, frontend developer, Nepal",
+			},
+			{
+				name: "author",
+				content: "Pranish Chaulagain",
+			},
+
+			{
+				property: "og:title",
+				content: "Pranish Chaulagain | Full Stack Developer",
+			},
+			{
+				property: "og:description",
+				content:
+					"Portfolio showcasing projects, skills, and experience in software development.",
+			},
+			{
+				property: "og:type",
+				content: "website",
+			},
+			{
+				property: "og:url",
+				content: "https://yourdomain.com",
+			},
+			{
+				property: "og:image",
+				content: "https://yourdomain.com/og-image.png",
+			},
+
+			{
+				name: "twitter:card",
+				content: "summary_large_image",
+			},
 		],
 		links: [
 			{

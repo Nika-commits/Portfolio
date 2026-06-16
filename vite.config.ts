@@ -12,7 +12,16 @@ const config = defineConfig({
 	plugins: [
 		devtools(),
 		tailwindcss(),
-		tanstackStart(),
+		tanstackStart({
+			prerender: {
+				enabled: true,
+				crawlLinks: true,
+			},
+			sitemap: {
+				enabled: true,
+				host: "https://pranishc.com.np",
+			},
+		}),
 		viteReact(),
 		babelPlugin({
 			presets: [reactCompilerPreset()],
