@@ -56,12 +56,7 @@ function RouteComponent() {
 							className="snap-center flex items-center justify-center"
 							key={project.name}
 						>
-							<motion.div
-								initial={{ scale: 0.8, opacity: 0.6 }}
-								whileInView={{ scale: 1, opacity: 1 }}
-								transition={{ duration: 0.2, ease: "linear" }}
-								viewport={{ amount: 0.99 }}
-							>
+							<motion.div>
 								<Card>
 									<CardHeader>
 										<CardTitle className="flex justify-between items-center">
