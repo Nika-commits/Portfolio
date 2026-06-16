@@ -59,8 +59,7 @@ export default function NavigationTabs() {
 												currentIndex > nextIndex
 													? ["slide-right"]
 													: ["slide-left"],
-                                        },
-										
+										},
 									});
 								}}
 							>

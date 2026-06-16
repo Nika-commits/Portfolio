@@ -48,6 +48,7 @@ function RootDocument() {
 				{/*<BackgroundGradients />*/}
 				<main className="container mx-auto max-w-2xl px-6 pb-18">
 					<Navigation />
+					<Separator className="my-4 md:my-6" />
 					<div style={{ viewTransitionName: "main-content" }}>
 						<TooltipProvider>
 							<Outlet />

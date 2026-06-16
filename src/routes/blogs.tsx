@@ -9,15 +9,15 @@ export const Route = createFileRoute("/blogs")({
 function RouteComponent() {
 	return (
 		<div>
-			<div className="pt-4 md:pt-6 lg:pt-8">
+			<div className="flex flex-col items-start gap-1 md:gap-2">
 				<GlobalGradientText text="My Blogs" />
 
 				<p className="text-base md:text-lg font-bold tracking-wide text-muted-foreground">
-					A Glimpse inside my head. 💭
+					A Glimpse inside my mind. 💭
 				</p>
 			</div>
 
-			<Separator className="my-8" />
+			<Separator className="my-4 md:my-6" />
 
 			<div>
 				<span>

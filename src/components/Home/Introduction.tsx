@@ -11,9 +11,7 @@ export default function Introduction() {
 				as a Frontend Developer at{" "}
 				<UnderlineWrapper
 					href="https://restobrain.ai/"
-					// target="_blank"
 					className="text-foreground font-medium text-sm md:text-base leading-relaxed "
-					// rel="noopener"
 				>
 					restobrain.ai
 				</UnderlineWrapper>

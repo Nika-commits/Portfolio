@@ -1,4 +1,5 @@
 import {
+	siBlazor,
 	siCloudflare,
 	siDocker,
 	siDotnet,
@@ -29,14 +30,15 @@ const SKILL_DOMAINS = [
 			{ label: "React", icon: siReact },
 			{ label: "Next.js", icon: siNextdotjs },
 			{ label: "TanStack Start", icon: siTanstack },
+			{ label: "Blazor", icon: siBlazor },
 		],
 	},
 	{
 		domain: "Backend",
 		skills: [
 			{ label: "C# / .NET", icon: siDotnet },
-			{ label: "FastAPI", icon: siFastapi },
 			{ label: "Node.js", icon: siNodedotjs },
+			{ label: "FastAPI", icon: siFastapi },
 			{ label: "Go", icon: siGo },
 		],
 	},
@@ -102,7 +104,7 @@ export default function Skills() {
 											<TooltipTrigger>
 												<span
 													key={label}
-													className="flex items-center gap-2 px-2 py-1 md:px-1 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-3xl select-none"
+													className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-3xl select-none"
 												>
 													<SimpleIcon icon={icon} />
 													{label}

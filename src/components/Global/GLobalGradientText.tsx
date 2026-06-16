@@ -19,6 +19,7 @@ export default function GlobalGradientText({
 			neon
 			text={text}
 		/>
+		// </motion.div>
 	);
 }
 

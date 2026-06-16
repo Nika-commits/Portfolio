@@ -41,14 +41,13 @@ function RouteComponent() {
 	const [openReadMore, setOpenReadMore] = useState<ProjectContent | null>(null);
 	return (
 		<div className="pb-50">
-			<div className="pt-4 md:pt-6 lg:pt-8 flex flex-col items-start gap-1 md:gap-2 px-4">
+			<div className="flex flex-col items-start gap-1 md:gap-2">
 				<GlobalGradientText text="My Projects" />
 				<p className="text-base md:text-lg  font-bold tracking-wide text-muted-foreground ">
-					Things I've worked on. 🛠️
+					Things I have worked on. 🛠️
 				</p>
 			</div>
-
-			<Separator className="my-8" />
+			<Separator className="my-4 md:my-6" />
 
 			<div className="flex flex-col gap-20">
 				{Projects.map((project) => {
@@ -85,12 +84,13 @@ function RouteComponent() {
 												<CarouselContent className="">
 													{project.images.map((image, index) => (
 														<CarouselItem key={image}>
-															<div className="aspect-auto overflow-hidden rounded-lg">
+															<div className="aspect-video overflow-hidden rounded-lg">
 																<img
 																	src={image}
 																	alt={`Slide ${index + 1}`}
 																	className="w-full h-full object-cover rounded-lg"
 																	loading="lazy"
+																	decoding="async"
 																/>
 															</div>
 														</CarouselItem>
@@ -160,7 +160,7 @@ function RouteComponent() {
 														variant="default"
 														size="icon-lg"
 													>
-														<SimpleIcon icon={siGithub} />
+														<SimpleIcon icon={siGithub} overrideColor="green" />
 													</Button>
 												</a>
 											)}
