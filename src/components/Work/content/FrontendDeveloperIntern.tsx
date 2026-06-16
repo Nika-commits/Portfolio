@@ -1,5 +1,5 @@
 import { siReact, siTanstack, siTypescript } from "simple-icons";
-import { SkillIcon } from "#/components/Home/Skills";
+import { SimpleIcon } from "#/components/Home/Skills";
 import UnderlineWrapper from "#/components/Home/UnderlineWrapper";
 import {
 	Accordion,
@@ -53,14 +53,14 @@ const { data: dashboardData } = useQuery({
 				<Separator className="my-4 md:my-6 " />
 				<div className="flex flex-wrap items-center gap-4">
 					<span className="flex gap-2 items-end ">
-						<SkillIcon icon={siTypescript} />
+						<SimpleIcon icon={siTypescript} />
 					</span>
 					<span className="flex gap-2 items-end ">
-						<SkillIcon icon={siReact} />
+						<SimpleIcon icon={siReact} />
 					</span>
 					<span className="flex gap-2 items-end  ">
 						<span className="bg-white p-0.5 rounded">
-							<SkillIcon icon={siTanstack} />
+							<SimpleIcon icon={siTanstack} />
 						</span>
 					</span>
 				</div>
@@ -102,9 +102,9 @@ const { data: dashboardData } = useQuery({
 									product.
 								</li>
 								<li>
-									Wired up form validation with React Hook Form and Zod, learning
-									how schema-level validation prevents bad data from ever
-									reaching the API.
+									Wired up form validation with React Hook Form and Zod,
+									learning how schema-level validation prevents bad data from
+									ever reaching the API.
 								</li>
 								<li>
 									Joined backend syncs to understand API contracts and give

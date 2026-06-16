@@ -5,7 +5,7 @@ import {
 	siTanstack,
 	siTypescript,
 } from "simple-icons";
-import { SkillIcon } from "#/components/Home/Skills";
+import { SimpleIcon } from "#/components/Home/Skills";
 import {
 	Accordion,
 	AccordionContent,
@@ -51,21 +51,21 @@ export default function FrontendDeveloper() {
 
 				<div className="flex flex-wrap items-center gap-4">
 					<span className="flex gap-2 items-end ">
-						<SkillIcon icon={siTypescript} />
+						<SimpleIcon icon={siTypescript} />
 					</span>
 					<span className="flex gap-2 items-end ">
-						<SkillIcon icon={siReact} />
+						<SimpleIcon icon={siReact} />
 					</span>
 					<span className="flex gap-2 items-end  ">
 						<span className="bg-white p-0.5 rounded">
-							<SkillIcon icon={siTanstack} />
+							<SimpleIcon icon={siTanstack} />
 						</span>
 					</span>
 					<span className="flex gap-2 items-end ">
-						<SkillIcon icon={siCypress} />
+						<SimpleIcon icon={siCypress} />
 					</span>
 					<span className="flex gap-2 items-end ">
-						<SkillIcon icon={siReacthookform} />
+						<SimpleIcon icon={siReacthookform} />
 					</span>
 				</div>
 				<Separator className="my-4 md:my-6 " />
