@@ -7,8 +7,16 @@ export const Route = createFileRoute("/blogs")({
 
 function RouteComponent() {
 	return (
-		<div className="pt-4 md:pt-6 lg:pt-8">
-			<GlobalGradientText text="My Blogs" />
+		<div>
+			<div className="pt-4 md:pt-6 lg:pt-8">
+				<GlobalGradientText text="My Blogs" />
+			</div>
+			<div className="py-6">
+				<span>
+					Will write some personal blog posts about my experiences in Software
+					Development and learnings soon ....
+				</span>
+			</div>
 		</div>
 	);
 }
