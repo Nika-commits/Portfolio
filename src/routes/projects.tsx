@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { BookOpenTextIcon, Globe } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
+import Markdown from "react-markdown";
 import { siGithub } from "simple-icons";
 import GlobalGradientText from "#/components/Global/GLobalGradientText";
 import { UnderlineLink } from "#/components/Global/UnderlineLink";
@@ -122,7 +123,6 @@ function RouteComponent() {
 										<a href={project.liveUrl} target="_blank" rel="noopener">
 											<Button type="button" variant="default" size="icon-lg">
 												<Globe />
-												{/*Live*/}
 											</Button>
 										</a>
 									)}
@@ -131,7 +131,6 @@ function RouteComponent() {
 										<a href={project.githubUrl} target="_blank" rel="noopener">
 											<Button type="button" variant="default" size="icon-lg">
 												<SimpleIcon icon={siGithub} />
-												{/*Github*/}
 											</Button>
 										</a>
 									)}
@@ -148,18 +147,14 @@ function RouteComponent() {
 					if (!open) setOpenReadMore(null);
 				}}
 			>
-				<DialogContent className="max-w-2xl! ">
-					<DialogHeader>
-						<DialogTitle>{openReadMore?.name}</DialogTitle>
-					</DialogHeader>
-					{/*<div className="prose prose-sm prose-neutral dark:prose-invert  pb-4 text-muted-foreground leading-relaxed">*/}
-					{/*<Markdown remarkPlugins={[remarkGfm]}>*/}
-						{openReadMore?.description}
-					{/*</Markdown>*/}
-					{/*</div>*/}
+				<DialogContent className="max-w-2xl! max-h-[90dvh] flex flex-col overflow-hidden">
+					<DialogHeader></DialogHeader>
+					<div className="prose prose-sm prose-neutral dark:prose-invert pb-4 leading-relaxed overflow-y-auto min-h-0 pr-2 md:pr-0 max-w-none">
+						<Markdown>{openReadMore?.description}</Markdown>
+					</div>
 					<DialogFooter>
 						<DialogClose asChild>
-							<Button variant="outline">Close</Button>
+							<Button variant="default">Close</Button>
 						</DialogClose>
 					</DialogFooter>
 				</DialogContent>
