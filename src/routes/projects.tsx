@@ -31,6 +31,7 @@ import {
 	DialogFooter,
 	DialogHeader,
 } from "#/components/ui/dialog";
+import { Separator } from "#/components/ui/separator";
 
 export const Route = createFileRoute("/projects")({
 	component: RouteComponent,
@@ -45,9 +46,11 @@ function RouteComponent() {
 				<p className="text-muted-foreground text-base">
 					Things I've worked on 🛠️
 				</p>
-			</div>
+            </div>
 
-			<div className="py-8 flex flex-col gap-20">
+            <Separator className="my-8" />
+
+			<div className="flex flex-col gap-20">
 				{Projects.map((project) => {
 					return (
 						<motion.div
