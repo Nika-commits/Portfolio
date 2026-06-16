@@ -3,7 +3,7 @@ import UnderlineWrapper from "./UnderlineWrapper";
 
 export default function QuickLinks() {
 	return (
-		<div className="flex flex-col md:flex-row items-start justify-between gap-x-2 gap-y-4">
+		<div className="flex flex-col md:flex-row items-start justify-between gap-x-2 gap-y-4 px-2">
 			<div className="flex items-center gap-2">
 				<GraduationCap size={18} className="shrink-0 text-primary" />
 				<UnderlineWrapper href="https://islington.edu.np/programmes/computing">
@@ -20,8 +20,8 @@ export default function QuickLinks() {
 
 			<div className="flex items-center gap-2">
 				<Mail size={18} className="shrink-0 text-primary" />
-				<UnderlineWrapper href="mailto:pranishchaulagain06@gmail.com">
-					pranishchaulagain06@gmail.com
+				<UnderlineWrapper href="mailto:itismepranish@gmail.com">
+					itismepranish@gmail.com
 				</UnderlineWrapper>
 			</div>
 		</div>
