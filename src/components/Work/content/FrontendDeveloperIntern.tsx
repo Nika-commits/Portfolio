@@ -24,7 +24,7 @@ const { data: dashboardData } = useQuery({
 			<div className="space-y-4">
 				<div className="space-y-3">
 					<h3 className="text-base md:text-base font-semibold">
-						Frontend Developer Intern —{" "}
+						Frontend Developer Intern -  {" "}
 						<UnderlineWrapper
 							href="https://restobrain.ai"
 							className="text-base md:text-lg font-bold "

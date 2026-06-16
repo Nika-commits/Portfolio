@@ -6,6 +6,7 @@ import {
 	siTypescript,
 } from "simple-icons";
 import { SimpleIcon } from "#/components/Home/Skills";
+import UnderlineWrapper from "#/components/Home/UnderlineWrapper";
 import {
 	Accordion,
 	AccordionContent,
@@ -21,7 +22,13 @@ export default function FrontendDeveloper() {
 			<div className="space-y-4">
 				<div className="space-y-2">
 					<h3 className="text-base md:text-lg font-semibold">
-						Frontend Developer — Resto Brain.ai
+						Frontend Developer -{" "}
+						<UnderlineWrapper
+							href="https://restobrain.ai"
+							className="text-base md:text-lg font-bold "
+						>
+							RestoBrain.ai
+						</UnderlineWrapper>
 					</h3>
 					<p className="text-muted-foreground text-xs md:text-sm">
 						After joining as an intern, I was offered a full time developer role
