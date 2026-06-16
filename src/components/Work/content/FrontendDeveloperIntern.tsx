@@ -38,18 +38,6 @@ const { data: dashboardData } = useQuery({
 						used by actual clients.
 					</p>
 				</div>
-				{/*<ul className="text-muted-foreground ml-2 list-inside list-disc space-y-3 text-xs md:text-sm">
-					<li>
-						Built reusable React + TypeScript components under senior review
-					</li>
-					<li>
-						Learned how TanStack Query caching works by eliminating redundant
-						API calls in a live dashboard
-					</li>
-					<li>
-						Wrote my first production Cypress tests covering real user workflows
-					</li>
-				</ul>*/}
 				<Separator className="my-4 md:my-6 " />
 				<div className="flex flex-wrap items-center gap-4">
 					<span className="flex gap-2 items-end ">

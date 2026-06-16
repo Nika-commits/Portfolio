@@ -13,6 +13,7 @@ export default function UnderlineWrapper({
 		<a
 			target="_blank"
 			href={href}
+			rel="noopener"
 			className={cn(
 				"relative cursor-pointer text-xs md:text-xs text-muted-foreground after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
 				className,

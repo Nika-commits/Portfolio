@@ -15,6 +15,7 @@ import {
 	siTypescript,
 	siVercel,
 } from "simple-icons";
+import { cn } from "#/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
@@ -61,15 +62,17 @@ const SKILL_DOMAINS = [
 export function SimpleIcon({
 	icon,
 	overrideColor,
+	className,
 }: {
 	icon: SimpleIcon;
 	overrideColor?: string;
+	className?: string;
 }) {
 	return (
 		<svg
 			role="img"
 			viewBox="0 0 24 24"
-			className="size-3 md:size-5 shrink-0"
+			className={cn("size-3 md:size-5 shrink-0", className)}
 			fill={overrideColor ?? `#${icon.hex}`}
 			aria-label={icon.title}
 		>

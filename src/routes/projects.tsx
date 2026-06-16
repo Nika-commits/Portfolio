@@ -1,10 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Github, Globe, Link } from "lucide-react";
+import { BookOpenTextIcon, Globe } from "lucide-react";
 import { motion } from "motion/react";
+import { useState } from "react";
+import { siGithub } from "simple-icons";
 import GlobalGradientText from "#/components/Global/GLobalGradientText";
 import { UnderlineLink } from "#/components/Global/UnderlineLink";
 import { SimpleIcon } from "#/components/Home/Skills";
-import { Projects } from "#/components/Projects/contents";
+import UnderlineWrapper from "#/components/Home/UnderlineWrapper";
+import { type ProjectContent, Projects } from "#/components/Projects/contents";
 import { Button } from "#/components/ui/button";
 import {
 	Card,
@@ -20,12 +23,21 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from "#/components/ui/carousel";
+import {
+	Dialog,
+	DialogClose,
+	DialogContent,
+	DialogFooter,
+	DialogHeader,
+	DialogTitle,
+} from "#/components/ui/dialog";
 
 export const Route = createFileRoute("/projects")({
 	component: RouteComponent,
 });
 
 function RouteComponent() {
+	const [openReadMore, setOpenReadMore] = useState<ProjectContent | null>(null);
 	return (
 		<>
 			<div className="pt-4 md:pt-6 lg:pt-8 flex flex-col items-start gap-1 md:gap-2 px-4">
@@ -73,11 +85,23 @@ function RouteComponent() {
 									</Carousel>
 								</div>
 								<div>
-									<p className="text-justify">{project.description}</p>
+									{/*<p className="text-justify">{project.description}</p>*/}
+									<span className="flex justify-end items-center mt-2">
+										<Button
+											type="button"
+											variant="ghost"
+											size="xs"
+											onClick={() => setOpenReadMore(project)}
+										>
+											<UnderlineWrapper className="flex  items-center gap-1 font-bold ">
+												Learn More <BookOpenTextIcon />
+											</UnderlineWrapper>
+										</Button>
+									</span>
 								</div>
 							</CardContent>
 							<CardFooter className="flex justify-between py-2">
-								<div className="flex flex-wrap gap-2 md:gap-4">
+								<div className="flex flex-wrap gap-2 md:gap-2">
 									{project.techStack.map((tech) => (
 										<span
 											key={tech.name}
@@ -96,18 +120,18 @@ function RouteComponent() {
 								<div className="flex gap-2">
 									{project.liveUrl && (
 										<a href={project.liveUrl} target="_blank" rel="noopener">
-											<Button>
+											<Button type="button" variant="default" size="icon-lg">
 												<Globe />
-												Live
+												{/*Live*/}
 											</Button>
 										</a>
 									)}
 
 									{project.githubUrl && (
 										<a href={project.githubUrl} target="_blank" rel="noopener">
-											<Button>
-												<Github />
-												Github
+											<Button type="button" variant="default" size="icon-lg">
+												<SimpleIcon icon={siGithub} />
+												{/*Github*/}
 											</Button>
 										</a>
 									)}
@@ -117,6 +141,29 @@ function RouteComponent() {
 					);
 				})}
 			</motion.div>
+
+			<Dialog
+				open={openReadMore !== null}
+				onOpenChange={(open) => {
+					if (!open) setOpenReadMore(null);
+				}}
+			>
+				<DialogContent className="max-w-2xl! ">
+					<DialogHeader>
+						<DialogTitle>{openReadMore?.name}</DialogTitle>
+					</DialogHeader>
+					{/*<div className="prose prose-sm prose-neutral dark:prose-invert  pb-4 text-muted-foreground leading-relaxed">*/}
+					{/*<Markdown remarkPlugins={[remarkGfm]}>*/}
+						{openReadMore?.description}
+					{/*</Markdown>*/}
+					{/*</div>*/}
+					<DialogFooter>
+						<DialogClose asChild>
+							<Button variant="outline">Close</Button>
+						</DialogClose>
+					</DialogFooter>
+				</DialogContent>
+			</Dialog>
 		</>
 	);
 }
