@@ -114,7 +114,7 @@ This project showcases enterprise application architecture, database design, API
 		description: `
 # Quizex
 
-A modern full-stack quiz platform that allows users to create, manage, and participate in quizzes while tracking their performance through real-time scoring and analytics. The application was designed to provide an engaging and interactive learning experience. This was actually my first full-stack project which I made while learning MERN stack. Now that I look back on it, it looks amateurish where i have used useEffect for almost everything but still this was a great learning experience for me.
+A quiz platform that allows admins (teachers) to create and manage quizzes, and allow users (students) to participate in these quizzes while tracking their performance through real-time scoring and analytics. The application was designed to provide an engaging and interactive learning experience. This was actually my first full-stack project which I made while learning MERN stack. Now that I look back on it, it looks amateurish where i have used useEffect for almost everything and used AI a lot but still this was a great learning experience for me.
 
 - Quiz and question set creation. (Admin Side)
 - User authentication and profile management. (User Side and Admin Side)

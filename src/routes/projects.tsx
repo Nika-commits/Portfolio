@@ -30,7 +30,6 @@ import {
 	DialogContent,
 	DialogFooter,
 	DialogHeader,
-	DialogTitle,
 } from "#/components/ui/dialog";
 
 export const Route = createFileRoute("/projects")({
@@ -40,7 +39,7 @@ export const Route = createFileRoute("/projects")({
 function RouteComponent() {
 	const [openReadMore, setOpenReadMore] = useState<ProjectContent | null>(null);
 	return (
-		<>
+		<div className="pb-50">
 			<div className="pt-4 md:pt-6 lg:pt-8 flex flex-col items-start gap-1 md:gap-2 px-4">
 				<GlobalGradientText text="My Projects" />
 				<p className="text-muted-foreground text-base">
@@ -48,98 +47,128 @@ function RouteComponent() {
 				</p>
 			</div>
 
-			<motion.div className="py-8 flex flex-col gap-6">
+			<div className="py-8 flex flex-col gap-20">
 				{Projects.map((project) => {
 					return (
-						<Card key={project.name}>
-							<CardHeader>
-								<CardTitle className="flex justify-between items-center">
-									<UnderlineLink to="/">
-										<span className="flex gap-4 items-center">
-											{project.name}
-										</span>
-									</UnderlineLink>
-								</CardTitle>
-							</CardHeader>
-							<CardContent className="flex flex-col space-y-4 px-6">
-								<div className="w-full">
-									<Carousel
-										className="relative w-full"
-										opts={{
-											align: "start",
-											loop: true,
-										}}
-									>
-										<CarouselContent className="">
-											{project.images.map((image, index) => (
-												<CarouselItem key={image}>
-													<img
-														src={image}
-														alt={`Slide ${index + 1}`}
-														className="w-full h-full object-cover rounded-lg"
-													/>
-												</CarouselItem>
+						<motion.div
+							className="snap-center flex items-center justify-center"
+							key={project.name}
+						>
+							<motion.div
+								initial={{ scale: 0.8, opacity: 0.6 }}
+								whileInView={{ scale: 1, opacity: 1 }}
+								transition={{ duration: 0.2, ease: "linear" }}
+								viewport={{ amount: 0.99 }}
+							>
+								<Card>
+									<CardHeader>
+										<CardTitle className="flex justify-between items-center">
+											<UnderlineLink to="/">
+												<span className="flex gap-4 items-center">
+													{project.name}
+												</span>
+											</UnderlineLink>
+										</CardTitle>
+									</CardHeader>
+									<CardContent className="flex flex-col space-y-4 px-6">
+										<div className="w-full">
+											<Carousel
+												className="relative w-full"
+												opts={{
+													align: "start",
+													loop: true,
+												}}
+											>
+												<CarouselContent className="">
+													{project.images.map((image, index) => (
+														<CarouselItem key={image}>
+															<div className="aspect-video overflow-hidden rounded-lg">
+																<img
+																	src={image}
+																	alt={`Slide ${index + 1}`}
+																	className="w-full h-full object-cover rounded-lg"
+																	loading="lazy"
+																/>
+															</div>
+														</CarouselItem>
+													))}
+												</CarouselContent>
+												<CarouselPrevious className="-left-4 z-99" />
+												<CarouselNext className="-right-4 z-99" />
+											</Carousel>
+										</div>
+										<div>
+											<span className="flex justify-end items-center mt-2">
+												<Button
+													type="button"
+													variant="ghost"
+													size="xs"
+													onClick={() => setOpenReadMore(project)}
+												>
+													<UnderlineWrapper className="flex  items-center gap-1 font-bold ">
+														Learn More <BookOpenTextIcon />
+													</UnderlineWrapper>
+												</Button>
+											</span>
+										</div>
+									</CardContent>
+									<CardFooter className="flex justify-between py-2">
+										<div className="flex flex-wrap gap-2 md:gap-2">
+											{project.techStack.map((tech) => (
+												<span
+													key={tech.name}
+													className="flex flex-col gap-2 items-center min-w-16"
+												>
+													<div className="bg-border rounded-lg p-1 md:p-2">
+														<SimpleIcon icon={tech.icon} />
+													</div>
+													<p className="text-[10px] md:text-xs text-muted-foreground break-word">
+														{tech.name}
+													</p>
+												</span>
 											))}
-										</CarouselContent>
-										<CarouselPrevious className="-left-4 z-99" />
-										<CarouselNext className="-right-4 z-99" />
-									</Carousel>
-								</div>
-								<div>
-									{/*<p className="text-justify">{project.description}</p>*/}
-									<span className="flex justify-end items-center mt-2">
-										<Button
-											type="button"
-											variant="ghost"
-											size="xs"
-											onClick={() => setOpenReadMore(project)}
-										>
-											<UnderlineWrapper className="flex  items-center gap-1 font-bold ">
-												Learn More <BookOpenTextIcon />
-											</UnderlineWrapper>
-										</Button>
-									</span>
-								</div>
-							</CardContent>
-							<CardFooter className="flex justify-between py-2">
-								<div className="flex flex-wrap gap-2 md:gap-2">
-									{project.techStack.map((tech) => (
-										<span
-											key={tech.name}
-											className="flex flex-col gap-2 items-center min-w-16"
-										>
-											<div className="bg-border rounded-lg p-1 md:p-2">
-												<SimpleIcon icon={tech.icon} />
-											</div>
-											<p className="text-[10px] md:text-xs text-muted-foreground break-word">
-												{tech.name}
-											</p>
-										</span>
-									))}
-								</div>
+										</div>
 
-								<div className="flex gap-2">
-									{project.liveUrl && (
-										<a href={project.liveUrl} target="_blank" rel="noopener">
-											<Button type="button" variant="default" size="icon-lg">
-												<Globe />
-											</Button>
-										</a>
-									)}
+										<div className="flex gap-2">
+											{project.liveUrl && (
+												<a
+													href={project.liveUrl}
+													target="_blank"
+													rel="noopener"
+												>
+													<Button
+														type="button"
+														variant="default"
+														size="icon-lg"
+													>
+														<Globe />
+													</Button>
+												</a>
+											)}
 
-									{project.githubUrl && (
-										<a href={project.githubUrl} target="_blank" rel="noopener">
-											<Button type="button" variant="default" size="icon-lg">
-												<SimpleIcon icon={siGithub} />
-											</Button>
-										</a>
-									)}
-								</div>
-							</CardFooter>
-						</Card>
+											{project.githubUrl && (
+												<a
+													href={project.githubUrl}
+													target="_blank"
+													rel="noopener"
+												>
+													<Button
+														type="button"
+														variant="default"
+														size="icon-lg"
+													>
+														<SimpleIcon icon={siGithub} />
+													</Button>
+												</a>
+											)}
+										</div>
+									</CardFooter>
+								</Card>
+							</motion.div>
+						</motion.div>
 					);
 				})}
-			</motion.div>
+			</div>
 
 			<Dialog
 				open={openReadMore !== null}
@@ -159,6 +188,6 @@ function RouteComponent() {
 					</DialogFooter>
 				</DialogContent>
 			</Dialog>
-		</>
+		</div>
 	);
 }
