@@ -16,8 +16,8 @@ function GradientText({
 	// gradient = "linear-gradient(90deg, #3b82f6 0%, #a855f7 20%, #ec4899 50%, #a855f7 80%, #3b82f6 100%)",
 	// gradient = "linear-gradient(90deg, #111111 0%, #c4c4c4 20%, #f2f2f2 50%, #b3b3b3 80%, #111111 100%)",
 	gradient = "var(--hero-gradient)",
-	neon = false,
-	transition = { duration: 50, repeat: Infinity, ease: "linear" },
+	neon = true,
+	transition = { duration: 24, repeat: Infinity, ease: "linear" },
 	...props
 }: GradientTextProps) {
 	const baseStyle: React.CSSProperties = {
@@ -51,7 +51,7 @@ function GradientText({
 						top: 0,
 						left: 0,
 						mixBlendMode: "plus-lighter",
-						filter: "blur(8px)",
+						filter: "blur(10px)",
 						...baseStyle,
 					}}
 					initial={{ backgroundPosition: "0% 0%" }}

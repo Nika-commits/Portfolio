@@ -11,6 +11,10 @@ function RouteComponent() {
 		<div>
 			<div className="pt-4 md:pt-6 lg:pt-8">
 				<GlobalGradientText text="My Blogs" />
+
+				<p className="text-base md:text-lg font-bold tracking-wide text-muted-foreground">
+					A Glimpse inside my head. 💭
+				</p>
 			</div>
 
 			<Separator className="my-8" />

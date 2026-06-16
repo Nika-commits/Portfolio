@@ -146,7 +146,7 @@ This project demonstrates full-stack web development, API integration, state man
 	},
 
 	{
-		name: "Custom Home Page",
+		name: "My Custom Home Page",
 		description: `
 # Custom Home Page
 

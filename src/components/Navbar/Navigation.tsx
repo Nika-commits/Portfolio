@@ -29,7 +29,7 @@ export default function Navigation() {
 					<UnderlineWrapper href="https://www.instagram.com/_pranisshh/">
 						<SimpleIcon
 							icon={siInstagram}
-							className="size-5 mt-px"
+							className="size-5 "
 							overrideColor="gray"
 						/>
 					</UnderlineWrapper>

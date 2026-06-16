@@ -15,17 +15,14 @@ export default function Introduction() {
 					className="text-foreground font-medium text-sm md:text-base leading-relaxed "
 					// rel="noopener"
 				>
-					RestoBrain.ai
+					restobrain.ai
 				</UnderlineWrapper>
-				, where I mainly work on data-driven admin dashboards using Tanstack
-				React and TypeScript. In my work, I care about following clean
-				architecture and writing code that's easy to reason about, simple and
-				performs well without any bloat.
+				, where I mainly work with Tanstack React and TypeScript.
 			</p>
 
 			<p className="text-sm md:text-base leading-relaxed text-muted-foreground">
-				My primary tech stack is TypeScript, and Next.js. On the backend I've
-				shipped with Node.js, FastAPI, ASP.NET and Supabase. Outside of work I'm
+				My primary language is TypeScript. On the backend I've shipped with
+				Node.js, FastAPI, ASP.NET and Supabase. Outside of work I am really
 				digging into system design, Go, and backend architectures. Open to
 				backend internships and or full-time roles.
 			</p>

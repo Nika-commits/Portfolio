@@ -34,8 +34,7 @@ const { data: dashboardData } = useQuery({
 					</h3>
 					<p className="text-muted-foreground text-xs md:text-sm">
 						My first industry role. Joined as a frontend intern and worked with
-						the frontend team, shipping real features to a data-driven dashboard
-						used by actual clients.
+						the frontend team, to build Dashboard UIs.
 					</p>
 				</div>
 				<Separator className="my-4 md:my-6 " />
@@ -59,9 +58,10 @@ const { data: dashboardData } = useQuery({
 				<CopyCode code={codeExample} />
 				<p className="text-muted-foreground text-xs py-2">
 					This was one of the first real patterns I had to understand on the
-					job. Keying queries to specific client IDs and configuring stale times
-					was how we stopped the dashboard from hammering the API on every
-					render.
+					job. I had never used Tanstack Query before, so I had to learn it from
+					scratch. Keying queries to specific ID and configuring stale times was
+					how I learned to cache the API data and stop the frontend from
+					hammering the API on every render.
 				</p>
 				<Accordion
 					type="single"
@@ -89,15 +89,7 @@ const { data: dashboardData } = useQuery({
 									calls — my first exposure to server state management in a real
 									product.
 								</li>
-								<li>
-									Wired up form validation with React Hook Form and Zod,
-									learning how schema-level validation prevents bad data from
-									ever reaching the API.
-								</li>
-								<li>
-									Joined backend syncs to understand API contracts and give
-									frontend feedback on response shapes.
-								</li>
+								<li>Wired up form validation with React Hook Form and Zod,</li>
 								<li>
 									Wrote Cypress tests for dashboard workflows — my introduction
 									to E2E testing in a production environment.
@@ -119,16 +111,13 @@ const { data: dashboardData } = useQuery({
 							<ul className="text-muted-foreground list-inside list-disc space-y-3 text-xs md:text-sm">
 								<li>
 									How to read and contribute to an existing codebase without
-									breaking things — the skill no tutorial teaches you.
+									breaking things.
 								</li>
 								<li>
 									That server state and client state are genuinely different
 									problems, and why a dedicated tool like TanStack Query exists.
 								</li>
-								<li>
-									How API contracts affect frontend code — and why frontend
-									engineers need a seat at that table.
-								</li>
+								<li>How API contracts affect frontend design</li>
 								<li>
 									What it actually means to write a test that will still pass
 									after the next UI change.

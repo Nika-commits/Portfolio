@@ -29,7 +29,7 @@ function RouteComponent() {
 			<div>
 				<div className="pt-4 md:pt-6 lg:pt-8 flex flex-col items-start gap-1 md:gap-2 px-4">
 					<GlobalGradientText text="My Work Experiences" />
-					<p className="text-muted-foreground text-base">
+					<p className="text-base lg:text-lg font-bold tracking-wide text-muted-foreground">
 						I am relatively new to the industry with around 1 year of
 						experience. 🌱
 					</p>
@@ -46,7 +46,7 @@ function RouteComponent() {
 export const releases: Timeline[] = [
 	{
 		version: "Latest Job",
-		date: "February 9, 2025",
+		date: "February 9, 2026",
 		content: <FrontendDeveloper />,
 	},
 	{

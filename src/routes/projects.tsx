@@ -43,12 +43,12 @@ function RouteComponent() {
 		<div className="pb-50">
 			<div className="pt-4 md:pt-6 lg:pt-8 flex flex-col items-start gap-1 md:gap-2 px-4">
 				<GlobalGradientText text="My Projects" />
-				<p className="text-muted-foreground text-base">
-					Things I've worked on 🛠️
+				<p className="text-base md:text-lg  font-bold tracking-wide text-muted-foreground ">
+					Things I've worked on. 🛠️
 				</p>
-            </div>
+			</div>
 
-            <Separator className="my-8" />
+			<Separator className="my-8" />
 
 			<div className="flex flex-col gap-20">
 				{Projects.map((project) => {

@@ -36,10 +36,7 @@ export default function FrontendDeveloper() {
 						Responsibilities expanded to :
 					</p>
 					<ul className="text-muted-foreground ml-2 list-inside list-disc space-y-3 text-xs md:text-sm">
-						<li>
-							Owning the component architecture end-to-end, not just
-							implementing tickets
-						</li>
+						<li>Owning the component architecture end-to-end</li>
 						<li>
 							Driving API contract decisions with the backend team directly
 						</li>
@@ -110,11 +107,15 @@ export default function FrontendDeveloper() {
 							<ul className="text-muted-foreground list-inside list-disc space-y-3 text-xs md:text-sm">
 								<li>
 									Built and maintained scalable, reusable React + TypeScript
-									components for a production dashboard.
+									components for the production dashboard.
 								</li>
 								<li>
 									Eliminated redundant API calls using TanStack Query cache key
 									strategies and stale time configuration.
+								</li>
+								<li>
+									Worked on new routes and pages - combined Tanstack Router with
+									Tanstack Query
 								</li>
 								<li>
 									Enforced schema-level form validation with React Hook Form +
@@ -144,13 +145,10 @@ export default function FrontendDeveloper() {
 						<AccordionContent className="text-muted-foreground">
 							<ul className="text-muted-foreground list-inside list-disc space-y-3 text-xs md:text-sm">
 								<li>
-									How to structure a component library that stays maintainable
-									as the product grows, not just one that works today.
+									How to structure a frontend that stays maintainable as the
+									product grows.
 								</li>
-								<li>
-									That API contract clarity is a frontend problem too — vague
-									contracts produce bugs that look like frontend issues.
-								</li>
+								<li>That API contract clarity is a frontend problem too.</li>
 								<li>
 									Real caching tradeoffs: stale time, cache invalidation, and
 									when optimistic updates hurt more than they help.
