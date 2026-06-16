@@ -85,7 +85,7 @@ function RouteComponent() {
 												<CarouselContent className="">
 													{project.images.map((image, index) => (
 														<CarouselItem key={image}>
-															<div className="aspect-video overflow-hidden rounded-lg">
+															<div className="aspect-auto overflow-hidden rounded-lg">
 																<img
 																	src={image}
 																	alt={`Slide ${index + 1}`}
