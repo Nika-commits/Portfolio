@@ -37,17 +37,17 @@ export const Projects: ProjectContent[] = [
 		description: `
 # Tap WholeSale AI
 
-An AI-powered wholesale ecommerce platform built to help small and medium-sized clothing retailers digitize their operations and manage their business more efficiently. The platform combines traditional ecommerce functionality with intelligent business tools that help store owners make data-driven decisions.
+An AI-powered wholesale ecommerce platform built to help small and medium-sized clothing retailers digitize their wholesale purchases and manage their business more efficiently. The platform combines traditional ecommerce functionality with intelligent business tools that help store owners make data-driven decisions.
 
 ## Features
 
-- Secure authentication and role-based access control.
+- Secure authentication and role-based access control (I used Supabase Auth for this).
 - Product, catalogue, and inventory management.
-- Shopping cart and checkout workflows.
-- Order and customer management.
-- Administrative analytics dashboard.
-- AI-powered product recommendation engine.
-- Sales demand forecasting using historical sales data.
+- Shopping cart and checkout workflows (Esewa and Khalti Integrations).
+- Order and customer management (Admin Side).
+- Administrative analytics dashboard (Admin Side).
+- AI-powered product recommendation engine (Uses IF-IDF and SVD algorithms).
+- Sales demand forecasting using historical sales data (Uses LightGBM Model).
 
 ## Technical Highlights
 
@@ -78,19 +78,17 @@ This project demonstrates full-stack development, cloud deployment, containeriza
 		description: `
 # Nep Auto
 
-A full-stack automotive ecommerce platform designed to simplify the buying and selling of vehicle parts through a centralized digital marketplace. The system provides customers with an intuitive shopping experience while offering business owners powerful inventory and sales management tools.
+A full-stack automotive vehicle and parts inventory management platform designed to simplify the buying and selling of vehicle parts through a centralized digital marketplace. The system provides customers with an intuitive shopping experience while offering business owners powerful inventory and sales management tools This was my college coursework project I did with my group.
 
-- User authentication and account management.
+- User authentication and account management (Uses Identity Framework).
 - Automotive parts catalogue and search functionality.
-- Shopping cart and checkout system.
 - Inventory and product management dashboard.
 - Sales tracking and reporting.
-- Recommendation system for related products.
-- Forecasting tools for inventory planning.
+- Sales and Purchase Invoice generation. (Uses QuestPDF)
 
 ## Technical Highlights
 
-Built using TanStack technologies, ASP.NET, PostgreSQL, and Docker, the application follows modern full-stack development practices with a focus on scalability, maintainability, and performance.
+Built using TanStack in Frontend, ASP.NET, PostgreSQL, and Docker, the application follows modern full-stack development practices with a focus on scalability, maintainability, and performance.
 
 ## Outcome
 
@@ -116,10 +114,10 @@ This project showcases enterprise application architecture, database design, API
 		description: `
 # Quizex
 
-A modern full-stack quiz platform that allows users to create, manage, and participate in quizzes while tracking their performance through real-time scoring and analytics. The application was designed to provide an engaging and interactive learning experience.
+A modern full-stack quiz platform that allows users to create, manage, and participate in quizzes while tracking their performance through real-time scoring and analytics. The application was designed to provide an engaging and interactive learning experience. This was actually my first full-stack project which I made while learning MERN stack. Now that I look back on it, it looks amateurish where i have used useEffect for almost everything but still this was a great learning experience for me.
 
-- Quiz and question set creation.
-- User authentication and profile management.
+- Quiz and question set creation. (Admin Side)
+- User authentication and profile management. (User Side and Admin Side)
 - Real-time quiz scoring.
 - Leaderboards and rankings.
 - Detailed performance analytics.
@@ -152,12 +150,12 @@ This project demonstrates full-stack web development, API integration, state man
 		description: `
 # Custom Home Page
 
-A customizable browser new-tab page created to provide a cleaner and more productive browsing experience. The project was inspired by the limitations of traditional browser shortcut systems and focuses on flexibility and ease of use.
+A customizable browser new-tab page created to provide a cleaner and more productive browsing experience. I made this simple project as default chrome new-tab page had very limited shortcuts and I wanted more flexibility. I also added some neat personal utilities for myself.
 
 - Infinite customizable shortcuts.
 - Drag-and-drop shortcut organization.
 - Local storage persistence.
-- Integrated search functionality.
+- Integrated search functionality. (Uses Google Search API)
 - Responsive and minimal user interface.
 - Shortcut creation, editing, and deletion.
 
@@ -184,7 +182,7 @@ This project highlights frontend development skills, user experience design, dra
 		description: `
 # My Journal
 
-A cross-platform journaling application built with .NET MAUI Blazor Hybrid that allows users to create, organize, and manage personal journal entries across multiple devices through a single shared codebase.
+A cross-platform journaling application built with .NET MAUI Blazor Hybrid that allows users to create, organize, and manage personal journal entries across multiple devices through a single shared codebase. This was another college coursework project. Blazor is quite a niche technology but I had fun using it.
 
 - Rich journal writing experience.
 - Calendar-based navigation.
