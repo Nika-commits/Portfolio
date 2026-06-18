@@ -9,7 +9,7 @@ import { Separator } from "#/components/ui/separator";
 export const Route = createFileRoute("/blogs/$blogId")({
 	component: RouteComponent,
 	loader: ({ params }) => {
-		const blog = allPosts.find((post) => post._meta.fileName === params.blogId);
+		const blog = allPosts.find((post) => post.slug === params.blogId);
 		return blog;
 	},
 });

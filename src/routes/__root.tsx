@@ -12,6 +12,7 @@ import { Button } from "#/components/ui/button";
 import { Separator } from "#/components/ui/separator";
 import { TooltipProvider } from "#/components/ui/tooltip";
 import appCss from "../styles.css?url";
+import "highlight.js/styles/github-dark.css";
 
 export const Route = createRootRoute({
 	head: () => ({
@@ -29,7 +30,7 @@ export const Route = createRootRoute({
 			{
 				name: "description",
 				content:
-					"Portfolio of Pranish Chaulagain, a software developer specializing in React, TypeScript, Java, Python, and modern web applications.",
+					"Portfolio of Pranish Chaulagain, a software engineer specializing in React, TypeScript, ASP.NET, Python, and modern web applications.",
 			},
 			{
 				name: "keywords",

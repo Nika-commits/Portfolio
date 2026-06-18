@@ -1,6 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypeRaw from "rehype-raw";
+import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 
@@ -15,8 +15,8 @@ export function Markdown({ content, className }: MarkdownProps) {
 			<ReactMarkdown
 				remarkPlugins={[remarkGfm]}
 				rehypePlugins={[
-					rehypeRaw,
 					rehypeSlug,
+					rehypeHighlight,
 					[
 						rehypeAutolinkHeadings,
 						{ behavior: "wrap", properties: { className: ["anchor"] } },

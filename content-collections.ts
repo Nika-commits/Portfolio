@@ -1,29 +1,32 @@
 import { defineCollection, defineConfig } from "@content-collections/core";
-import { compileMDX } from "@content-collections/mdx";
+import { compileMarkdown } from "@content-collections/markdown";
 import { z } from "zod";
 
-// for more information on configuration, visit:
-// https://www.content-collections.dev/docs/configuration
 
-const posts = defineCollection({
-  name: "posts",
-  directory: "content/posts",
-  include: "*.mdx",
-  schema: z.object({
-    title: z.string(),
-    summary: z.string(),
-    date: z.coerce.date(),
-    author: z.string(),
-  }),
+const blogSchema = z.object({
+  title: z.string(),
+  summary: z.string(),
+  date: z.coerce.date(),
+  author: z.string(),
+  readingTime: z.number().optional(),
+})
+
+const blogs = defineCollection({
+  name: 'posts',
+  directory: 'content/posts',
+  include: '*.md',
+  schema: blogSchema,
   transform: async (document, context) => {
-    const mdx = await compileMDX(context, document);
+    const html = await compileMarkdown(context, document)
     return {
       ...document,
-      mdx,
-    };
+      slug: document._meta.fileName,
+      author: document.author,
+      html,
+    }
   },
-});
+})
 
 export default defineConfig({
-  collections: [posts],
+  collections: [blogs],
 });

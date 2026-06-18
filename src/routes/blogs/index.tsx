@@ -32,7 +32,7 @@ function RouteComponent() {
 						key={post._meta.fileName}
 						to="/blogs/$blogId"
 						params={{
-							blogId: post._meta.fileName,
+							blogId: post.slug,
 						}}
 					>
 						<Card key={post._meta.fileName}>
