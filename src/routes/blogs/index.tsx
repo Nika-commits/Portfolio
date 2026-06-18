@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import GlobalGradientText from "#/components/Global/GLobalGradientText";
 import { Separator } from "#/components/ui/separator";
 
-export const Route = createFileRoute("/blogs")({
+export const Route = createFileRoute("/blogs/")({
 	component: RouteComponent,
 });
 

@@ -8,14 +8,12 @@ export default function Navigation() {
 	return (
 		<nav className="grid grid-cols-8 items-center py-4 sticky top-0 z-50">
 			<div className="col-span-2 flex justify-start items-center">
-				<div className="social-links grid grid-cols-3 gap-5 ">
-					<UnderlineWrapper href="https://www.linkedin.com/in/pranish-chaulagain-0a4833300/">
-						<img
-							src="./Icons/linkedin.svg"
-							alt="LinkedIn"
-							height={20}
-							width={20}
-						/>
+				<div className="social-links grid grid-cols-3 gap-4 place-items-center ">
+					<UnderlineWrapper
+						href="https://www.linkedin.com/in/pranish-chaulagain-0a4833300/"
+						className="text-xl md:text-xl font-extrabold"
+					>
+						in
 					</UnderlineWrapper>
 
 					<UnderlineWrapper href="https://github.com/Nika-commits/">

@@ -1,3 +1,4 @@
+import contentCollections from "@content-collections/vite";
 import babelPlugin from "@rolldown/plugin-babel";
 import tailwindcss from "@tailwindcss/vite";
 import { devtools } from "@tanstack/devtools-vite";
@@ -9,24 +10,18 @@ import { defineConfig } from "vite";
 
 const config = defineConfig({
 	resolve: { tsconfigPaths: true },
-	plugins: [
-		devtools(),
-		tailwindcss(),
-		tanstackStart({
-			prerender: {
-				enabled: true,
-				crawlLinks: true,
-			},
-			sitemap: {
-				enabled: true,
-				host: "https://pranishc.com.np",
-			},
-		}),
-		viteReact(),
-		babelPlugin({
-			presets: [reactCompilerPreset()],
-		}),
-	],
+	plugins: [devtools(), tailwindcss(), tanstackStart({
+        prerender: {
+            enabled: true,
+            crawlLinks: true,
+        },
+        sitemap: {
+            enabled: true,
+            host: "https://pranishc.com.np",
+        },
+    }), viteReact(), babelPlugin({
+        presets: [reactCompilerPreset()],
+    }), contentCollections()],
 });
 
 export default config;

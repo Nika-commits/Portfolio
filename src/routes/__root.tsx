@@ -87,7 +87,7 @@ function RootDocument() {
 			</head>
 			<body className="relative min-h-screen antialiased transition-colors duration-200 ease-linear scroll-smooth">
 				{/*<BackgroundGradients />*/}
-				<main className="container mx-auto max-w-2xl px-6 pb-18">
+				<main className="container mx-auto max-w-2xl px-6 pb-18 pt-2">
 					<Navigation />
 					<Separator className="my-4 md:my-6" />
 					<div style={{ viewTransitionName: "main-content" }}>
