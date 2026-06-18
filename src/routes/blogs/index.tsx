@@ -26,35 +26,43 @@ function RouteComponent() {
 
 			<Separator className="my-4 md:my-6" />
 
-			<div className="flex flex-col space-y-8">
-				{allPosts.map((post) => (
-					<Link
-						key={post._meta.fileName}
-						to="/blogs/$blogId"
-						params={{
-							blogId: post.slug,
-						}}
-					>
-						<Card key={post._meta.fileName}>
-							<CardHeader>
-								<CardTitle className="flex items-center gap-14">
-									<span className="flex-1">{post.title}</span>
-									<div className="text-sm shrink-0 text-muted-foreground flex justify-end">
-										<span className="">
-											{post.date.toLocaleDateString("en-us", {
-												year: "numeric",
-												month: "short",
-												day: "numeric",
-											})}
-										</span>
-									</div>
-								</CardTitle>
-								<CardDescription>{post.summary}</CardDescription>
-							</CardHeader>
-						</Card>
-					</Link>
-				))}
-			</div>
+			{allPosts.length === 0 ? (
+				<div className="flex justify-center items-center p-6 border border-dashed border-secondary rounded">
+					<h3 className="font-bold text-2xl text-muted-foreground">
+						No Blogs Yet
+					</h3>
+				</div>
+			) : (
+				<div className="flex flex-col space-y-8">
+					{allPosts.map((post) => (
+						<Link
+							key={post._meta.fileName}
+							to="/blogs/$blogId"
+							params={{
+								blogId: post.slug,
+							}}
+						>
+							<Card key={post._meta.fileName}>
+								<CardHeader>
+									<CardTitle className="flex items-center gap-14">
+										<span className="flex-1">{post.title}</span>
+										<div className="text-sm shrink-0 text-muted-foreground flex justify-end">
+											<span className="">
+												{post.date.toLocaleDateString("en-us", {
+													year: "numeric",
+													month: "short",
+													day: "numeric",
+												})}
+											</span>
+										</div>
+									</CardTitle>
+									<CardDescription>{post.summary}</CardDescription>
+								</CardHeader>
+							</Card>
+						</Link>
+					))}
+				</div>
+			)}
 		</div>
 	);
 }
