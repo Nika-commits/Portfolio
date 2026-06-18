@@ -1,0 +1,300 @@
+---
+
+title: Hello Wor
+description: A showcase of rich MDX features
+date: 2026-08-18
+author: Pranish Chaulagain
+readingTime: 8
+tags:
+
+* mdx
+* react
+* typescript
+* portfolio
+
+---
+
+![Hero Image](/Icons/linkedin.svg)
+
+# Advanced MDX Demo
+
+Welcome to this **rich MDX document**. This page demonstrates various Markdown and MDX capabilities that you can use in your blog.
+
+---
+
+## Typography
+
+This is regular text.
+
+This is **bold text**.
+
+This is *italic text*.
+
+This is ~~strikethrough text~~.
+
+This is `inline code`.
+
+You can also combine **bold with `inline code`**.
+
+---
+
+## Blockquote
+
+> MDX combines the simplicity of Markdown with the power of React.
+
+> You can write content and embed components directly into your documents.
+
+---
+
+## Lists
+
+### Unordered List
+
+* React
+* TypeScript
+* TanStack Router
+* Tailwind CSS
+
+### Ordered List
+
+1. Install dependencies
+2. Configure MDX
+3. Create content
+4. Deploy website
+
+### Task List
+
+* [x] Setup project
+* [x] Configure routing
+* [x] Create blog page
+* [ ] Add search functionality
+* [ ] Add comments
+
+---
+
+## Links
+
+Visit my portfolio:
+
+[Portfolio](https://example.com)
+
+Visit GitHub:
+
+[GitHub](https://github.com)
+
+---
+
+## Table
+
+| Technology | Type     | Difficulty |
+| ---------- | -------- | ---------- |
+| React      | Frontend | Medium     |
+| TypeScript | Language | Medium     |
+| Node.js    | Backend  | Easy       |
+| Docker     | DevOps   | Hard       |
+
+---
+
+## Horizontal Rule
+
+---
+
+## JavaScript Example
+
+```javascript
+function greet(name) {
+  return `Hello ${name}!`;
+}
+
+console.log(greet("Pranish"));
+```
+
+---
+
+## TypeScript Example
+
+```typescript
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+const user: User = {
+  id: 1,
+  name: "Pranish",
+  email: "pranish@example.com",
+};
+
+console.log(user);
+```
+
+---
+
+## React Component Example
+
+```tsx
+type ButtonProps = {
+  children: React.ReactNode;
+};
+
+export function Button({ children }: ButtonProps) {
+  return (
+    <button className="rounded-md bg-black px-4 py-2 text-white">
+      {children}
+    </button>
+  );
+}
+```
+
+---
+
+## JSON Example
+
+```json
+{
+  "name": "portfolio",
+  "framework": "react",
+  "language": "typescript",
+  "styling": "tailwindcss"
+}
+```
+
+---
+
+## Bash Example
+
+```bash
+pnpm install
+
+pnpm dev
+
+pnpm build
+```
+
+---
+
+## CSS Example
+
+```css
+.gradient-text {
+  background: linear-gradient(
+    to right,
+    #3b82f6,
+    #8b5cf6
+  );
+
+  -webkit-background-clip: text;
+  color: transparent;
+}
+```
+
+---
+
+## HTML Example
+
+```html
+<div class="card">
+  <h2>Hello World</h2>
+  <p>This is a card component.</p>
+</div>
+```
+
+---
+
+## Nested Lists
+
+* Frontend
+
+  * React
+  * Vue
+  * Svelte
+* Backend
+
+  * Node.js
+  * Express
+  * NestJS
+
+---
+
+## Image Gallery
+
+![LinkedIn](/Icons/linkedin.svg)
+
+![LinkedIn](/Icons/linkedin.svg)
+
+![LinkedIn](/Icons/linkedin.svg)
+
+---
+
+## Raw HTML
+
+<div style="padding:16px;border:1px solid gray;border-radius:8px;">
+  This is raw HTML rendered inside MDX.
+</div>
+
+---
+
+## Code Diff
+
+```diff
+- const name = "John";
++ const name = "Pranish";
+
+- console.log("Old");
++ console.log("New");
+```
+
+---
+
+## Long Code Example
+
+```tsx
+import { useState } from "react";
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <h2>Count: {count}</h2>
+
+      <button
+        onClick={() => setCount((prev) => prev + 1)}
+      >
+        Increment
+      </button>
+    </div>
+  );
+}
+```
+
+---
+
+## MDX Component Test
+
+If your MDX setup supports React components, place a component below:
+
+<GlobalGradientText text="Hello from MDX 🚀" />
+
+---
+
+## Conclusion
+
+Congratulations! 🎉
+
+If everything renders correctly, your MDX setup supports:
+
+* Frontmatter
+* Images
+* Links
+* Tables
+* Code blocks
+* Syntax highlighting
+* Raw HTML
+* React components
+* Nested lists
+* Blockquotes
+* Task lists
+
+Your MDX pipeline is working correctly.
