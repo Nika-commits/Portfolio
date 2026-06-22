@@ -73,12 +73,7 @@ export default function FrontendDeveloper() {
 					</span>
 				</div>
 				<Separator className="my-4 md:my-6 " />
-				<Accordion
-					type="single"
-					className="w-full border"
-					defaultValue="what-i-did"
-					collapsible
-				>
+				<Accordion type="single" className="w-full border" collapsible>
 					<AccordionItem value="screenshots" className="bg-transparent">
 						<AccordionTrigger className="hover:no-underline [&>svg]:size-6!">
 							<Badge className="h-6 rounded-sm" variant={"default"}>

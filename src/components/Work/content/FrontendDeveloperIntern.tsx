@@ -24,7 +24,7 @@ const { data: dashboardData } = useQuery({
 			<div className="space-y-4">
 				<div className="space-y-3">
 					<h3 className="text-base md:text-base font-semibold">
-						Frontend Developer Intern -  {" "}
+						Frontend Developer Intern -{" "}
 						<UnderlineWrapper
 							href="https://restobrain.ai"
 							className="text-base md:text-lg font-bold "
@@ -63,12 +63,7 @@ const { data: dashboardData } = useQuery({
 					how I learned to cache the API data and stop the frontend from
 					hammering the API on every render.
 				</p>
-				<Accordion
-					type="single"
-					className="p-2 w-full border"
-					defaultValue="what-i-did"
-					collapsible
-				>
+				<Accordion type="single" className="p-2 w-full border" collapsible>
 					<AccordionItem
 						value="what-i-did"
 						className="bg-transparent border-b last:border-b-0"
