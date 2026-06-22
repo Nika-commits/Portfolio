@@ -174,7 +174,7 @@ function RouteComponent() {
 					if (!open) setOpenReadMore(null);
 				}}
 			>
-				<DialogContent className="max-w-2xl! max-h-[90dvh] flex flex-col overflow-hidden">
+				<DialogContent className="md:max-w-2xl! max-h-[90dvh] flex flex-col overflow-hidden">
 					<DialogHeader></DialogHeader>
 					<div className="prose prose-sm prose-neutral dark:prose-invert pb-4 leading-relaxed overflow-y-auto min-h-0 pr-2 md:pr-0 max-w-none">
 						<Markdown>{openReadMore?.description}</Markdown>
