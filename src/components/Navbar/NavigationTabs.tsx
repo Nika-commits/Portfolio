@@ -1,4 +1,3 @@
-"use client";
 import { useLocation, useNavigate } from "@tanstack/react-router";
 import {
 	BriefcaseIcon,
@@ -35,7 +34,7 @@ export default function NavigationTabs() {
 	const { pathname } = useLocation();
 
 	return (
-		<div className="flex fixed items-center justify-center bottom-[2dvh] lg:static myNav">
+		<div className="flex fixed items-center justify-center bottom-[2dvh] lg:static ">
 			<Tabs
 				value={pathname}
 				className="w-full bg-background border-2 border-primary/30 rounded-3xl"

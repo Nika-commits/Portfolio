@@ -6,7 +6,7 @@ import { ThemeToggle } from "./ThemeToggle";
 
 export default function Navigation() {
 	return (
-		<nav className="grid grid-cols-8 items-center py-4 sticky top-0 z-50">
+		<nav className="grid grid-cols-8 items-center py-4 sticky top-0 z-50 myNav">
 			<div className="col-span-2 flex justify-start items-center">
 				<div className="social-links grid grid-cols-3 gap-4 place-items-center ">
 					<UnderlineWrapper
