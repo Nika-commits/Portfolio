@@ -20,11 +20,11 @@ export default function WorkTimeLine({ timelines }: ChangelogContentProps) {
 					id={String(index + 1)}
 					className="relative flex scroll-mt-18 justify-end gap-2"
 				>
-					<div className="sticky top-19 flex w-36 flex-col items-end gap-2 self-start pb-4 max-md:hidden">
-						<Badge className="flex size-6 w-auto justify-end rounded-sm text-sm font-medium">
+					<div className="sticky top-19 flex w-46 flex-col items-end gap-2 self-start pb-4 max-md:hidden">
+						<Badge className="flex size-6 w-auto justify-end rounded text-sm font-medium">
 							{timeline.version}
 						</Badge>
-						<div className="text-muted-foreground text-right text-sm font-medium">
+						<div className="text-muted-foreground text-left text-sm font-medium">
 							{timeline.date}
 						</div>
 					</div>

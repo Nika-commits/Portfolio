@@ -18,7 +18,7 @@ export const MyName = () => {
 				<GlobalGradientText text="Pranish Chaulagain" />
 				<span className="flex justify-start">
 					<TypingText
-						className="text-base md:text-lg font-bold tracking-wide text-muted-foreground "
+						className="text-base md:text-lg font-bold tracking-normal text-muted-foreground "
 						text={texts}
 						loop
 					>

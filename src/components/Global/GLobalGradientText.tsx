@@ -12,7 +12,7 @@ export default function GlobalGradientText({
 	return (
 		<GradientText
 			className={cn(
-				"text-2xl md:text-3xl lg:text-4xl text-left font-extrabold tracking-normal",
+				"text-xl md:text-2xl lg:text-3xl text-left font-extrabold tracking-normal",
 				className,
 			)}
 			// gradient="var(--gradient-primary)"

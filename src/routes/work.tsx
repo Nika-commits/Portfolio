@@ -16,9 +16,9 @@ function RouteComponent() {
 		<div>
 			<div className="flex flex-col items-start gap-1 md:gap-2">
 				<GlobalGradientText text="My Work Experiences" />
-				<p className="text-base lg:text-lg font-bold tracking-wide text-muted-foreground">
-					I am relatively new to the industry with around 1 year of experience.
-					🌱
+				<p className="text-base lg:text-lg font-bold tracking-normal text-muted-foreground">
+					My journey from frontend development to full-stack engineering and
+					native Android.
 				</p>
 			</div>
 
@@ -31,18 +31,18 @@ function RouteComponent() {
 
 export const releases: Timeline[] = [
 	{
-		version: "Recent Job",
-		date: "July 1, 2026",
+		version: "eSewa",
+		date: "Jul 1, 2026 - Present",
 		content: <AndroidDeveloperIntern />,
 	},
 	{
-		version: "Latest Job",
-		date: "February 9, 2026",
+		version: "Resto Brain",
+		date: "Feb 9, 2026 - Present",
 		content: <FrontendDeveloper />,
 	},
 	{
-		version: "First Job",
-		date: "September 7, 2025",
+		version: "Resto Brain",
+		date: "Sep 7, 2025 - Jan 7, 2026",
 		content: <FrontendDeveloperIntern />,
 	},
 ];

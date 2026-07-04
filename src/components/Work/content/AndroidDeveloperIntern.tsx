@@ -1,6 +1,8 @@
 import {
 	siAndroid,
 	siAndroidstudio,
+	siGradio,
+	siGradle,
 	siJetpackcompose,
 	siKotlin,
 	siXml,
@@ -40,7 +42,7 @@ export default function AndroidDeveloperIntern() {
 						<SimpleIcon icon={siAndroid} />
 					</span>
 					<span className="flex gap-2 items-end  ">
-						<span className="bg-white p-0.5 rounded">
+						<span className=" p-0.5 rounded">
 							<SimpleIcon icon={siJetpackcompose} />
 						</span>
 					</span>
@@ -49,6 +51,9 @@ export default function AndroidDeveloperIntern() {
 					</span>
 					<span className="flex gap-2 items-end ">
 						<SimpleIcon icon={siAndroidstudio} />
+                    </span>
+					<span className="flex gap-2 items-end ">
+						<SimpleIcon icon={siGradle} />
 					</span>
 				</div>
 				<Separator className="my-4 md:my-6 " />
@@ -87,28 +92,29 @@ export default function AndroidDeveloperIntern() {
 						<AccordionContent className="text-muted-foreground">
 							<ul className="text-muted-foreground list-inside list-disc space-y-3 text-xs md:text-sm">
 								<li>
-									Built and maintained scalable, reusable React + TypeScript
-									components for the production dashboard.
+									Followed a structured Android development roadmap covering
+									Java, Kotlin, XML layouts, Jetpack Compose, and modern Android
+									development practices.
 								</li>
 								<li>
-									Eliminated redundant API calls using TanStack Query cache key
-									strategies and stale time configuration.
+									Implemented UI screens from Figma designs, recreating them
+									using both traditional XML layouts and Jetpack Compose to
+									understand the differences between the two approaches.
 								</li>
 								<li>
-									Worked on new routes and pages - combined Tanstack Router with
-									Tanstack Query
+									Built small Android features and practice applications to
+									reinforce core concepts such as activities, layouts, state
+									management, and navigation.
 								</li>
 								<li>
-									Enforced schema-level form validation with React Hook Form +
-									Zod before any data reached the API.
+									Learned to consume REST APIs using Retrofit and worked with
+									JSON data, asynchronous network requests, and response
+									handling.
 								</li>
 								<li>
-									Collaborated with the backend team to refine API contracts,
-									reducing integration friction on both sides.
-								</li>
-								<li>
-									Wrote Cypress component and E2E tests covering dashboard
-									workflows and critical UI paths.
+									Received regular code reviews and guidance from senior Android
+									developers to improve code quality, architecture, and Android
+									best practices.
 								</li>
 							</ul>
 						</AccordionContent>
@@ -118,25 +124,35 @@ export default function AndroidDeveloperIntern() {
 						value="what-i-learned"
 						className="bg-transparent border-b last:border-b-0"
 					>
-						<AccordionTrigger className=" hover:no-underline [&>svg]:size-6!">
-							<Badge className="h-6 rounded-sm " variant={"default"}>
+						<AccordionTrigger className="hover:no-underline [&>svg]:size-6!">
+							<Badge className="h-6 rounded-sm" variant={"default"}>
 								What I Learned
 							</Badge>
 						</AccordionTrigger>
 						<AccordionContent className="text-muted-foreground">
 							<ul className="text-muted-foreground list-inside list-disc space-y-3 text-xs md:text-sm">
 								<li>
-									How to structure a frontend that stays maintainable as the
-									product grows.
-								</li>
-								<li>That API contract clarity is a frontend problem too.</li>
-								<li>
-									Real caching tradeoffs: stale time, cache invalidation, and
-									when optimistic updates hurt more than they help.
+									How Android applications are structured using Activities,
+									Fragments, layouts, and modern development patterns.
 								</li>
 								<li>
-									How to write tests that survive UI refactors without rewriting
-									the entire test suite.
+									The progression from Java to Kotlin, including Kotlin language
+									features that simplify Android development and improve code
+									readability.
+								</li>
+								<li>
+									How to build responsive user interfaces with both XML and
+									Jetpack Compose while translating real Figma designs into
+									Android screens.
+								</li>
+								<li>
+									How to integrate REST APIs using Retrofit and work with
+									network requests, data models, and asynchronous programming.
+								</li>
+								<li>
+									The importance of writing clean, maintainable Android code and
+									approaching development with an iterative learning mindset
+									through mentor feedback and practical exercises.
 								</li>
 							</ul>
 						</AccordionContent>

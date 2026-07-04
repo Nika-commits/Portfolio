@@ -43,7 +43,7 @@ function RouteComponent() {
 		<div className="pb-50">
 			<div className="flex flex-col items-start gap-1 md:gap-2">
 				<GlobalGradientText text="My Projects" />
-				<p className="text-base md:text-lg  font-bold tracking-wide text-muted-foreground ">
+				<p className="text-base md:text-lg  font-bold tracking-normal text-muted-foreground ">
 					Things I have worked on. 🛠️
 				</p>
 			</div>
