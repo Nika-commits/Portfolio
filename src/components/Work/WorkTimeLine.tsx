@@ -44,7 +44,8 @@ export default function WorkTimeLine({ timelines }: ChangelogContentProps) {
 							<div className="font-medium">{timeline.date}</div>
 						</div>
 						{timeline.content}
-					</div>
+                    </div>
+
 				</div>
 			))}
 		</>

@@ -1,4 +1,5 @@
 import {
+    siAndroid,
 	siBlazor,
 	siCloudflare,
 	siDocker,
@@ -6,15 +7,20 @@ import {
 	siFastapi,
 	siGo,
 	siGooglecloud,
+	siJetpackcompose,
+	siKotlin,
 	siMongodb,
 	siMysql,
 	siNextdotjs,
 	siNodedotjs,
 	siPostgresql,
 	siReact,
+	siSqlite,
+	siSquare,
 	siTanstack,
 	siTypescript,
 	siVercel,
+    siXml,
 } from "simple-icons";
 import { cn } from "#/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -41,13 +47,24 @@ const SKILL_DOMAINS = [
 			{ label: "FastAPI", icon: siFastapi },
 			{ label: "Go", icon: siGo },
 		],
+    },
+	{
+		domain: "Mobile",
+		skills: [
+			{ label: "Android", icon: siAndroid },
+			{ label: "Kotlin", icon: siKotlin },
+            { label: "Jetpack Compose", icon: siJetpackcompose },
+            { label: "XML", icon: siXml },
+			{ label: "Retrofit", icon: siSquare },
+		],
 	},
 	{
 		domain: "Database and Infrastructure",
 		skills: [
 			{ label: "PostgreSQL", icon: siPostgresql },
 			{ label: "MongoDB", icon: siMongodb },
-			{ label: "MySQL", icon: siMysql },
+            { label: "MySQL", icon: siMysql },
+			{ label: "SQLite", icon: siSqlite },
 			{ label: "Docker", icon: siDocker },
 		],
 	},

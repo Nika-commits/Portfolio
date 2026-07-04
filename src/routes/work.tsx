@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import GlobalGradientText from "#/components/Global/GLobalGradientText";
 import { Separator } from "#/components/ui/separator";
+import AndroidDeveloperIntern from "#/components/Work/content/AndroidDeveloperIntern";
 import FrontendDeveloper from "#/components/Work/content/FrontendDeveloper";
 import FrontendDeveloperIntern from "#/components/Work/content/FrontendDeveloperIntern";
 import WorkTimeLine, { type Timeline } from "#/components/Work/WorkTimeLine";
@@ -29,6 +30,11 @@ function RouteComponent() {
 }
 
 export const releases: Timeline[] = [
+	{
+		version: "Recent Job",
+		date: "July 1, 2026",
+		content: <AndroidDeveloperIntern />,
+	},
 	{
 		version: "Latest Job",
 		date: "February 9, 2026",

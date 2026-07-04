@@ -53,116 +53,108 @@ function RouteComponent() {
 				{Projects.map((project) => {
 					return (
 						<motion.div
-							className="snap-center flex items-center justify-center"
 							key={project.name}
-						>
-							<motion.div>
-								<Card>
-									<CardHeader>
-										<CardTitle className="flex justify-between items-center">
-											<UnderlineLink to="/">
-												<span className="flex gap-4 items-center">
-													{project.name}
-												</span>
-											</UnderlineLink>
-										</CardTitle>
-									</CardHeader>
-									<CardContent className="flex flex-col space-y-4 px-6">
-										<div className="w-full">
-											<Carousel
-												className="relative w-full"
-												opts={{
-													align: "start",
-													loop: true,
-												}}
-											>
-												<CarouselContent className="">
-													{project.images.map((image, index) => (
-														<CarouselItem key={image}>
-															<div className="aspect-video overflow-hidden rounded-lg">
-																<img
-																	src={image}
-																	alt={`Slide ${index + 1}`}
-																	className="w-full h-full object-cover rounded-lg"
-																	loading="lazy"
-																	decoding="async"
-																/>
-															</div>
-														</CarouselItem>
-													))}
-												</CarouselContent>
-												<CarouselPrevious className="-left-4 z-99" />
-												<CarouselNext className="-right-4 z-99" />
-											</Carousel>
-										</div>
-										<div>
-											<span className="flex justify-end items-center mt-2">
-												<Button
-													type="button"
-													variant="ghost"
-													size="xs"
-													onClick={() => setOpenReadMore(project)}
-												>
-													<UnderlineWrapper className="flex  items-center gap-1 font-bold ">
-														Learn More <BookOpenTextIcon />
-													</UnderlineWrapper>
-												</Button>
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{
+                                margin: "-200px"
+                            }}
+                        >
+							<Card>
+								<CardHeader>
+									<CardTitle className="flex justify-between items-center">
+										<UnderlineLink to="/">
+											<span className="flex gap-4 items-center">
+												{project.name}
 											</span>
-										</div>
-									</CardContent>
-									<CardFooter className="flex justify-between py-2">
-										<div className="flex flex-wrap gap-2 md:gap-2">
-											{project.techStack.map((tech) => (
-												<span
-													key={tech.name}
-													className="flex flex-col gap-2 items-center min-w-16"
-												>
-													<div className="bg-border rounded-lg p-1 md:p-2">
-														<SimpleIcon icon={tech.icon} />
-													</div>
-													<p className="text-[10px] md:text-xs text-muted-foreground break-word">
-														{tech.name}
-													</p>
-												</span>
-											))}
-										</div>
+										</UnderlineLink>
+									</CardTitle>
+								</CardHeader>
+								<CardContent className="flex flex-col space-y-4 px-6">
+									<div className="w-full">
+										<Carousel
+											className="relative w-full"
+											opts={{
+												align: "start",
+												loop: true,
+											}}
+										>
+											<CarouselContent className="">
+												{project.images.map((image, index) => (
+													<CarouselItem key={image}>
+														<div className="aspect-video overflow-hidden rounded-lg">
+															<img
+																src={image}
+																alt={`Slide ${index + 1}`}
+																className="w-full h-full object-cover rounded-lg"
+																loading="lazy"
+																decoding="async"
+															/>
+														</div>
+													</CarouselItem>
+												))}
+											</CarouselContent>
+											<CarouselPrevious className="-left-4 z-99" />
+											<CarouselNext className="-right-4 z-99" />
+										</Carousel>
+									</div>
+									<div>
+										<span className="flex justify-end items-center mt-2">
+											<Button
+												type="button"
+												variant="ghost"
+												size="xs"
+												onClick={() => setOpenReadMore(project)}
+											>
+												<UnderlineWrapper className="flex  items-center gap-1 font-bold ">
+													Learn More <BookOpenTextIcon />
+												</UnderlineWrapper>
+											</Button>
+										</span>
+									</div>
+								</CardContent>
+								<CardFooter className="flex justify-between py-2">
+									<div className="flex flex-wrap gap-2 md:gap-2">
+										{project.techStack.map((tech) => (
+											<span
+												key={tech.name}
+												className="flex flex-col gap-2 items-center min-w-16"
+											>
+												<div className="bg-border rounded-lg p-1 md:p-2">
+													<SimpleIcon icon={tech.icon} />
+												</div>
+												<p className="text-[10px] md:text-xs text-muted-foreground break-word">
+													{tech.name}
+												</p>
+											</span>
+										))}
+									</div>
 
-										<div className="flex gap-2">
-											{project.liveUrl && (
-												<a
-													href={project.liveUrl}
-													target="_blank"
-													rel="noopener"
-												>
-													<Button
-														type="button"
-														variant="default"
-														size="icon-lg"
-													>
-														<Globe />
-													</Button>
-												</a>
-											)}
+									<div className="flex gap-2">
+										{project.liveUrl && (
+											<a href={project.liveUrl} target="_blank" rel="noopener">
+												<Button type="button" variant="default" size="icon-lg">
+													<Globe />
+												</Button>
+											</a>
+										)}
 
-											{project.githubUrl && (
-												<a
-													href={project.githubUrl}
-													target="_blank"
-													rel="noopener"
-												>
-													<Button
-														type="button"
-														variant="default"
-														size="icon-lg"
-													>
-														<SimpleIcon icon={siGithub} overrideColor="green" />
-													</Button>
-												</a>
-											)}
-										</div>
-									</CardFooter>
-								</Card>
-							</motion.div>
+										{project.githubUrl && (
+											<a
+												href={project.githubUrl}
+												target="_blank"
+												rel="noopener"
+											>
+												<Button type="button" variant="default" size="icon-lg">
+													<SimpleIcon icon={siGithub} overrideColor="green" />
+												</Button>
+											</a>
+										)}
+									</div>
+								</CardFooter>
+							</Card>
 						</motion.div>
 					);
 				})}

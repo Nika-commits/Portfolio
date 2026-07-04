@@ -1,6 +1,5 @@
 import { siReact, siTanstack, siTypescript } from "simple-icons";
 import { SimpleIcon } from "#/components/Home/Skills";
-import UnderlineWrapper from "#/components/Home/UnderlineWrapper";
 import {
 	Accordion,
 	AccordionContent,
@@ -22,20 +21,13 @@ const { data: dashboardData } = useQuery({
 	return (
 		<div>
 			<div className="space-y-4">
-				<div className="space-y-3">
+			<div className="space-y-2 flex justify-between items-start">
 					<h3 className="text-base md:text-base font-semibold">
-						Frontend Developer Intern -{" "}
-						<UnderlineWrapper
-							href="https://restobrain.ai"
-							className="text-base md:text-lg font-bold "
-						>
-							RestoBrain.ai
-						</UnderlineWrapper>
-					</h3>
-					<p className="text-muted-foreground text-xs md:text-sm">
-						My first industry role. Joined as a frontend intern and worked with
-						the frontend team, to build Dashboard UIs.
-					</p>
+						Frontend Developer Intern
+                    </h3>
+                    <div className="dark:bg-primary py-1 px-2 rounded">
+                        <img src="/Icons/restobrain.webp" alt="" className="h-5" />
+					</div>
 				</div>
 				<Separator className="my-4 md:my-6 " />
 				<div className="flex flex-wrap items-center gap-4">
@@ -121,7 +113,7 @@ const { data: dashboardData } = useQuery({
 						</AccordionContent>
 					</AccordionItem>
 
-					<AccordionItem
+					{/*<AccordionItem
 						value="stack"
 						className="bg-transparent border-b last:border-b-0"
 					>
@@ -146,7 +138,7 @@ const { data: dashboardData } = useQuery({
 								<li>Cypress — first exposure to E2E and component testing</li>
 							</ul>
 						</AccordionContent>
-					</AccordionItem>
+					</AccordionItem>*/}
 				</Accordion>
 			</div>
 		</div>

@@ -1,9 +1,9 @@
 import {
-	siCypress,
-	siReact,
-	siReacthookform,
-	siTanstack,
-	siTypescript,
+	siAndroid,
+	siAndroidstudio,
+	siJetpackcompose,
+	siKotlin,
+	siXml,
 } from "simple-icons";
 import { SimpleIcon } from "#/components/Home/Skills";
 import {
@@ -15,49 +15,45 @@ import {
 import { Badge } from "#/components/ui/badge.tsx";
 import { Separator } from "#/components/ui/separator";
 
-export default function FrontendDeveloper() {
+export default function AndroidDeveloperIntern() {
 	return (
 		<div>
 			<div className="space-y-4">
 				<div className="space-y-2 flex justify-between items-start">
-					<h3 className="text-base md:text-base font-semibold">
-						Frontend Developer
-                    </h3>
-                    <div className="dark:bg-primary py-1 px-2 rounded">
-                        <img src="/Icons/restobrain.webp" alt="" className="h-5" />
+					<h3 className="text-base md:text-base font-semibold ">
+						Android Developer Intern
+					</h3>
+
+					<div className="flex justify-end items-start rounded hover:scale-110 transform transition-all duration-150">
+						<img src="/Icons/why-esewa.webp" alt="" className="h-8 rounded" />
 					</div>
 				</div>
-				<p className="text-muted-foreground text-xs md:text-sm">
-					After joining as an intern, I was offered a full time developer role
-					at the same company, a direct result of the work I shipped during the
-					internship. Continued working on the advanced frontend of the
-					dashbaord.
-				</p>
 
+				<p className="text-muted-foreground text-xs md:text-sm"></p>
 				<Separator className="my-4 md:my-6 " />
 
 				<div className="flex flex-wrap items-center gap-4">
 					<span className="flex gap-2 items-end ">
-						<SimpleIcon icon={siTypescript} />
+						<SimpleIcon icon={siKotlin} />
 					</span>
 					<span className="flex gap-2 items-end ">
-						<SimpleIcon icon={siReact} />
+						<SimpleIcon icon={siAndroid} />
 					</span>
 					<span className="flex gap-2 items-end  ">
 						<span className="bg-white p-0.5 rounded">
-							<SimpleIcon icon={siTanstack} />
+							<SimpleIcon icon={siJetpackcompose} />
 						</span>
 					</span>
 					<span className="flex gap-2 items-end ">
-						<SimpleIcon icon={siCypress} />
+						<SimpleIcon icon={siXml} />
 					</span>
 					<span className="flex gap-2 items-end ">
-						<SimpleIcon icon={siReacthookform} />
+						<SimpleIcon icon={siAndroidstudio} />
 					</span>
 				</div>
 				<Separator className="my-4 md:my-6 " />
 				<Accordion type="single" className="w-full border" collapsible>
-					<AccordionItem value="screenshots" className="bg-transparent">
+					{/*<AccordionItem value="screenshots" className="bg-transparent">
 						<AccordionTrigger className="hover:no-underline [&>svg]:size-6!">
 							<Badge className="h-6 rounded-sm" variant={"default"}>
 								Screenshots
@@ -77,7 +73,7 @@ export default function FrontendDeveloper() {
 								/>
 							</div>
 						</AccordionContent>
-					</AccordionItem>
+					</AccordionItem>*/}
 
 					<AccordionItem
 						value="what-i-did"

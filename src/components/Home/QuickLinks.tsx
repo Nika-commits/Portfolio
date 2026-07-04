@@ -8,17 +8,17 @@ export default function QuickLinks() {
 				<GraduationCap size={18} className="shrink-0 text-primary" />
 				<UnderlineWrapper
 					href="https://islington.edu.np/programmes/computing"
-					className="text-xs md:text-sm"
+					className="text-xs md:text-sm font-medium"
 				>
-					BSc (Hons) in Computing
+					BSc (Hons) Computing
 				</UnderlineWrapper>
 			</div>
 
 			<div className="flex items-center gap-2">
 				<MapPinHouse size={18} className="shrink-0 text-primary" />
 				<UnderlineWrapper
-					href="https://www.google.com/search?q=Kathmandu"
-					className="text-xs md:text-sm"
+					href="https://www.google.com/search?q=Kathmandu "
+					className="text-xs md:text-sm font-medium"
 				>
 					Kathmandu, Nepal 🇳🇵
 				</UnderlineWrapper>
@@ -28,7 +28,7 @@ export default function QuickLinks() {
 				<Mail size={18} className="shrink-0 text-primary" />
 				<UnderlineWrapper
 					href="mailto:itismepranish@gmail.com"
-					className="text-xs md:text-sm"
+					className="text-xs md:text-sm font-medium"
 				>
 					itismepranish@gmail.com
 				</UnderlineWrapper>

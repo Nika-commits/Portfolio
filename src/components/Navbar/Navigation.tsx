@@ -27,7 +27,7 @@ export default function Navigation() {
 					<UnderlineWrapper href="https://www.instagram.com/_pranisshh/">
 						<SimpleIcon
 							icon={siInstagram}
-							className="size-5 "
+							className="size-4 "
 							overrideColor="gray"
 						/>
 					</UnderlineWrapper>
