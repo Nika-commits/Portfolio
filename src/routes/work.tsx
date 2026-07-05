@@ -1,4 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
+import {
+	TypingText,
+	TypingTextCursor,
+} from "#/components/animate-ui/primitives/texts/typing";
 import GlobalGradientText from "#/components/Global/GLobalGradientText";
 import { Separator } from "#/components/ui/separator";
 import AndroidDeveloperIntern from "#/components/Work/content/AndroidDeveloperIntern";
@@ -16,10 +20,15 @@ function RouteComponent() {
 		<div>
 			<div className="flex flex-col items-start gap-1 md:gap-2">
 				<GlobalGradientText text="My Work Experiences" />
-				<p className="text-base lg:text-lg font-bold tracking-normal text-muted-foreground">
-					My journey from frontend development to full-stack engineering and
-					native Android.
-				</p>
+				{/*<p className="text-base lg:text-lg font-bold tracking-normal text-muted-foreground">*/}
+				<TypingText
+					className="text-base md:text-lg font-bold tracking-normal text-muted-foreground h-12 md:h-auto "
+					text="My journey from frontend dev to full-stack and native Android. 💼"
+					// loop
+				>
+					<TypingTextCursor />
+				</TypingText>
+				{/*</p>*/}
 			</div>
 
 			<Separator className="my-4 md:my-6" />

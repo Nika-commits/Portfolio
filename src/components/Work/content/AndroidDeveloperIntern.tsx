@@ -98,8 +98,7 @@ export default function AndroidDeveloperIntern() {
 								</li>
 								<li>
 									Implemented UI screens from Figma designs, recreating them
-									using both traditional XML layouts and Jetpack Compose to
-									understand the differences between the two approaches.
+									using both traditional XML layouts and Jetpack Compose.
 								</li>
 								<li>
 									Built small Android features and practice applications to

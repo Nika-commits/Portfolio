@@ -28,7 +28,7 @@ type TypingTextProps = React.ComponentProps<"span"> & {
 function TypingText({
 	ref,
 	children,
-	duration = 40,
+	duration = 30,
 	delay = 0,
 	inView = false,
 	inViewMargin = "0px",
@@ -178,6 +178,6 @@ function TypingTextCursor({
 export {
 	TypingText,
 	TypingTextCursor,
-	type TypingTextProps,
 	type TypingTextCursorProps,
+	type TypingTextProps,
 };

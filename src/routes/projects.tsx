@@ -4,6 +4,10 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import Markdown from "react-markdown";
 import { siGithub } from "simple-icons";
+import {
+	TypingText,
+	TypingTextCursor,
+} from "#/components/animate-ui/primitives/texts/typing";
 import GlobalGradientText from "#/components/Global/GLobalGradientText";
 import { UnderlineLink } from "#/components/Global/UnderlineLink";
 import { SimpleIcon } from "#/components/Home/Skills";
@@ -43,9 +47,15 @@ function RouteComponent() {
 		<div className="pb-50">
 			<div className="flex flex-col items-start gap-1 md:gap-2">
 				<GlobalGradientText text="My Projects" />
-				<p className="text-base md:text-lg  font-bold tracking-normal text-muted-foreground ">
-					Things I have worked on. 🛠️
-				</p>
+				{/*<p className="text-base md:text-lg  font-bold tracking-normal text-muted-foreground ">*/}
+				<TypingText
+					className="text-base md:text-lg font-bold tracking-normal text-muted-foreground "
+					text="Things I have worked on. 🛠️"
+					// loop
+				>
+					<TypingTextCursor />
+				</TypingText>
+				{/*</p>*/}
 			</div>
 			<Separator className="my-4 md:my-6" />
 
@@ -57,11 +67,11 @@ function RouteComponent() {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5 }}
-                            whileInView={{ opacity: 1 }}
-                            viewport={{
-                                margin: "-200px"
-                            }}
-                        >
+							whileInView={{ opacity: 1 }}
+							viewport={{
+								margin: "-200px",
+							}}
+						>
 							<Card>
 								<CardHeader>
 									<CardTitle className="flex justify-between items-center">

@@ -25,6 +25,8 @@ function Home() {
 			<Skills />
 
 			<Separator className="my-4 md:my-6 " />
+
+			{/*<Me />*/}
 		</main>
 	);
 }

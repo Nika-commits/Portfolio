@@ -1,5 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { allPosts } from "content-collections";
+import {
+	TypingText,
+	TypingTextCursor,
+} from "#/components/animate-ui/primitives/texts/typing";
 import GlobalGradientText from "#/components/Global/GLobalGradientText";
 import {
 	Card,
@@ -19,9 +23,14 @@ function RouteComponent() {
 			<div className="flex flex-col items-start gap-1 md:gap-2">
 				<GlobalGradientText text="My Blogs" />
 
-				<p className="text-base md:text-lg font-bold tracking-normal text-muted-foreground">
-					A Glimpse inside my mind. 💭
-				</p>
+				<TypingText
+					className="text-base md:text-lg font-bold tracking-normal text-muted-foreground "
+					text="A Glimpse inside my mind. 💭"
+					// loop
+				>
+					<TypingTextCursor />
+				</TypingText>
+				{/*<p className="text-base md:text-lg font-bold tracking-normal text-muted-foreground"></p>*/}
 			</div>
 
 			<Separator className="my-4 md:my-6" />
