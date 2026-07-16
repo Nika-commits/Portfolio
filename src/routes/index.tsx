@@ -2,13 +2,17 @@ import Introduction from "#/components/Home/Introduction";
 import { MyName } from "#/components/Home/MyName";
 import Skills from "#/components/Home/Skills";
 import { Separator } from "#/components/ui/separator";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
     return (
         <main className="flex flex-col ">
+            <Link to="/work" preload="viewport" />
+            <Link to="/projects" preload="viewport" />
+            <Link to="/blogs" preload="viewport" />
+
             <MyName />
 
             {/*<Separator className="my-4 md:my-6" />
@@ -26,6 +30,8 @@ function Home() {
             <Separator className="my-4 md:my-6 " />
 
             {/*<Me />*/}
+
+
         </main>
     );
 }
