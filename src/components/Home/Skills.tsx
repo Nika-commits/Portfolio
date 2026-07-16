@@ -1,171 +1,171 @@
-import {
-    siAndroid,
-	siBlazor,
-	siCloudflare,
-	siDocker,
-	siDotnet,
-	siFastapi,
-	siGo,
-	siGooglecloud,
-	siJetpackcompose,
-	siKotlin,
-	siMongodb,
-	siMysql,
-	siNextdotjs,
-	siNodedotjs,
-	siPostgresql,
-	siReact,
-	siSqlite,
-	siSquare,
-	siTanstack,
-	siTypescript,
-	siVercel,
-    siXml,
-} from "simple-icons";
 import { cn } from "#/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+    siAndroid,
+    siBlazor,
+    siCloudflare,
+    siDocker,
+    siDotnet,
+    siFastapi,
+    siGo,
+    siGooglecloud,
+    siJetpackcompose,
+    siKotlin,
+    siMongodb,
+    siMysql,
+    siNextdotjs,
+    siNodedotjs,
+    siPostgresql,
+    siReact,
+    siSqlite,
+    siSquare,
+    siTanstack,
+    siTypescript,
+    siVercel,
+    siXml,
+} from "simple-icons";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 type SimpleIcon = { path: string; hex: string; title: string };
 
 const SKILL_DOMAINS = [
-	{
-		domain: "Frontend",
-		skills: [
-			{ label: "TypeScript", icon: siTypescript },
-			{ label: "React", icon: siReact },
-			{ label: "Next.js", icon: siNextdotjs },
-			{ label: "TanStack Start", icon: siTanstack },
-			{ label: "Blazor", icon: siBlazor },
-		],
-	},
-	{
-		domain: "Backend",
-		skills: [
-			{ label: "C# / .NET", icon: siDotnet },
-			{ label: "Node.js", icon: siNodedotjs },
-			{ label: "FastAPI", icon: siFastapi },
-			{ label: "Go", icon: siGo },
-		],
+    {
+        domain: "Frontend",
+        skills: [
+            { label: "TypeScript", icon: siTypescript },
+            { label: "React", icon: siReact },
+            { label: "Next.js", icon: siNextdotjs },
+            { label: "TanStack Start", icon: siTanstack },
+            { label: "Blazor", icon: siBlazor },
+        ],
     },
-	{
-		domain: "Mobile",
-		skills: [
-			{ label: "Android", icon: siAndroid },
-			{ label: "Kotlin", icon: siKotlin },
+    {
+        domain: "Backend",
+        skills: [
+            { label: "C# / .NET", icon: siDotnet },
+            { label: "Node.js", icon: siNodedotjs },
+            { label: "FastAPI", icon: siFastapi },
+            { label: "Go", icon: siGo },
+        ],
+    },
+    {
+        domain: "Mobile",
+        skills: [
+            { label: "Android", icon: siAndroid },
+            { label: "Kotlin", icon: siKotlin },
             { label: "Jetpack Compose", icon: siJetpackcompose },
             { label: "XML", icon: siXml },
-			{ label: "Retrofit", icon: siSquare },
-		],
-	},
-	{
-		domain: "Database and Infrastructure",
-		skills: [
-			{ label: "PostgreSQL", icon: siPostgresql },
-			{ label: "MongoDB", icon: siMongodb },
+            { label: "Retrofit", icon: siSquare },
+        ],
+    },
+    {
+        domain: "Database and Infrastructure",
+        skills: [
+            { label: "PostgreSQL", icon: siPostgresql },
+            { label: "MongoDB", icon: siMongodb },
             { label: "MySQL", icon: siMysql },
-			{ label: "SQLite", icon: siSqlite },
-			{ label: "Docker", icon: siDocker },
-		],
-	},
-	{
-		domain: "Where I Host Generally",
-		skills: [
-			{ label: "Vercel", icon: siVercel },
-			{ label: "Cloudflare", icon: siCloudflare },
-			{ label: "Google Cloud ", icon: siGooglecloud },
-		],
-	},
+            { label: "SQLite", icon: siSqlite },
+            { label: "Docker", icon: siDocker },
+        ],
+    },
+    {
+        domain: "Where I Host Generally",
+        skills: [
+            { label: "Vercel", icon: siVercel },
+            { label: "Cloudflare", icon: siCloudflare },
+            { label: "Google Cloud ", icon: siGooglecloud },
+        ],
+    },
 ];
 
 export function SimpleIcon({
-	icon,
-	overrideColor,
-	className,
+    icon,
+    overrideColor,
+    className,
 }: {
-	icon: SimpleIcon;
-	overrideColor?: string;
-	className?: string;
+    icon: SimpleIcon;
+    overrideColor?: string;
+    className?: string;
 }) {
-	return (
-		<svg
-			role="img"
-			viewBox="0 0 24 24"
-			className={cn("size-3 md:size-5 shrink-0", className)}
-			fill={overrideColor ?? `#${icon.hex}`}
-			aria-label={icon.title}
-		>
-			<path d={icon.path} />
-		</svg>
-	);
+    return (
+        <svg
+            role="img"
+            viewBox="0 0 24 24"
+            className={cn("size-3 md:size-5 shrink-0", className)}
+            fill={overrideColor ?? `#${icon.hex}`}
+            aria-label={icon.title}
+        >
+            <path d={icon.path} />
+        </svg>
+    );
 }
 
 export default function Skills() {
-	return (
-		<section className="w-full space-y-4">
-			<h2 className="text-base md:text-lg font-bold">What I Work With </h2>
-			<div className="flex flex-col gap-4">
-				{SKILL_DOMAINS.map(({ domain, skills }) => (
-					<Card key={domain}>
-						<CardHeader>
-							<CardTitle className="text-sm md:text-base">{domain}</CardTitle>
-						</CardHeader>
-						<CardContent className="flex flex-wrap gap-3 md:gap-4">
-							{skills.map(({ label, icon }) => {
-								const isCloudflare = label === "Cloudflare";
-								const isTanstack = label === "TanStack Start";
+    return (
+        <section className="w-full space-y-4">
+            <h2 className="text-base md:text-lg font-bold">What I Work With </h2>
+            <div className="flex flex-col gap-4">
+                {SKILL_DOMAINS.map(({ domain, skills }) => (
+                    <Card key={domain}>
+                        <CardHeader>
+                            <CardTitle className="text-sm md:text-base">{domain}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="flex flex-wrap gap-3 md:gap-4">
+                            {skills.map(({ label, icon }) => {
+                                const isCloudflare = label === "Cloudflare";
+                                const isTanstack = label === "TanStack Start";
 
-								if (isCloudflare) {
-									return (
-										<Tooltip key={label}>
-											<TooltipTrigger>
-												<span
-													key={label}
-													className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-3xl select-none"
-												>
-													<SimpleIcon icon={icon} />
-													{label}
-												</span>
-											</TooltipTrigger>
-											<TooltipContent>
-												This is hosted in Cloudflare btw. 😜
-											</TooltipContent>
-										</Tooltip>
-									);
-								}
-								if (isTanstack) {
-									return (
-										<Tooltip key={label}>
-											<TooltipTrigger>
-												<span
-													key={label}
-													className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-3xl select-none"
-												>
-													<SimpleIcon icon={icon} overrideColor={"green"} />
-													{label}
-												</span>
-											</TooltipTrigger>
-											<TooltipContent>
-												This was built using Tanstack btw. 😜
-											</TooltipContent>
-										</Tooltip>
-									);
-								}
+                                if (isCloudflare) {
+                                    return (
+                                        <Tooltip key={label}>
+                                            <TooltipTrigger>
+                                                <span
+                                                    key={label}
+                                                    className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-xl select-none"
+                                                >
+                                                    <SimpleIcon icon={icon} />
+                                                    {label}
+                                                </span>
+                                            </TooltipTrigger>
+                                            <TooltipContent>
+                                                This is hosted in Cloudflare btw. 😜
+                                            </TooltipContent>
+                                        </Tooltip>
+                                    );
+                                }
+                                if (isTanstack) {
+                                    return (
+                                        <Tooltip key={label}>
+                                            <TooltipTrigger>
+                                                <span
+                                                    key={label}
+                                                    className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-xl select-none"
+                                                >
+                                                    <SimpleIcon icon={icon} overrideColor={"green"} />
+                                                    {label}
+                                                </span>
+                                            </TooltipTrigger>
+                                            <TooltipContent>
+                                                This was built using Tanstack btw. 😜
+                                            </TooltipContent>
+                                        </Tooltip>
+                                    );
+                                }
 
-								return (
-									<span
-										key={label}
-										className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-secondary rounded-3xl select-none"
-									>
-										<SimpleIcon icon={icon} />
-										{label}
-									</span>
-								);
-							})}
-						</CardContent>
-					</Card>
-				))}
-			</div>
-		</section>
-	);
+                                return (
+                                    <span
+                                        key={label}
+                                        className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-secondary rounded-xl select-none"
+                                    >
+                                        <SimpleIcon icon={icon} />
+                                        {label}
+                                    </span>
+                                );
+                            })}
+                        </CardContent>
+                    </Card>
+                ))}
+            </div>
+        </section>
+    );
 }
