@@ -19,7 +19,7 @@ function Home() {
 
             <QuickLinks />
 */}
-            <Separator className="my-4 md:my-6 " />
+            <Separator className="my-4 md:my-6" />
 
             <Introduction />
 
