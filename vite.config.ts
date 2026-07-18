@@ -8,6 +8,8 @@ import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import viteReact, { reactCompilerPreset } from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 const config = defineConfig({
 	resolve: { tsconfigPaths: true },
 	plugins: [devtools(), tailwindcss(), tanstackStart({
@@ -21,7 +23,11 @@ const config = defineConfig({
         },
     }), viteReact(), babelPlugin({
         presets: [reactCompilerPreset()],
-    }), contentCollections()],
+    }), contentCollections(), cloudflare({
+        viteEnvironment: {
+            name: "ssr"
+        }
+    })],
 });
 
 export default config;

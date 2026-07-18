@@ -8,11 +8,13 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "pnpm run build && wrangler dev",
     "test": "vitest run",
     "format": "biome format",
     "lint": "biome lint",
-    "check": "biome check"
+    "check": "biome check",
+    "deploy": "pnpm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
     "@base-ui-components/react": "1.0.0-rc.0",
@@ -57,6 +59,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.0",
+    "@cloudflare/vite-plugin": "^1.45.1",
     "@content-collections/core": "^0.15.2",
     "@content-collections/markdown": "^0.1.4",
     "@content-collections/mdx": "^0.2.2",
@@ -76,6 +79,7 @@
     "typescript": "^6.0.3",
     "vite": "^8.0.16",
     "vitest": "^4.1.9",
+    "wrangler": "^4.112.0",
     "zod": "^4.4.3"
   }
 }
