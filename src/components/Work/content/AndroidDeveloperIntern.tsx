@@ -24,7 +24,7 @@ export default function AndroidDeveloperIntern() {
                         Android Developer Intern
                     </h3>
 
-                    <div className="flex justify-end items-start rounded hover:scale-110 transform transition-all duration-150">
+                    <div className="flex justify-end items-start rounded">
                         <img src="/Icons/why-esewa.webp" alt="" className="h-8 rounded" />
                     </div>
                 </div>

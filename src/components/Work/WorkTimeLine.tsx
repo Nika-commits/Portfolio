@@ -21,7 +21,7 @@ export default function WorkTimeLine({ timelines }: ChangelogContentProps) {
                     className="relative flex scroll-mt-18 justify-end gap-2"
                 >
                     <div className="sticky top-19 flex w-46 flex-col items-end gap-2 self-start pb-4 max-md:hidden">
-                        <Badge className="flex size-6 w-auto justify-end rounded text-sm font-medium">
+                        <Badge className="flex size-6 w-auto justify-end rounded text-sm font-semibold">
                             {timeline.version}
                         </Badge>
                         <div className="text-muted-foreground text-left text-sm font-medium">
