@@ -9,11 +9,10 @@ import { Badge } from "#/components/ui/badge.tsx";
 import { Separator } from "#/components/ui/separator";
 import {
     siAndroid,
-    siAndroidstudio,
-    siGradle,
+    siFirebase,
     siJetpackcompose,
     siKotlin,
-    siXml,
+    siXml
 } from "simple-icons";
 
 export default function AndroidDeveloperIntern() {
@@ -48,37 +47,13 @@ export default function AndroidDeveloperIntern() {
                     <span className="flex gap-2 items-end ">
                         <SimpleIcon icon={siXml} />
                     </span>
-                    <span className="flex gap-2 items-end ">
-                        <SimpleIcon icon={siAndroidstudio} />
+                    <span>
+                        <SimpleIcon icon={siFirebase} />
                     </span>
-                    <span className="flex gap-2 items-end ">
-                        <SimpleIcon icon={siGradle} />
-                    </span>
+
                 </div>
                 <Separator className="my-4 md:my-6 " />
                 <Accordion type="single" className="w-full border" collapsible>
-                    {/*<AccordionItem value="screenshots" className="bg-transparent">
-						<AccordionTrigger className="hover:no-underline [&>svg]:size-6!">
-							<Badge className="h-6 rounded-sm" variant={"default"}>
-								Screenshots
-							</Badge>
-						</AccordionTrigger>
-						<AccordionContent className="h-auto">
-							<div className="bg-muted space-y-2 rounded-[10px] p-2">
-								<img
-									src="./Work/TodoDashboard.png"
-									alt="Todo Dashboard"
-									className="w-full rounded-[7px] object-cover"
-								/>
-								<img
-									src="./Work/StoreSettings.png"
-									alt="Store Settings"
-									className="w-full rounded-[7px] object-cover"
-								/>
-							</div>
-						</AccordionContent>
-					</AccordionItem>*/}
-
                     <AccordionItem
                         value="what-i-did"
                         className="bg-transparent border-b last:border-b-0"
@@ -96,23 +71,15 @@ export default function AndroidDeveloperIntern() {
                                     development practices.
                                 </li>
                                 <li>
-                                    Implemented UI screens from Figma designs, recreating them
-                                    using both traditional XML layouts and Jetpack Compose.
+                                    Implemented UI screens from Figma designs, recreating them in XML layouts and Jetpack Compose.
                                 </li>
                                 <li>
-                                    Built small Android features and practice applications to
-                                    reinforce core concepts such as activities, layouts, state
-                                    management, and navigation.
+                                    Built a demo MarketPlace ecommerce application using Jetpack Compose, XML and Firebase.
                                 </li>
                                 <li>
                                     Learned to consume REST APIs using Retrofit and worked with
                                     JSON data, asynchronous network requests, and response
                                     handling.
-                                </li>
-                                <li>
-                                    Received regular code reviews and guidance from senior Android
-                                    developers to improve code quality, architecture, and Android
-                                    best practices.
                                 </li>
                             </ul>
                         </AccordionContent>

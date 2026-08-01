@@ -1,5 +1,6 @@
 import Autoplay from "embla-carousel-autoplay";
-import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+import { useEffect, useState } from "react";
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "../ui/carousel";
 
 const myImages = [
     "https://img.vsco.co/cdn-cgi/image/width=960,height=720/90d792/274469124/691b557ddce0a533bb4c34d6/f9c5da89-9824-4a07-b97a-5891951933ac5910148862502348387.jpg",
@@ -11,10 +12,26 @@ const myImages = [
 ]
 
 export default function Me() {
-    return (
-        <div className="flex justify-center items-center">
+    const [api, setApi] = useState<CarouselApi>()
+    const [current, setCurrent] = useState(0)
 
+
+    useEffect(() => {
+        if (!api) return
+
+        const onSelect = () => {
+            setCurrent(api.selectedScrollSnap())
+        }
+        onSelect()
+        api.on("select", onSelect)
+        return () => {
+            api.off("select", onSelect)
+        }
+    }, [api])
+    return (
+        <div className="flex flex-col justify-center items-center gap-4">
             <Carousel
+                setApi={setApi}
                 plugins={[
                     Autoplay({
                         delay: 2000,
@@ -33,14 +50,18 @@ export default function Me() {
                     ))}
                 </CarouselContent>
             </Carousel>
-            {/*<img
-                src="https://img.vsco.co/cdn-cgi/image/width=960,height=720/90d792/274469124/691b557ddce0a533bb4c34d6/f9c5da89-9824-4a07-b97a-5891951933ac5910148862502348387.jpg"
-                alt=""
-                className="w-48 rounded-full h-48 object-contain"
-            />*/}
 
-
-            {/*<img src="/Icons/me.webp" alt="" className="w-48 rounded-full h-48 object-contain" />*/}
+            <div className="flex items-center gap-1.5">
+                {myImages.map((_, index) => (
+                    <span
+                        key={index}
+                        className={`size-1 rounded-full transition-colors ${current === index
+                            ? "bg-foreground"
+                            : "bg-muted-foreground/30"
+                            }`}
+                    />
+                ))}
+            </div>
         </div>
     );
 }

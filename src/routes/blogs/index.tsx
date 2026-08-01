@@ -1,77 +1,77 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { allPosts } from "content-collections";
 import {
-	TypingText,
-	TypingTextCursor,
+    TypingText,
+    TypingTextCursor,
 } from "#/components/animate-ui/primitives/texts/typing";
 import GlobalGradientText from "#/components/Global/GLobalGradientText";
 import {
-	Card,
-	CardDescription,
-	CardHeader,
-	CardTitle,
+    Card,
+    CardDescription,
+    CardHeader,
+    CardTitle,
 } from "#/components/ui/card";
 import { Separator } from "#/components/ui/separator";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { allPosts } from "content-collections";
 
 export const Route = createFileRoute("/blogs/")({
-	component: RouteComponent,
+    component: RouteComponent,
 });
 
 function RouteComponent() {
-	return (
-		<div>
-			<div className="flex flex-col items-start gap-1 md:gap-2">
-				<GlobalGradientText text="My Blogs" />
+    return (
+        <div>
+            <div className="flex flex-col items-start gap-1 md:gap-2">
+                <GlobalGradientText text="My Blogs" />
 
-				<TypingText
-					className="text-base md:text-lg font-bold tracking-normal text-muted-foreground "
-					text="A Glimpse inside my mind. 💭"
-					// loop
-				>
-					<TypingTextCursor />
-				</TypingText>
-				{/*<p className="text-base md:text-lg font-bold tracking-normal text-muted-foreground"></p>*/}
-			</div>
+                <TypingText
+                    className="text-base md:text-lg font-bold tracking-normal text-muted-foreground "
+                    text="A Glimpse inside my mind. 💭"
+                // loop
+                >
+                    <TypingTextCursor />
+                </TypingText>
+                {/*<p className="text-base md:text-lg font-bold tracking-normal text-muted-foreground"></p>*/}
+            </div>
 
-			<Separator className="my-4 md:my-6" />
+            <Separator className="my-4 md:my-6" />
 
-			{allPosts.length === 0 ? (
-				<div className="flex justify-center items-center p-6 border border-dashed border-secondary rounded">
-					<h3 className="font-bold text-2xl text-muted-foreground">
-						No Blogs Yet
-					</h3>
-				</div>
-			) : (
-				<div className="flex flex-col space-y-8">
-					{allPosts.map((post) => (
-						<Link
-							key={post._meta.fileName}
-							to="/blogs/$blogId"
-							params={{
-								blogId: post.slug,
-							}}
-						>
-							<Card key={post._meta.fileName}>
-								<CardHeader>
-									<CardTitle className="flex items-center gap-14">
-										<span className="flex-1">{post.title}</span>
-										<div className="text-sm shrink-0 text-muted-foreground flex justify-end">
-											<span className="">
-												{post.date.toLocaleDateString("en-us", {
-													year: "numeric",
-													month: "short",
-													day: "numeric",
-												})}
-											</span>
-										</div>
-									</CardTitle>
-									<CardDescription>{post.summary}</CardDescription>
-								</CardHeader>
-							</Card>
-						</Link>
-					))}
-				</div>
-			)}
-		</div>
-	);
+            {allPosts.length === 0 ? (
+                <div className="flex justify-center items-center p-6 border border-dashed border-secondary rounded">
+                    <h3 className="font-bold text-2xl text-muted-foreground">
+                        Will write something soon :)
+                    </h3>
+                </div>
+            ) : (
+                <div className="flex flex-col space-y-8">
+                    {allPosts.map((post) => (
+                        <Link
+                            key={post._meta.fileName}
+                            to="/blogs/$blogId"
+                            params={{
+                                blogId: post.slug,
+                            }}
+                        >
+                            <Card key={post._meta.fileName}>
+                                <CardHeader>
+                                    <CardTitle className="flex items-center gap-14">
+                                        <span className="flex-1">{post.title}</span>
+                                        <div className="text-sm shrink-0 text-muted-foreground flex justify-end">
+                                            <span className="">
+                                                {post.date.toLocaleDateString("en-us", {
+                                                    year: "numeric",
+                                                    month: "short",
+                                                    day: "numeric",
+                                                })}
+                                            </span>
+                                        </div>
+                                    </CardTitle>
+                                    <CardDescription>{post.summary}</CardDescription>
+                                </CardHeader>
+                            </Card>
+                        </Link>
+                    ))}
+                </div>
+            )}
+        </div>
+    );
 }

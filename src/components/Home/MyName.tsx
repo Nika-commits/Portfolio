@@ -14,12 +14,8 @@ import QuickLinks from "./QuickLinks";
 
 export const MyName = () => {
     return (
-        <div className="flex flex-row h-full items-start md:items-center justify-start gap-6 md:gap-12">
-            <div>
-                {/*<img src="/Icons/me.webp" alt="" className="w-48 rounded h-48 object-contain" />*/}
-
-                <Me />
-            </div>
+        <div className="flex flex-row items-start md:items-start justify-start gap-6 md:gap-12">
+            <Me />
             <div className="flex flex-col items-start gap-2 md:gap-6">
                 <GlobalGradientText text="Pranish Chaulagain" />
                 <QuickLinks />

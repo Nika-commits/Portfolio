@@ -15,12 +15,7 @@ function Home() {
 
             <MyName />
 
-            {/*<Separator className="my-4 md:my-6" />
-
-            <QuickLinks />
-*/}
             <Separator className="my-4 md:my-6" />
-            {/*<Me />*/}
 
             <Introduction />
 

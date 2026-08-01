@@ -8,7 +8,7 @@ export default function QuickLinks() {
             <div className="flex items-center gap-2">
                 <CalendarClock size={14} className="shrink-0 text-primary" />
                 <UnderlineWrapper
-                    href="https://www.google.com/calendar"
+                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                     className="text-xs md:text-xs font-medium"
                 >
                     20 yrs
