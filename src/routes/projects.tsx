@@ -7,6 +7,7 @@ import { UnderlineLink } from "#/components/Global/UnderlineLink";
 import { SimpleIcon } from "#/components/Home/Skills";
 import UnderlineWrapper from "#/components/Home/UnderlineWrapper";
 import { type ProjectContent, Projects } from "#/components/Projects/contents";
+import { ProjectCarousel } from "#/components/Projects/ProjectCarousel.tsx";
 import { Button } from "#/components/ui/button";
 import {
     Card,
@@ -16,13 +17,6 @@ import {
     CardTitle,
 } from "#/components/ui/card";
 import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "#/components/ui/carousel";
-import {
     Dialog,
     DialogClose,
     DialogContent,
@@ -31,7 +25,6 @@ import {
 } from "#/components/ui/dialog";
 import { Separator } from "#/components/ui/separator";
 import { createFileRoute } from "@tanstack/react-router";
-import Autoplay from "embla-carousel-autoplay";
 import { BookOpenTextIcon, Globe } from "lucide-react";
 import { motion, type Variants } from "motion/react";
 import { useState } from "react";
@@ -57,6 +50,7 @@ function RouteComponent() {
             transition: { duration: 0.5, ease: ["easeInOut"] }
         }
     }
+
 
     return (
         <div className="pb-50">
@@ -86,11 +80,12 @@ function RouteComponent() {
                             }}
                         >
                             <motion.div
-                                whileHover={{ scale: 1.03, y: -6 }}
+                                whileHover={{ scale: 1.05, y: -10 }}
+                                initial="hidden"
                                 transition={{ duration: 0.3, ease: "easeInOut" }}
                             >
 
-                                <Card>
+                                <Card className="max-w-xl justify-self-center">
                                     <CardHeader>
                                         <CardTitle className="flex justify-between items-center">
                                             <UnderlineLink to="/">
@@ -102,37 +97,7 @@ function RouteComponent() {
                                     </CardHeader>
                                     <CardContent className="flex flex-col space-y-4 px-6">
                                         <div className="w-full">
-                                            <Carousel
-                                                className="relative w-full"
-                                                opts={{
-                                                    align: "start",
-                                                    loop: true,
-                                                }}
-
-                                                plugins={[
-                                                    Autoplay({
-                                                        delay: 3000
-                                                    })
-                                                ]}
-                                            >
-                                                <CarouselContent>
-                                                    {project.images.map((image, index) => (
-                                                        <CarouselItem key={image}>
-                                                            <div className="aspect-video overflow-hidden rounded-lg">
-                                                                <img
-                                                                    src={image}
-                                                                    alt={`Slide ${index + 1}`}
-                                                                    className="w-full h-full object-cover rounded-lg"
-                                                                    loading="lazy"
-                                                                    decoding="async"
-                                                                />
-                                                            </div>
-                                                        </CarouselItem>
-                                                    ))}
-                                                </CarouselContent>
-                                                <CarouselPrevious className="-left-4 z-99" />
-                                                <CarouselNext className="-right-4 z-99" />
-                                            </Carousel>
+                                            <ProjectCarousel images={project.images} />
                                         </div>
                                         <div>
                                             <span className="flex justify-end items-center mt-2">
