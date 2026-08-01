@@ -21,7 +21,7 @@ export default function AndroidDeveloperIntern() {
         <div>
             <div className="space-y-4">
                 <div className="space-y-2 flex justify-between items-start">
-                    <h3 className="text-base md:text-base font-semibold ">
+                    <h3 className="text-sm md:text-sm font-semibold ">
                         Android Developer Intern
                     </h3>
 

@@ -3,22 +3,22 @@ import UnderlineWrapper from "./UnderlineWrapper";
 export default function Introduction() {
     return (
         <article className="flex flex-col items-start justify-start gap-4 ">
-            <h1 className="text-base md:text-base font-bold">Hi, 👋🏽</h1>
+            <h1 className="text-sm md:text-sm font-bold">Hi, 👋🏽</h1>
 
-            <p className="text-sm text-justify md:text-base leading-relaxed text-muted-foreground font-medium">
+            <p className="text-sm text-justify md:text-sm leading-relaxed text-muted-foreground font-medium">
                 I am a frontend-focused
-                <UnderlineWrapper className="text-foreground font-medium text-sm md:text-base leading-relaxed">
+                <UnderlineWrapper className="text-foreground font-medium text-sm md:text-sm leading-relaxed">
                     {" "}Full-stack Engineer{" "}
                 </UnderlineWrapper>
                 and also an
-                <UnderlineWrapper className="text-foreground font-medium text-sm md:text-base leading-relaxed">
+                <UnderlineWrapper className="text-foreground font-medium text-sm md:text-sm leading-relaxed">
                     {" "}Android developer
                 </UnderlineWrapper>.
                 I currently work
                 as a Frontend Developer at{" "}
                 <UnderlineWrapper
                     href="https://restobrain.ai/"
-                    className="text-foreground font-medium text-sm md:text-base leading-relaxed"
+                    className="text-foreground font-medium text-sm md:text-sm leading-relaxed"
                 >
                     Restobrain AI
                 </UnderlineWrapper>
@@ -26,26 +26,50 @@ export default function Introduction() {
                 and TypeScript. I am also interning at{" "}
                 <UnderlineWrapper
                     href="https://esewa.com.np/"
-                    className="text-foreground font-medium text-sm md:text-base leading-relaxed"
+                    className="text-foreground font-medium text-sm md:text-sm leading-relaxed"
                 >
                     eSewa {" "}
                 </UnderlineWrapper>
                 as an Android Developer, learning to develop native Android applications with
-                <span className="text-foreground"> Kotlin</span>
-                , <span className="text-foreground">Java</span>, <span className="text-foreground">Jetpack Compose</span>, and <span className="text-foreground">XML Views</span>.
+                <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
+                    {" Kotlin"}
+                </UnderlineWrapper>, <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
+                    {" Java"}
+                </UnderlineWrapper>, <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
+                    {" Jetpack Compose"}
+                </UnderlineWrapper>, and <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
+                    {" XML Views"}
+                </UnderlineWrapper>.
             </p>
 
-            <p className="text-sm text-justify md:text-base leading-relaxed text-muted-foreground font-medium">
+            <p className="text-sm text-justify md:text-sm leading-relaxed text-muted-foreground font-medium">
                 My primary stack is
-                <span className="text-foreground"> TypeScript</span>  and recently <span className="text-foreground">Kotlin</span>.
+                <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
+                    {" TypeScript "}
+                </UnderlineWrapper>
+                and recently
+                <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
+                    {" Kotlin"}
+                </UnderlineWrapper>.
                 On the backend I have worked with
-                <span className="text-foreground"> Node.js</span>, <span className="text-foreground">FastAPI</span>,
-                <span className="text-foreground"> ASP.NET</span> and
-                <span className="text-foreground"> Supabase</span>. Through my Android internship, I have also been
+                <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
+                    {" Node.js"}
+                </UnderlineWrapper>,
+                <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
+                    {" FastAPI"}
+                </UnderlineWrapper>,
+                <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
+                    {" ASP.NET"}
+                </UnderlineWrapper> and
+                <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
+                    {" Supasm"}
+                </UnderlineWrapper>. Through my Android internship, I have also been
                 gaining hands-on experience with native Android architecture and modern
                 mobile development. Outside of work, I am diving deeper into system
                 design,
-                <span className="text-foreground"> Go</span>, and backend architectures. I am always open to
+                <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
+                    {" Go"}
+                </UnderlineWrapper>, and backend architectures. I am always open to
                 challenging software engineering opportunities where I can continue
                 learning and building good softwares.
             </p>

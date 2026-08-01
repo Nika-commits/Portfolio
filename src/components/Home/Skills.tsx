@@ -103,12 +103,12 @@ export function SimpleIcon({
 export default function Skills() {
     return (
         <section className="w-full space-y-4">
-            <h2 className="text-base md:text-lg font-bold">What I Work With </h2>
+            <h2 className="text-sm md:text-base font-bold">What I Work With </h2>
             <div className="flex flex-col gap-4">
                 {SKILL_DOMAINS.map(({ domain, skills }) => (
                     <Card key={domain}>
                         <CardHeader>
-                            <CardTitle className="text-sm md:text-base">{domain}</CardTitle>
+                            <CardTitle className="text-xs md:text-sm">{domain}</CardTitle>
                         </CardHeader>
                         <CardContent className="flex flex-wrap gap-3 md:gap-4">
                             {skills.map(({ label, icon }) => {
@@ -155,7 +155,7 @@ export default function Skills() {
                                 return (
                                     <span
                                         key={label}
-                                        className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-secondary rounded-xl select-none"
+                                        className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-secondary rounded-xl select-none transform-gpu hover:scale-105 transition-all duration-200 cursor-pointer"
                                     >
                                         <SimpleIcon icon={icon} />
                                         {label}
