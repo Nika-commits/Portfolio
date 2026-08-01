@@ -9,8 +9,8 @@ import viteReact, { reactCompilerPreset } from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
 const config = defineConfig({
-	resolve: { tsconfigPaths: true },
-	plugins: [devtools(), tailwindcss(), tanstackStart({
+    resolve: { tsconfigPaths: true },
+    plugins: [devtools(), tailwindcss(), tanstackStart({
         prerender: {
             enabled: true,
             crawlLinks: true,
