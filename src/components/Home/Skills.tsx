@@ -3,7 +3,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { type Variants } from "motion";
 import { motion } from "motion/react";
 import {
-    siAndroid,
     siBlazor,
     siCloudflare,
     siDocker,
@@ -25,7 +24,7 @@ import {
     siTanstack,
     siTypescript,
     siVercel,
-    siXml,
+    siXml
 } from "simple-icons";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
@@ -55,7 +54,6 @@ const SKILL_DOMAINS = [
     {
         domain: "Mobile",
         skills: [
-            { label: "Android", icon: siAndroid },
             { label: "Kotlin", icon: siKotlin },
             { label: "Jetpack Compose", icon: siJetpackcompose },
             { label: "XML", icon: siXml },
@@ -66,18 +64,18 @@ const SKILL_DOMAINS = [
         domain: "Database and Infrastructure",
         skills: [
             { label: "Firebase", icon: siFirebase },
+            { label: "Docker", icon: siDocker },
             { label: "PostgreSQL", icon: siPostgresql },
-            { label: "MongoDB", icon: siMongodb },
             { label: "MySQL", icon: siMysql },
             { label: "SQLite", icon: siSqlite },
-            { label: "Docker", icon: siDocker },
+            { label: "MongoDB", icon: siMongodb },
         ],
     },
     {
         domain: "Where I Host Generally",
         skills: [
-            { label: "Vercel", icon: siVercel },
             { label: "Cloudflare", icon: siCloudflare },
+            { label: "Vercel", icon: siVercel },
             { label: "Google Cloud ", icon: siGooglecloud },
         ],
     },
