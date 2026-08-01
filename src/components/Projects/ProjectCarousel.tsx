@@ -1,39 +1,47 @@
 import Autoplay from "embla-carousel-autoplay";
-import { useInView } from "motion/react";
-import { useEffect, useRef } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel";
 
 export function ProjectCarousel({ images }: { images: string[] }) {
-    const containerRef = useRef<HTMLDivElement>(null);
+    // const containerRef = useRef<HTMLDivElement>(null);
+    // const [api, setApi] = useState<CarouselApi>()
 
-    const autoplay = useRef(
-        Autoplay({
-            delay: 1000,
-            playOnInit: false,
-        }),
-    );
+    // const autoplay = useRef(
+    //     Autoplay({
+    //         delay: 1500,
+    //     }),
+    // );
 
-    const isInCenter = useInView(containerRef, {
-        margin: "-30% 0px -30% 0px",
-    });
+    // const isInCenter = useInView(containerRef, {
+    //     margin: "-20% 0px -30% 0px",
+    // });
 
-    useEffect(() => {
-        if (isInCenter) {
-            autoplay.current?.play();
-        } else {
-            autoplay.current?.stop();
-        }
-    }, [isInCenter]);
+    // useEffect(() => {
+    //     if (!api) return;
+    //     const autoplayPlugin = api.plugins().autoplay
+    //     if (!autoplayPlugin) return;
+    //     if (isInCenter) {
+    //         autoplay?.current?.play();
+    //     } else {
+    //         autoplay?.current?.stop();
+    //     }
+    // }, [isInCenter, api]);
 
     return (
-        <div ref={containerRef} className="w-full">
+        <div className="w-full">
             <Carousel
                 className="relative w-full"
+                // setApi={setApi}
                 opts={{
                     align: "start",
                     loop: true,
                 }}
-                plugins={[autoplay.current]}
+                // plugins={[autoplay.current]}
+                plugins={[
+                    Autoplay({
+                        delay: 1500,
+                        playOnInit: true,
+                    }),
+                ]}
             >
                 <CarouselContent>
                     {images.map((image, index) => (
@@ -51,8 +59,8 @@ export function ProjectCarousel({ images }: { images: string[] }) {
                     ))}
                 </CarouselContent>
 
-                <CarouselPrevious className="-left-4 z-99" />
-                <CarouselNext className="-right-4 z-99" />
+                <CarouselPrevious variant={"secondary"} className="-left-4 z-99" />
+                <CarouselNext variant={"secondary"} className="-right-4 z-99" />
             </Carousel>
         </div>
     );

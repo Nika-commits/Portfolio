@@ -39,9 +39,9 @@ function RouteComponent() {
     const [openReadMore, setOpenReadMore] = useState<ProjectContent | null>(null);
     const variants: Variants = {
         hidden: {
-            opacity: 0,
-            y: 50,
-            scale: 0.95,
+            opacity: 0.3,
+            y: -50,
+            scale: 0.5,
         },
         visible: {
             opacity: 1,
@@ -72,89 +72,98 @@ function RouteComponent() {
                             key={project.name}
                             variants={variants}
                             initial="hidden"
-                            whileInView={"visible"}
+                            whileInView="visible"
                             viewport={{
-                                once: true,
-                                amount: 0.15,
-                                margin: "15%",
+                                once: false,
+                                amount: 0.4,
+                                margin: "-20% 0px -20% 0px"
+                            }}
+                            // whileHover={{
+                            //     scale: 1.03,
+                            //     y: -10,
+                            // }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeInOut",
                             }}
                         >
-                            <motion.div
-                                whileHover={{ scale: 1.05, y: -10 }}
-                                initial="hidden"
+                            {/*<motion.div
+                                whileHover={{ scale: 1.03, y: -10 }}
+                                initial={{ opacity: 0, y: 20 }}
                                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                            >
+                                whileInView={{ opacity: 1, y: 0 }}
+                            >*/}
 
-                                <Card className="max-w-xl justify-self-center">
-                                    <CardHeader>
-                                        <CardTitle className="flex justify-between items-center">
-                                            <UnderlineLink to="/">
-                                                <span className="flex gap-4 items-center px-3 font-bold tracking-wider">
-                                                    {project.name}
-                                                </span>
-                                            </UnderlineLink>
-                                        </CardTitle>
-                                    </CardHeader>
-                                    <CardContent className="flex flex-col space-y-4 px-6">
-                                        <div className="w-full">
-                                            <ProjectCarousel images={project.images} />
-                                        </div>
-                                        <div>
-                                            <span className="flex justify-end items-center mt-2">
-                                                <Button
-                                                    type="button"
-                                                    variant="ghost"
-                                                    size="xs"
-                                                    onClick={() => setOpenReadMore(project)}
-                                                >
-                                                    <UnderlineWrapper className="flex  items-center gap-1 font-bold ">
-                                                        Learn More <BookOpenTextIcon />
-                                                    </UnderlineWrapper>
-                                                </Button>
+                            <Card>
+                                <CardHeader>
+                                    <CardTitle className="flex justify-between items-center">
+                                        <UnderlineLink to="/">
+                                            <span className="flex gap-4 items-center px-3 font-bold tracking-wider">
+                                                {project.name}
                                             </span>
-                                        </div>
-                                    </CardContent>
-                                    <CardFooter className="flex justify-between py-2">
-                                        <div className="flex flex-wrap gap-2 md:gap-2">
-                                            {project.techStack.map((tech) => (
-                                                <span
-                                                    key={tech.name}
-                                                    className="flex flex-col gap-2 items-center min-w-16"
-                                                >
-                                                    <div className="bg-border rounded-lg p-1 md:p-2">
-                                                        <SimpleIcon icon={tech.icon} />
-                                                    </div>
-                                                    <p className="text-[10px] md:text-xs text-muted-foreground break-word">
-                                                        {tech.name}
-                                                    </p>
-                                                </span>
-                                            ))}
-                                        </div>
+                                        </UnderlineLink>
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent className="flex flex-col space-y-4 px-6">
+                                    <div className="w-full">
+                                        <ProjectCarousel images={project.images} />
+                                    </div>
+                                    <div>
+                                        <span className="flex justify-end items-center mt-2">
+                                            <Button
+                                                type="button"
+                                                variant="ghost"
+                                                size="xs"
+                                                onClick={() => setOpenReadMore(project)}
+                                            >
+                                                <UnderlineWrapper className="flex  items-center gap-1 font-bold ">
+                                                    Learn More <BookOpenTextIcon />
+                                                </UnderlineWrapper>
+                                            </Button>
+                                        </span>
+                                    </div>
+                                </CardContent>
+                                <CardFooter className="flex justify-between py-2">
+                                    <div className="flex flex-wrap gap-2 md:gap-2">
+                                        {project.techStack.map((tech) => (
+                                            <span
+                                                key={tech.name}
+                                                className="flex flex-col gap-2 items-center min-w-16"
+                                            >
+                                                <div className="bg-border rounded-lg p-1 md:p-2">
+                                                    <SimpleIcon icon={tech.icon} />
+                                                </div>
+                                                <p className="text-[10px] md:text-xs text-muted-foreground break-word">
+                                                    {tech.name}
+                                                </p>
+                                            </span>
+                                        ))}
+                                    </div>
 
-                                        <div className="flex gap-2">
-                                            {project.liveUrl && (
-                                                <a href={project.liveUrl} target="_blank" rel="noopener">
-                                                    <Button type="button" variant="default" size="icon-lg">
-                                                        <Globe />
-                                                    </Button>
-                                                </a>
-                                            )}
+                                    <div className="flex gap-2">
+                                        {project.liveUrl && (
+                                            <a href={project.liveUrl} target="_blank" rel="noopener">
+                                                <Button type="button" variant="default" size="icon-lg">
+                                                    <Globe />
+                                                </Button>
+                                            </a>
+                                        )}
 
-                                            {project.githubUrl && (
-                                                <a
-                                                    href={project.githubUrl}
-                                                    target="_blank"
-                                                    rel="noopener"
-                                                >
-                                                    <Button type="button" variant="default" size="icon-lg">
-                                                        <SimpleIcon icon={siGithub} overrideColor="green" />
-                                                    </Button>
-                                                </a>
-                                            )}
-                                        </div>
-                                    </CardFooter>
-                                </Card>
-                            </motion.div>
+                                        {project.githubUrl && (
+                                            <a
+                                                href={project.githubUrl}
+                                                target="_blank"
+                                                rel="noopener"
+                                            >
+                                                <Button type="button" variant="default" size="icon-lg">
+                                                    <SimpleIcon icon={siGithub} overrideColor="green" />
+                                                </Button>
+                                            </a>
+                                        )}
+                                    </div>
+                                </CardFooter>
+                            </Card>
+                            {/*</motion.div>*/}
                         </motion.div>
                     );
                 })}

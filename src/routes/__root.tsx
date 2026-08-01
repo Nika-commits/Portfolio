@@ -2,7 +2,6 @@ import Navigation from "#/components/Navbar/Navigation";
 import { Button } from "#/components/ui/button";
 import { Separator } from "#/components/ui/separator";
 import { TooltipProvider } from "#/components/ui/tooltip";
-import { TanStackDevtools } from "@tanstack/react-devtools";
 import {
     createRootRoute,
     HeadContent,
@@ -10,7 +9,6 @@ import {
     Scripts,
     useNavigate,
 } from "@tanstack/react-router";
-import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import "highlight.js/styles/github-dark.css";
 import appCss from "../styles.css?url";
 
@@ -97,7 +95,7 @@ function RootDocument() {
                         </TooltipProvider>
                     </div>
                 </main>
-                <TanStackDevtools
+                {/*<TanStackDevtools
                     config={{
                         position: "bottom-right",
                     }}
@@ -107,21 +105,14 @@ function RootDocument() {
                             render: <TanStackRouterDevtoolsPanel />,
                         },
                     ]}
-                />
+                />*/}
                 <Scripts />
             </body>
         </html>
     );
 }
 
-// function BackgroundGradients() {
-// 	return (
-// 		<div className="relative h-full w-full bg-background">
-// 			<div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-size[14px_24px]"></div>
-// 			<div className="absolute left-0 right-0 top-[-10%] h-250 w-250 rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div>
-// 		</div>
-// 	);
-// }
+
 
 function NotFound() {
     const navigate = useNavigate();
