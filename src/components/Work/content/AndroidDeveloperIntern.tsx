@@ -20,7 +20,7 @@ export default function AndroidDeveloperIntern() {
         <div>
             <div className="space-y-4">
                 <div className="space-y-2 flex justify-between items-start">
-                    <h3 className="text-sm md:text-sm font-semibold ">
+                    <h3 className="text-sm md:text-base font-semibold ">
                         Android Developer Intern
                     </h3>
 
@@ -29,7 +29,10 @@ export default function AndroidDeveloperIntern() {
                     </div>
                 </div>
 
-                <p className="text-muted-foreground text-xs md:text-sm"></p>
+                <p className="text-muted-foreground text-xs md:text-sm">
+                    Esewa is the subsidiary of F1Soft - a leading Fintech company based in Nepal.
+                    It is the most used digital wallet in Nepal that serves over 10 million users.
+                </p>
                 <Separator className="my-4 md:my-6 " />
 
                 <div className="flex flex-wrap items-center gap-4">

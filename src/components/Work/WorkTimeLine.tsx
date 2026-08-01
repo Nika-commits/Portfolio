@@ -2,8 +2,8 @@ import { Badge } from "#/components/ui/badge.tsx";
 import type { ReactNode } from "react";
 
 export interface Timeline {
-    version: string;
     date: string;
+    company: string;
     content: ReactNode;
 }
 
@@ -22,10 +22,10 @@ export default function WorkTimeLine({ timelines }: ChangelogContentProps) {
                 >
                     <div className="sticky top-19 flex w-46 flex-col items-end gap-2 self-start pb-4 max-md:hidden">
                         <Badge className="flex size-6 w-auto justify-end rounded text-sm font-semibold">
-                            {timeline.version}
+                            {timeline.date}
                         </Badge>
                         <div className="text-muted-foreground text-left text-sm font-medium">
-                            {timeline.date}
+                            {timeline.company}
                         </div>
                     </div>
                     <div className="flex flex-col items-center">
@@ -38,10 +38,10 @@ export default function WorkTimeLine({ timelines }: ChangelogContentProps) {
                     </div>
                     <div className="flex flex-1 flex-col gap-4 pb-11 pl-3 md:pl-6 lg:pl-9">
                         <div className="flex flex-col gap-2 md:hidden">
-                            <Badge className="flex rounded-sm font-medium">
-                                {timeline.version}
+                            <Badge className="flex rounded-sm font-semibold">
+                                {timeline.date}
                             </Badge>
-                            <div className="font-medium">{timeline.date}</div>
+                            <div className="font-bold text-sm">{timeline.company}</div>
                         </div>
                         {timeline.content}
                     </div>

@@ -1,5 +1,7 @@
 import { cn } from "#/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { stagger, type Variants } from "motion";
+import { motion } from "motion/react";
 import {
     siAndroid,
     siBlazor,
@@ -25,6 +27,7 @@ import {
     siXml,
 } from "simple-icons";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+
 
 type SimpleIcon = { path: string; hex: string; title: string };
 
@@ -101,71 +104,111 @@ export function SimpleIcon({
 }
 
 export default function Skills() {
+
+    const container: Variants = {
+        hidden: {
+            opacity: 0,
+        },
+        visible: {
+            opacity: 1,
+            transition: {
+                delayChildren: stagger(0.3, {
+                    startDelay: 0.5,
+                }),
+            }
+        },
+    }
+
+    const variants: Variants = {
+        hidden: {
+            opacity: 0,
+            y: 16,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                ease: "easeOut",
+            }
+        },
+    }
+
     return (
         <section className="w-full space-y-4">
             <h2 className="text-sm md:text-base font-bold">What I Work With </h2>
-            <div className="flex flex-col gap-4">
+            <motion.div
+                className="flex flex-col gap-4"
+                variants={container}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.15, margin: "10% 0px 10% 0px" }}
+            >
                 {SKILL_DOMAINS.map(({ domain, skills }) => (
-                    <Card key={domain}>
-                        <CardHeader>
-                            <CardTitle className="text-xs md:text-sm">{domain}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="flex flex-wrap gap-3 md:gap-4">
-                            {skills.map(({ label, icon }) => {
-                                const isCloudflare = label === "Cloudflare";
-                                const isTanstack = label === "TanStack Start";
+                    <motion.div
+                        key={domain}
+                        variants={variants}
+                    >
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="text-xs md:text-sm">{domain}</CardTitle>
+                            </CardHeader>
+                            <CardContent className="flex flex-wrap gap-3 md:gap-4">
+                                {skills.map(({ label, icon }) => {
+                                    const isCloudflare = label === "Cloudflare";
+                                    const isTanstack = label === "TanStack Start";
 
-                                if (isCloudflare) {
-                                    return (
-                                        <Tooltip key={label}>
-                                            <TooltipTrigger>
-                                                <span
-                                                    key={label}
-                                                    className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-xl select-none"
-                                                >
-                                                    <SimpleIcon icon={icon} />
-                                                    {label}
-                                                </span>
-                                            </TooltipTrigger>
-                                            <TooltipContent>
-                                                This is hosted in Cloudflare btw. 😜
-                                            </TooltipContent>
-                                        </Tooltip>
-                                    );
-                                }
-                                if (isTanstack) {
-                                    return (
-                                        <Tooltip key={label}>
-                                            <TooltipTrigger>
-                                                <span
-                                                    key={label}
-                                                    className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-xl select-none"
-                                                >
-                                                    <SimpleIcon icon={icon} overrideColor={"green"} />
-                                                    {label}
-                                                </span>
-                                            </TooltipTrigger>
-                                            <TooltipContent>
-                                                This was built using Tanstack btw. 😜
-                                            </TooltipContent>
-                                        </Tooltip>
-                                    );
-                                }
+                                    if (isCloudflare) {
+                                        return (
+                                            <Tooltip key={label}>
+                                                <TooltipTrigger>
+                                                    <span
+                                                        className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-xl select-none"
+                                                    >
+                                                        <SimpleIcon icon={icon} />
+                                                        {label}
+                                                    </span>
+                                                </TooltipTrigger>
+                                                <TooltipContent>
+                                                    This is hosted in Cloudflare btw. 😜
+                                                </TooltipContent>
+                                            </Tooltip>
+                                        );
+                                    }
+                                    if (isTanstack) {
+                                        return (
+                                            <Tooltip key={label}>
+                                                <TooltipTrigger>
+                                                    <span
+                                                        className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-xl select-none"
+                                                    >
+                                                        <SimpleIcon icon={icon} overrideColor={"green"} />
+                                                        {label}
+                                                    </span>
+                                                </TooltipTrigger>
+                                                <TooltipContent>
+                                                    This was built using Tanstack btw. 😜
+                                                </TooltipContent>
+                                            </Tooltip>
+                                        );
+                                    }
 
-                                return (
-                                    <span
-                                        key={label}
-                                        className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-secondary rounded-xl select-none transform-gpu hover:scale-105 transition-all duration-200 cursor-pointer"
-                                    >
-                                        <SimpleIcon icon={icon} />
-                                        {label}
-                                    </span>
-                                );
-                            })}
-                        </CardContent>
-                    </Card>
+                                    return (
+                                        <span
+                                            key={label}
+                                            className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-secondary rounded-xl select-none transform-gpu hover:scale-105 transition-all duration-200 cursor-pointer"
+                                        >
+                                            <SimpleIcon icon={icon} />
+                                            {label}
+                                        </span>
+                                    );
+                                })}
+                            </CardContent>
+                        </Card>
+
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </section>
     );
 }
