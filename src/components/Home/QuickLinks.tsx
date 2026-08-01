@@ -1,11 +1,22 @@
-import { GraduationCap, Mail, MapPinHouse } from "lucide-react";
+import { CalendarClock, GraduationCap, Mail, MapPinHouse } from "lucide-react";
 import UnderlineWrapper from "./UnderlineWrapper";
 
 export default function QuickLinks() {
     return (
-        <div className="flex flex-col md:flex-row items-start justify-between gap-x-6 gap-y-4">
+        <div className="flex flex-col md:flex-col items-start justify-between gap-x-6 gap-y-4">
+
             <div className="flex items-center gap-2">
-                <GraduationCap size={18} className="shrink-0 text-primary" />
+                <CalendarClock size={14} className="shrink-0 text-primary" />
+                <UnderlineWrapper
+                    href="https://www.google.com/calendar"
+                    className="text-xs md:text-xs font-medium"
+                >
+                    20 yrs
+                </UnderlineWrapper>
+            </div>
+
+            <div className="flex items-center gap-2">
+                <GraduationCap size={14} className="shrink-0 text-primary" />
                 <UnderlineWrapper
                     href="https://islington.edu.np/programmes/computing"
                     className="text-xs md:text-xs font-medium"
@@ -15,7 +26,7 @@ export default function QuickLinks() {
             </div>
 
             <div className="flex items-center gap-2">
-                <MapPinHouse size={18} className="shrink-0 text-primary" />
+                <MapPinHouse size={14} className="shrink-0 text-primary" />
                 <UnderlineWrapper
                     href="https://www.google.com/search?q=Kathmandu "
                     className="text-xs md:text-xs font-medium"
@@ -25,7 +36,7 @@ export default function QuickLinks() {
             </div>
 
             <div className="flex items-center gap-2">
-                <Mail size={18} className="shrink-0 text-primary" />
+                <Mail size={14} className="shrink-0 text-primary" />
                 <UnderlineWrapper
                     href="mailto:itismepranish@gmail.com"
                     className="text-xs md:text-xs font-medium"
