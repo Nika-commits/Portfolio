@@ -9,6 +9,7 @@ import {
     siDocker,
     siDotnet,
     siFastapi,
+    siFirebase,
     siGo,
     siGooglecloud,
     siJetpackcompose,
@@ -64,6 +65,7 @@ const SKILL_DOMAINS = [
     {
         domain: "Database and Infrastructure",
         skills: [
+            { label: "Firebase", icon: siFirebase },
             { label: "PostgreSQL", icon: siPostgresql },
             { label: "MongoDB", icon: siMongodb },
             { label: "MySQL", icon: siMysql },
@@ -154,7 +156,7 @@ export default function Skills() {
                                             <Tooltip key={label}>
                                                 <TooltipTrigger>
                                                     <span
-                                                        className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded select-none"
+                                                        className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-lg select-none"
                                                     >
                                                         <SimpleIcon icon={icon} />
                                                         {label}
@@ -171,7 +173,7 @@ export default function Skills() {
                                             <Tooltip key={label}>
                                                 <TooltipTrigger>
                                                     <span
-                                                        className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded select-none"
+                                                        className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-lg select-none"
                                                     >
                                                         <SimpleIcon icon={icon} overrideColor={"green"} />
                                                         {label}
@@ -187,7 +189,7 @@ export default function Skills() {
                                     return (
                                         <span
                                             key={label}
-                                            className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-secondary rounded select-none transform-gpu hover:scale-105 transition-all duration-200 cursor-pointer"
+                                            className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-secondary rounded-lg select-none transform-gpu hover:scale-105 transition-all duration-200 cursor-pointer"
                                         >
                                             <SimpleIcon icon={icon} />
                                             {label}
