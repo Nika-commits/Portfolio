@@ -176,7 +176,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -291,4 +291,14 @@ html:active-view-transition-type(slide-right) {
 }
 ::view-transition-group(nav) {
     z-index: 100;
+}
+
+
+@utility scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
 }

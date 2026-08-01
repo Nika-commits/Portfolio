@@ -15,8 +15,7 @@ import {
     Dialog,
     DialogClose,
     DialogContent,
-    DialogFooter,
-    DialogHeader,
+    DialogFooter
 } from "#/components/ui/dialog";
 import { createFileRoute } from "@tanstack/react-router";
 import { BookOpenTextIcon, Globe } from "lucide-react";
@@ -169,9 +168,8 @@ function RouteComponent() {
                     if (!open) setOpenReadMore(null);
                 }}
             >
-                <DialogContent className="md:max-w-2xl! max-h-[90dvh] flex flex-col p-8 overflow-hidden">
-                    <DialogHeader></DialogHeader>
-                    <div className="prose prose-sm prose-neutral dark:prose-invert pb-4 leading-relaxed overflow-y-auto min-h-0 pr-2 md:pr-0 max-w-none text-xs md:text-sm">
+                <DialogContent className="md:max-w-2xl! max-h-[80dvh] flex flex-col p-8 overflow-hidden">
+                    <div className="scrollbar-hide prose prose-sm prose-neutral dark:prose-invert pb-4 leading-relaxed overflow-y-auto min-h-0 max-w-none text-xs text-left md:text-sm">
                         <Markdown>{openReadMore?.description}</Markdown>
                     </div>
                     <DialogFooter>

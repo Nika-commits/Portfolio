@@ -5,7 +5,7 @@ export default function Introduction() {
         <article className="flex flex-col items-start justify-start gap-4 ">
             <h1 className="text-sm md:text-sm font-extrabold">Hi, 👋🏽</h1>
 
-            <p className="text-sm text-justify md:text-sm leading-relaxed text-muted-foreground font-medium tracking-wide">
+            <p className="text-sm text-left md:text-sm leading-relaxed text-muted-foreground font-medium ">
                 I am a frontend-focused
                 <UnderlineWrapper className="text-foreground font-medium text-sm md:text-sm leading-relaxed">
                     {" "}Full-stack Engineer{" "}
@@ -42,7 +42,7 @@ export default function Introduction() {
                 </UnderlineWrapper>.
             </p>
 
-            <p className="text-sm text-justify md:text-sm leading-relaxed text-muted-foreground font-medium tracking-wide">
+            <p className="text-sm text-left md:text-sm leading-relaxed text-muted-foreground font-medium">
                 My primary stack is
                 <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
                     {" TypeScript "}
