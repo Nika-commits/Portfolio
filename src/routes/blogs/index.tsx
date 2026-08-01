@@ -1,15 +1,9 @@
 import {
-    TypingText,
-    TypingTextCursor,
-} from "#/components/animate-ui/primitives/texts/typing";
-import GlobalGradientText from "#/components/Global/GLobalGradientText";
-import {
     Card,
     CardDescription,
     CardHeader,
     CardTitle,
 } from "#/components/ui/card";
-import { Separator } from "#/components/ui/separator";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { allPosts } from "content-collections";
 
@@ -20,20 +14,18 @@ export const Route = createFileRoute("/blogs/")({
 function RouteComponent() {
     return (
         <div>
-            <div className="flex flex-col items-start gap-1 md:gap-2">
-                <GlobalGradientText text="My Blogs" />
+            {/*<div className="flex flex-col items-start gap-1 md:gap-2">*/}
+            {/*<GlobalGradientText text="My Blogs" />*/}
 
-                <TypingText
+            {/*<TypingText
                     className="text-base md:text-lg font-bold tracking-normal text-muted-foreground "
                     text="A Glimpse inside my mind. 💭"
-                // loop
                 >
                     <TypingTextCursor />
-                </TypingText>
-                {/*<p className="text-base md:text-lg font-bold tracking-normal text-muted-foreground"></p>*/}
-            </div>
+                </TypingText>*/}
+            {/*</div>*/}
 
-            <Separator className="my-4 md:my-6" />
+            {/*<Separator className="my-4 md:my-6" />*/}
 
             {allPosts.length === 0 ? (
                 <div className="flex justify-center items-center p-6 border border-dashed border-secondary rounded">

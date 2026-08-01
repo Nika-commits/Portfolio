@@ -1,9 +1,3 @@
-import {
-    TypingText,
-    TypingTextCursor,
-} from "#/components/animate-ui/primitives/texts/typing";
-import GlobalGradientText from "#/components/Global/GLobalGradientText";
-import { Separator } from "#/components/ui/separator";
 import AndroidDeveloperIntern from "#/components/Work/content/AndroidDeveloperIntern";
 import FrontendDeveloper from "#/components/Work/content/FrontendDeveloper";
 import FrontendDeveloperIntern from "#/components/Work/content/FrontendDeveloperIntern";
@@ -18,17 +12,17 @@ export const Route = createFileRoute("/work")({
 function RouteComponent() {
     return (
         <div>
-            <div className="flex flex-col items-start gap-1 md:gap-2">
-                <GlobalGradientText text="My Work Experiences" />
-                <TypingText
+            {/*<div className="flex flex-col items-start gap-1 md:gap-2">*/}
+            {/*<GlobalGradientText text="My Work Experiences" />*/}
+            {/*<TypingText
                     className="text-sm md:text-base font-bold tracking-normal text-muted-foreground h-12 md:h-auto "
                     text="My journey from frontend dev to full-stack and native Android. 💼"
                 >
                     <TypingTextCursor />
-                </TypingText>
-            </div>
+                </TypingText>*/}
+            {/*</div>*/}
 
-            <Separator className="my-4 md:my-6" />
+            {/*<Separator className="my-4 md:my-6" />*/}
 
             <WorkTimeLine timelines={releases} />
         </div>

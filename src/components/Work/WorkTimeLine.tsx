@@ -18,7 +18,7 @@ export default function WorkTimeLine({ timelines }: ChangelogContentProps) {
                 <div
                     key={timeline.date}
                     id={String(index + 1)}
-                    className="relative flex scroll-mt-18 justify-end gap-2"
+                    className="relative flex scroll-mt-18 justify-end gap-2 py-6"
                 >
                     <div className="sticky top-19 flex w-46 flex-col items-end gap-2 self-start pb-4 max-md:hidden">
                         <Badge className="flex size-6 w-auto justify-end rounded text-sm font-semibold">

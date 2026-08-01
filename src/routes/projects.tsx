@@ -1,8 +1,3 @@
-import {
-    TypingText,
-    TypingTextCursor,
-} from "#/components/animate-ui/primitives/texts/typing";
-import GlobalGradientText from "#/components/Global/GLobalGradientText";
 import { UnderlineLink } from "#/components/Global/UnderlineLink";
 import { SimpleIcon } from "#/components/Home/Skills";
 import UnderlineWrapper from "#/components/Home/UnderlineWrapper";
@@ -23,7 +18,6 @@ import {
     DialogFooter,
     DialogHeader,
 } from "#/components/ui/dialog";
-import { Separator } from "#/components/ui/separator";
 import { createFileRoute } from "@tanstack/react-router";
 import { BookOpenTextIcon, Globe } from "lucide-react";
 import { motion, type Variants } from "motion/react";
@@ -54,16 +48,16 @@ function RouteComponent() {
 
     return (
         <div className="pb-50">
-            <div className="flex flex-col items-start gap-1 md:gap-2">
-                <GlobalGradientText text="My Projects" />
-                <TypingText
+            {/*<div className="flex flex-col items-start gap-1 md:gap-2">*/}
+            {/*<GlobalGradientText text="My Projects" />*/}
+            {/*<TypingText
                     className="text-sm md:text-base font-bold tracking-normal text-muted-foreground "
                     text="Things I have worked on. 🛠️"
                 >
                     <TypingTextCursor />
-                </TypingText>
-            </div>
-            <Separator className="my-4 md:my-6" />
+                </TypingText>*/}
+            {/*</div>*/}
+            {/*<Separator className="my-4 md:my-6" />*/}
 
             <div className="flex flex-col gap-20">
                 {Projects.map((project) => {
