@@ -34,8 +34,8 @@ function RouteComponent() {
     const variants: Variants = {
         hidden: {
             opacity: 0.3,
-            y: -50,
-            scale: 0.5,
+            // y: -50,
+            scale: 0.9,
         },
         visible: {
             opacity: 1,
