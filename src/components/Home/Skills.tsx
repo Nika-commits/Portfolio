@@ -1,6 +1,6 @@
 import { cn } from "#/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { stagger, type Variants } from "motion";
+import { type Variants } from "motion";
 import { motion } from "motion/react";
 import {
     siAndroid,
@@ -105,49 +105,40 @@ export function SimpleIcon({
 
 export default function Skills() {
 
-    const container: Variants = {
-        hidden: {
-            opacity: 0,
-        },
-        visible: {
-            opacity: 1,
-            transition: {
-                delayChildren: stagger(0.3, {
-                    startDelay: 0.5,
-                }),
-            }
-        },
-    }
-
     const variants: Variants = {
         hidden: {
-            opacity: 0,
-            y: 16,
+            opacity: 0.2,
+            y: -20,
         },
-        visible: {
+        visible: (index: number) => ({
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.5,
-                ease: "easeOut",
+                duration: 0.3,
+                ease: "easeInOut",
+                delay: index * 0.02,
             }
-        },
+        }),
     }
 
     return (
         <section className="w-full space-y-4">
             <h2 className="text-sm md:text-base font-bold">What I Work With </h2>
-            <motion.div
+            <div
                 className="flex flex-col gap-4"
-                variants={container}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false, amount: 0.15, margin: "10% 0px 10% 0px" }}
             >
-                {SKILL_DOMAINS.map(({ domain, skills }) => (
+                {SKILL_DOMAINS.map(({ domain, skills }, index) => (
                     <motion.div
                         key={domain}
                         variants={variants}
+                        custom={index}
+                        initial="hidden"
+                        whileInView="visible"
+                    // viewport={{
+                    //     once: true,
+                    //     amount: 0.2,
+                    //     // margin: "-40% 0px -40% 0px",
+                    // }}
                     >
                         <Card>
                             <CardHeader>
@@ -208,7 +199,7 @@ export default function Skills() {
 
                     </motion.div>
                 ))}
-            </motion.div>
+            </div>
         </section>
     );
 }
