@@ -1,16 +1,6 @@
-// import {
-// 	TypingText,
-// 	TypingTextCursor,
-// } from "../animate-ui/primitives/texts/typing";
 import GlobalGradientText from "../Global/GLobalGradientText";
 import Me from "./Me";
 import QuickLinks from "./QuickLinks";
-
-// const texts = [
-//     "Specializing In Frontend 🌐 ",
-//     "Focused On Performance ⚡ ",
-//     "And Clean Architecture ⚙️ ",
-// ];
 
 export const MyName = () => {
     return (

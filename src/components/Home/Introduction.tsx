@@ -3,7 +3,7 @@ import UnderlineWrapper from "./UnderlineWrapper";
 export default function Introduction() {
     return (
         <article className="flex flex-col items-start justify-start gap-4 ">
-            <h1 className="text-sm md:text-sm font-extrabold">Hi, 👋🏽</h1>
+            <h1 className="text-sm font-extrabold">Hi, 👋🏽</h1>
 
             <p className="text-sm text-left md:text-sm leading-relaxed text-muted-foreground font-medium ">
                 I am a frontend-focused
@@ -52,20 +52,20 @@ export default function Introduction() {
                     {" Kotlin"}
                 </UnderlineWrapper>.
                 I have also worked with
-                <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
+                <UnderlineWrapper className="text-foreground font-medium text-sm md:text-sm leading-relaxed">
                     {" Node.js"}
                 </UnderlineWrapper>,
-                <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
+                <UnderlineWrapper className="text-foreground font-medium text-sm md:text-sm leading-relaxed">
                     {" FastAPI"}
                 </UnderlineWrapper>,
-                <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
+                <UnderlineWrapper className="text-foreground font-medium text-sm md:text-sm leading-relaxed">
                     {" ASP.NET"}
                 </UnderlineWrapper> and
-                <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
+                <UnderlineWrapper className="text-foreground font-medium text-sm md:text-sm leading-relaxed">
                     {" Supabase "}
                 </UnderlineWrapper>on the backend. Outside of work, I am exploring system
                 design,
-                <UnderlineWrapper className="text-foreground font-medium text-xs md:text-sm leading-relaxed">
+                <UnderlineWrapper className="text-foreground font-medium text-sm md:text-sm leading-relaxed">
                     {" Go"}
                 </UnderlineWrapper>, and backend architectures.
                 {/*I am always open to
