@@ -30,7 +30,7 @@ export default function AndroidDeveloperIntern() {
                 </div>
 
                 <p className="text-muted-foreground text-xs md:text-sm">
-                    Esewa is the subsidiary of F1Soft - a leading Fintech company based in Nepal.
+                    Esewa is part of F1Soft Group - a leading Fintech organization based in Nepal.
                     It is the most used digital wallet in Nepal that serves over 10 million users.
                 </p>
                 <Separator className="my-4 md:my-6 " />
@@ -74,9 +74,6 @@ export default function AndroidDeveloperIntern() {
                                     development practices.
                                 </li>
                                 <li>
-                                    Implemented UI screens from Figma designs, recreating them in XML layouts and Jetpack Compose.
-                                </li>
-                                <li>
                                     Built a demo MarketPlace ecommerce application using Jetpack Compose, XML and Firebase.
                                 </li>
                                 <li>
@@ -101,12 +98,11 @@ export default function AndroidDeveloperIntern() {
                             <ul className="text-muted-foreground list-inside list-disc space-y-3 text-xs md:text-sm">
                                 <li>
                                     How Android applications are structured using Activities,
-                                    Fragments, layouts, and modern development patterns.
+                                    Fragments, layouts and thier lifecycles.
                                 </li>
                                 <li>
-                                    The progression from Java to Kotlin, including Kotlin language
-                                    features that simplify Android development and improve code
-                                    readability.
+                                    How Kotlin and Kotlin Coroutines work together to simplify
+                                    asynchronous programming.
                                 </li>
                                 <li>
                                     How to build responsive user interfaces with both XML and
@@ -118,14 +114,12 @@ export default function AndroidDeveloperIntern() {
                                     network requests, data models, and asynchronous programming.
                                 </li>
                                 <li>
-                                    The importance of writing clean, maintainable Android code and
-                                    approaching development with an iterative learning mindset
-                                    through mentor feedback and practical exercises.
+                                    How to structure and organize Android projects using best
+                                    practices and modern development patterns.
                                 </li>
                             </ul>
                         </AccordionContent>
                     </AccordionItem>
-
                     {/*<AccordionItem
 						value="stack"
 						className="bg-transparent border-b last:border-b-0"
