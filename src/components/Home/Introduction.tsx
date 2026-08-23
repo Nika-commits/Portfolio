@@ -25,23 +25,23 @@ export default function Introduction() {
                     Restobrain AI
                 </UnderlineWrapper>
                 , where I primarily work on admin and client dashboards using TanStack Start
-                and TypeScript. I am also currently interning at{" "}
+                and TypeScript. I am also currently interning as an Android Developer at
                 <UnderlineWrapper
                     href="https://esewa.com.np/"
                     className={textSizeHighlight}
                 >
-                    eSewa {" "}
+                    {" eSewa "}
                 </UnderlineWrapper>
-                as an Android Developer, learning to develop native Android applications with
-                <UnderlineWrapper className={textSizeHighlight}>
-                    {" Kotlin"}
-                </UnderlineWrapper>, <UnderlineWrapper className={textSizeHighlight}>
-                    {" Java"}
-                </UnderlineWrapper>, <UnderlineWrapper className={textSizeHighlight}>
-                    {" Jetpack Compose"}
-                </UnderlineWrapper>, and <UnderlineWrapper className={textSizeHighlight}>
-                    {" XML Views"}
-                </UnderlineWrapper>.
+                , learning to develop native Android applications with
+                {/*<UnderlineWrapper className={textSizeHighlight}>*/}
+                {" Kotlin"}
+                {/*</UnderlineWrapper>, <UnderlineWrapper className={textSizeHighlight}>*/}
+                {" Java"}
+                {/*</UnderlineWrapper>, <UnderlineWrapper className={textSizeHighlight}>*/}
+                {" Jetpack Compose"}
+                {/*</UnderlineWrapper>, and <UnderlineWrapper className={textSizeHighlight}>*/}
+                {" XML Views"}
+                {/*</UnderlineWrapper>.*/}
             </p>
 
             <p className={textStyleBase}>
