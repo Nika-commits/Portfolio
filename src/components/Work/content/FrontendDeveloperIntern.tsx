@@ -31,8 +31,8 @@ const { data: dashboardData } = useQuery({
                 </div>
 
                 <p className="text-muted-foreground text-xs md:text-sm">
-                    Resto Brain is a Australia based startup which builds SAAS products
-                    targeted at Restaurant and business owners rangin from POS systems to websites.
+                    Resto Brain is an Australia based startup which builds SAAS products
+                    targeted at Restaurant and business owners ranging from POS systems to business management dashboards.
                 </p>
                 <Separator className="my-4 md:my-6 " />
                 <div className="flex flex-wrap items-center gap-4">
@@ -59,7 +59,7 @@ const { data: dashboardData } = useQuery({
                     job. I had never used Tanstack Query before, so I had to learn it from
                     scratch. Keying queries to specific ID and configuring stale times was
                     how I learned to cache the API data and stop the frontend from
-                    hammering the API on every render.
+                    hammering the API on every render and also how to invalidate cache when needed.
                 </p>
                 <Accordion type="single" className="p-2 w-full border" collapsible>
                     <AccordionItem
