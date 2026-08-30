@@ -21,10 +21,15 @@ export default function FrontendDeveloper() {
             <div className="space-y-4">
                 <div className="space-y-2 flex justify-between items-start">
                     <h3 className="text-sm md:text-base font-semibold">
-                        Frontend Developer
+                        Junior Frontend Developer
                     </h3>
-                    <div className="dark:bg-primary py-1 px-2 rounded">
-                        <img src="/Icons/restobrain.webp" alt="" className="h-5" />
+                    <div className="dark:bg-primary py-1 px-2 rounded hover:cursor-pointer hover:scale-110 transform-gpu transition-transform duration-300">
+                        <img
+                            src="/Icons/restobrain.webp"
+                            alt="Resto Brain"
+                            className="h-5"
+                            onClick={() => window.open("https://restobrain.ai", "_blank")}
+                        />
                     </div>
                 </div>
                 <p className="text-muted-foreground text-xs md:text-sm">

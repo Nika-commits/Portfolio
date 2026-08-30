@@ -24,8 +24,10 @@ export default function AndroidDeveloperIntern() {
                         Android Developer Intern
                     </h3>
 
-                    <div className="flex justify-end items-start rounded">
-                        <img src="/Icons/why-esewa.webp" alt="" className="h-8 rounded" />
+                    <div className="flex justify-end items-start rounded hover:cursor-pointer hover:scale-110 transform-gpu transition-transform duration-300">
+                        <img src="/Icons/why-esewa.webp" alt="" className="h-8 rounded"
+                            onClick={() => window.open("https://www.esewa.com.np", "_blank")}
+                        />
                     </div>
                 </div>
 
