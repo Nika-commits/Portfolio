@@ -24,11 +24,11 @@ function Home() {
 
             <Skills />
 
-            <Separator className="my-4 md:my-6 " />
+            <Separator className="my-12 md:my-12 " />
 
             <Quotes />
 
-            <Separator className="my-4 md:my-6 " />
+            <Separator className="my-12 md:my-12" />
 
         </main>
     );

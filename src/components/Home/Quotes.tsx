@@ -1,11 +1,14 @@
+import { Repeat } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import {
     Card,
     CardContent,
     CardFooter,
-    CardHeader
+    CardHeader,
 } from "@/components/ui/card";
-import { useState } from "react";
 
 export default function Quotes() {
     const [random, setRandom] = useState(
@@ -15,49 +18,89 @@ export default function Quotes() {
     const currentQuote = quotes[random];
 
     const getRandomQuote = () => {
-        setRandom(Math.floor(Math.random() * quotes.length));
+        let nextRandom = Math.floor(Math.random() * quotes.length);
+
+        while (nextRandom === random && quotes.length > 1) {
+            nextRandom = Math.floor(Math.random() * quotes.length);
+        }
+
+        setRandom(nextRandom);
     };
 
     return (
-        <Card className="w-full">
-            <CardHeader>
-                {/*<CardTitle className="text-xl">Quotes</CardTitle>*/}
-            </CardHeader>
+        <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{
+                once: false,
+                amount: 0.2,
+            }}
+            transition={{
+                duration: 0.3,
+                ease: "easeInOut",
+                delay: 0.2,
+            }}
+        >
+            <Card className="w-full">
+                <CardHeader />
 
-            <CardContent className="space-y-6">
-                <blockquote className="relative border-l-2 pl-6">
-                    <span className="absolute -left-3 -top-5 text-5xl font-serif text-muted-foreground">
-                        “
-                    </span>
+                <CardContent className="space-y-6">
+                    <AnimatePresence mode="wait">
+                        <motion.blockquote
+                            key={random}
+                            initial={{
+                                opacity: 0,
+                                y: 10,
+                            }}
+                            animate={{
+                                opacity: 1,
+                                y: 0,
+                            }}
+                            exit={{
+                                opacity: 0,
+                                y: -10,
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                            className="relative p-4"
+                        >
+                            <span className="absolute -left-2 -top-5 font-serif text-3xl text-muted-foreground">
+                                “
+                            </span>
 
-                    <p className="text-xl leading-relaxed font-medium tracking-tight">
-                        {currentQuote.quote}
-                    </p>
+                            <p className="font-serif text-base font-bold italic leading-relaxed tracking-wider">
+                                {currentQuote.quote}
+                            </p>
 
-                    <footer className="mt-4 text-sm text-muted-foreground">
-                        <span className="font-medium text-foreground">
-                            {currentQuote.author}
-                        </span>
-                        <span className="mx-2">·</span>
-                        <span>{currentQuote.date}</span>
-                    </footer>
-                </blockquote>
+                            <footer className="mt-8 text-sm text-muted-foreground">
+                                <span className="font-medium text-foreground">
+                                    {currentQuote.author}
+                                </span>
 
-                <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
-                    {currentQuote.title}
-                </p>
-            </CardContent>
+                                <span className="mx-2">·</span>
 
-            <CardFooter>
-                <Button variant="outline" onClick={getRandomQuote}>
-                    New Quote
-                </Button>
-            </CardFooter>
-        </Card>
+                                <span>{currentQuote.date}</span>
+                            </footer>
+                        </motion.blockquote>
+                    </AnimatePresence>
+                </CardContent>
+
+                <CardFooter className="flex justify-center">
+                    <Button
+                        variant="outline"
+                        size="icon"
+                        onClick={getRandomQuote}
+                    >
+                        <Repeat />
+                        <span className="sr-only">New quote</span>
+                    </Button>
+                </CardFooter>
+            </Card>
+        </motion.div>
     );
-}
-
-type Quotes = {
+} type Quotes = {
     title: string;
     quote: string;
     author: string;
@@ -280,12 +323,6 @@ const quotes: Quotes[] = [
         quote: "Life is really simple, but we insist on making it complicated.",
         author: "Confucius",
         date: "5th century BC",
-    },
-    {
-        title: "Difficult Things",
-        quote: "The difficult we do today; the impossible takes a little longer.",
-        author: "Unknown",
-        date: "20th century",
     },
     {
         title: "Action Over Talk",
