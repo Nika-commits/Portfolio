@@ -32,11 +32,10 @@ export default function AndroidDeveloperIntern() {
                 </div>
 
                 <p className="text-muted-foreground text-xs md:text-sm">
-                    Esewa is part of F1Soft Group - a leading Fintech organization based in Nepal.
+                    Esewa is part of F1Soft Group - a group of IT companies based in Nepal.
                     It is the most used digital wallet in Nepal that serves over 10 million users.
                 </p>
                 <Separator className="my-4 md:my-6 " />
-
                 <div className="flex flex-wrap items-center gap-4">
                     <span className="flex gap-2 items-end ">
                         <SimpleIcon icon={siKotlin} />
@@ -79,10 +78,9 @@ export default function AndroidDeveloperIntern() {
                                     Built a demo MarketPlace ecommerce application using Jetpack Compose, XML and Firebase.
                                 </li>
                                 <li>
-                                    Learned to consume REST APIs using Retrofit and worked with
-                                    JSON data, asynchronous network requests, and response
-                                    handling.
+                                    Integrated eSewa and Khalti Android SDKs into the app in Test Environment for payment processing.
                                 </li>
+                                <li>Built a custom ASP.NET backend and consumed REST APIs in the application using retrofit, working with asynchronous programming with Coroutines.</li>
                             </ul>
                         </AccordionContent>
                     </AccordionItem>

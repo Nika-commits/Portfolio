@@ -1,7 +1,7 @@
 import UnderlineWrapper from "./UnderlineWrapper";
 
 export default function Introduction() {
-    const textStyleBase = "text-sm md:text-sm lg:text-base text-left text-muted-foreground font-medium leading-relaxed" as const;
+    const textStyleBase = "text-xs md:text-xs lg:text-sm text-left text-muted-foreground font-medium leading-relaxed" as const;
     const textSizeHighlight = `${textStyleBase} text-foreground` as const;
     return (
         <article className="flex flex-col items-start justify-start gap-4 ">
@@ -14,10 +14,13 @@ export default function Introduction() {
                 </UnderlineWrapper>
                 and an
                 <UnderlineWrapper className={textSizeHighlight}>
-                    {" "}Android developer
+                    {" Android developer"}
                 </UnderlineWrapper>.
-                I currently work
-                as a Frontend Developer at{" "}
+                {" I currently work as a "}
+                <UnderlineWrapper className={textSizeHighlight}>
+                    Frontend Developer
+                </UnderlineWrapper>
+                {" for "}
                 <UnderlineWrapper
                     href="https://restobrain.ai/"
                     className={textSizeHighlight}
@@ -34,13 +37,11 @@ export default function Introduction() {
                 </UnderlineWrapper>
                 , learning to develop native Android applications with
                 {/*<UnderlineWrapper className={textSizeHighlight}>*/}
-                {" Kotlin"}
-                {/*</UnderlineWrapper>, <UnderlineWrapper className={textSizeHighlight}>*/}
-                {" Java"}
+                {" Kotlin,"}
                 {/*</UnderlineWrapper>, <UnderlineWrapper className={textSizeHighlight}>*/}
                 {" Jetpack Compose"}
                 {/*</UnderlineWrapper>, and <UnderlineWrapper className={textSizeHighlight}>*/}
-                {" XML Views"}
+                {" and XML Views"}
                 {/*</UnderlineWrapper>.*/}
             </p>
 
