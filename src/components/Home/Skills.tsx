@@ -94,7 +94,7 @@ export function SimpleIcon({
         <svg
             role="img"
             viewBox="0 0 24 24"
-            className={cn("size-3 md:size-5 shrink-0", className)}
+            className={cn("size-4 md:size-5 shrink-0", className)}
             fill={overrideColor ?? `#${icon.hex}`}
             aria-label={icon.title}
         >
