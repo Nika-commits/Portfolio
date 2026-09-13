@@ -45,9 +45,7 @@ const { data: dashboardData } = useQuery({
                         <SimpleIcon icon={siReact} />
                     </span>
                     <span className="flex gap-2 items-end  ">
-                        <span className="bg-white p-0.5 rounded">
-                            <SimpleIcon icon={siTanstack} />
-                        </span>
+                        <SimpleIcon icon={siTanstack} />
                     </span>
                 </div>
                 <Separator className="my-4 md:my-6 " />

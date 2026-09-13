@@ -11,12 +11,12 @@ export default function Navigation() {
             <div className="grid grid-cols-2 lg:grid-cols-8 items-center">
                 {/* Social links */}
                 <div className="lg:col-span-2 flex justify-start items-center">
-                    <div className="social-links flex gap-4 items-center">
+                    <div className="flex gap-3 md:gap-4 items-center bg-background px-4 border-2 border-primary/30 py-2 rounded-3xl">
                         <UnderlineWrapper
                             href="https://www.linkedin.com/in/pranish-chaulagain-0a4833300/"
                             className="flex items-center"
                         >
-                            <span className="text-xl text-primary/60 font-extrabold">
+                            <span className="text-base md:text-2xl text-primary/60 font-extrabold">
                                 in
                             </span>
                         </UnderlineWrapper>
@@ -25,7 +25,7 @@ export default function Navigation() {
                             href="https://gqtuuqsgkyffgcpbfltk.supabase.co/storage/v1/object/public/Resume/Pranish%20Chaulagain%20CV.pdf"
                             className="flex items-center"
                         >
-                            <FileUserIcon className="size-5 md:size-6" color="gray" />
+                            <FileUserIcon className="size-4 md:size-6" color="gray" />
                         </UnderlineWrapper>
 
                         <UnderlineWrapper
@@ -58,7 +58,7 @@ export default function Navigation() {
                 </div>
 
                 {/* Theme */}
-                <div className="lg:col-span-2 flex justify-end items-center">
+                <div className="social-links lg:col-span-2 flex justify-end items-center">
                     <ThemeToggle />
                 </div>
             </div>

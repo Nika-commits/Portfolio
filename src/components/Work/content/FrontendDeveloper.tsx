@@ -48,9 +48,7 @@ export default function FrontendDeveloper() {
                         <SimpleIcon icon={siReact} />
                     </span>
                     <span className="flex gap-2 items-end  ">
-                        <span className="bg-white p-0.5 rounded">
-                            <SimpleIcon icon={siTanstack} />
-                        </span>
+                        <SimpleIcon icon={siTanstack} />
                     </span>
                     <span className="flex gap-2 items-end ">
                         <SimpleIcon icon={siCypress} />
