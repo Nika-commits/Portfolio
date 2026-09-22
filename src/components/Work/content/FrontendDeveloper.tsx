@@ -68,6 +68,11 @@ export default function FrontendDeveloper() {
                         <AccordionContent className="h-auto">
                             <div className="bg-muted space-y-2 rounded-[10px] p-2">
                                 <img
+                                    src="https://gqtuuqsgkyffgcpbfltk.supabase.co/storage/v1/object/public/Portfolio/calendar%20(1).webp"
+                                    alt="Calendar"
+                                    className="w-full rounded-[7px] object-cover"
+                                />
+                                <img
                                     src="https://gqtuuqsgkyffgcpbfltk.supabase.co/storage/v1/object/public/Portfolio/dashboard-2.webp"
                                     alt="Todo Dashboard"
                                     className="w-full rounded-[7px] object-cover"
