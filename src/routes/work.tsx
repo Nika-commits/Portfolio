@@ -31,7 +31,7 @@ function RouteComponent() {
 
 export const releases: Timeline[] = [
     {
-        date: "June 28, 2026 - Present",
+        date: "June 28, 2026 - September 28, 2026",
         company: "eSewa",
         content: <AndroidDeveloperIntern />,
     },
