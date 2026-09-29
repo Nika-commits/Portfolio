@@ -84,8 +84,7 @@ function RootDocument() {
             <head>
                 <HeadContent />
             </head>
-            <body className="relative min-h-screen antialiased transition-colors duration-200 ease-linear scroll-smooth">
-                {/*<BackgroundGradients />*/}
+            <body className="antialiased transition-colors duration-300 ease-in-out scroll-smooth">
                 <main className="container mx-auto max-w-3xl px-8 pb-18 pt-4">
                     <Navigation />
                     <Separator className="my-4 md:my-6" />

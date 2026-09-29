@@ -1,4 +1,4 @@
-import { CalendarClock, GraduationCap, Mail, MapPinHouse } from "lucide-react";
+import { Cake, GraduationCap, Mail, MapPinHouse } from "lucide-react";
 import UnderlineWrapper from "./UnderlineWrapper";
 
 export default function QuickLinks() {
@@ -6,7 +6,7 @@ export default function QuickLinks() {
         <div className="flex flex-col md:flex-col items-start justify-between gap-x-6 gap-y-4">
 
             <div className="flex items-center gap-2">
-                <CalendarClock size={14} className="shrink-0 text-primary" />
+                <Cake size={14} className="shrink-0 text-primary" />
                 <UnderlineWrapper
                     href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                     className="text-xs md:text-xs font-medium"

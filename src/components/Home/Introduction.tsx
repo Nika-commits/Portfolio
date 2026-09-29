@@ -27,13 +27,13 @@ export default function Introduction() {
                 >
                     Restobrain AI
                 </UnderlineWrapper>
-                , where I primarily work on admin and client dashboards using TanStack Start
+                , where I primarily work on admin and client dashboards using TanStack Libraries
                 and TypeScript. I also have an internship experience as an Android Developer at
                 <UnderlineWrapper
                     href="https://esewa.com.np/"
                     className={textSizeHighlight}
                 >
-                    {" eSewa "}
+                    {" eSewa"}
                 </UnderlineWrapper>
                 , where I learned to develop native Android applications with
                 {/*<UnderlineWrapper className={textSizeHighlight}>*/}

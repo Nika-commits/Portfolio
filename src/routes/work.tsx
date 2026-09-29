@@ -31,14 +31,14 @@ function RouteComponent() {
 
 export const releases: Timeline[] = [
     {
-        date: "June 28, 2026 - September 28, 2026",
-        company: "eSewa",
-        content: <AndroidDeveloperIntern />,
-    },
-    {
-        date: "April 9, 2026 - Present",
+        date: "Apr 9, 2026 - Present",
         company: "Resto Brain",
         content: <FrontendDeveloper />,
+    },
+    {
+        date: "Jun 28, 2026 - Sep 28, 2026",
+        company: "eSewa",
+        content: <AndroidDeveloperIntern />,
     },
     {
         date: "Sep 7, 2025 - Jan 7, 2026",
