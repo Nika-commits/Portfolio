@@ -211,8 +211,8 @@ export function SimpleIcon({
             role="img"
             viewBox="0 0 24 24"
             className={cn(
-                "size-3 min-h-3 shrink-0",
-                "md:size-6 md:min-h-4",
+                "size-3 min-h-3 min-w-3 shrink-0",
+                "md:size-6 md:min-h-4 md:min-w-4",
                 className
             )}
             fill={overrideColor ?? `#${icon.hex}`}
