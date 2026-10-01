@@ -211,8 +211,8 @@ export function SimpleIcon({
             role="img"
             viewBox="0 0 24 24"
             className={cn(
-                "size-5 min-h-5 min-w-5 shrink-0",
-                "md:size-6 md:min-h-4 md:min-w-6",
+                "size-3 min-h-3 shrink-0",
+                "md:size-6 md:min-h-4",
                 className
             )}
             fill={overrideColor ?? `#${icon.hex}`}
@@ -266,7 +266,7 @@ export default function Skills() {
                                             <TooltipTrigger asChild>
                                                 <Badge
                                                     variant="secondary"
-                                                    className="flex items-center justify-start cursor-pointer select-none rounded-lg px-2 py-1 text-xs text-primary/80 transition-all duration-200 hover:scale-105 hover:bg-secondary/80 md:px-2 md:py-3.5"
+                                                    className="flex items-center gap-2 justify-start cursor-pointer select-none rounded-lg text-xs text-primary/80 transition-all duration-200 hover:scale-105 hover:bg-secondary/80 px-2 py-3 md:px-2.5 md:py-3.5"
                                                 >
                                                     {label === "C#" ? <CSharpIcon /> : <SimpleIcon icon={icon} />}
                                                     {label}
@@ -295,7 +295,7 @@ function CSharpIcon({
     return (
         <span
             className={cn(
-                "flex size-5 shrink-0 items-center justify-center",
+                "flex size-4.5 md:size-5 shrink-0 items-center justify-center",
                 "rounded-sm bg-[#512BD4]",
                 "tracking-wide",
                 "text-[9px] font-bold leading-none text-white",
