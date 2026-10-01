@@ -16,7 +16,7 @@ export default function Navigation() {
                             href="https://www.linkedin.com/in/pranish-chaulagain-0a4833300/"
                             className="flex items-center"
                         >
-                            <span className="text-base md:text-2xl text-primary/60 font-extrabold">
+                            <span className="text-base md:text-xl text-primary/60 font-extrabold">
                                 in
                             </span>
                         </UnderlineWrapper>
@@ -25,7 +25,7 @@ export default function Navigation() {
                             href="https://gqtuuqsgkyffgcpbfltk.supabase.co/storage/v1/object/public/Resume/Pranish%20Chaulagain%20CV.pdf"
                             className="flex items-center"
                         >
-                            <FileUserIcon className="size-4 md:size-6" color="gray" />
+                            <FileUserIcon className="size-4 md:size-5" color="gray" />
                         </UnderlineWrapper>
 
                         <UnderlineWrapper
@@ -34,7 +34,7 @@ export default function Navigation() {
                         >
                             <SimpleIcon
                                 icon={siGithub}
-                                className="size-4"
+                                className="size-4 md:size-5"
                                 overrideColor="gray"
                             />
                         </UnderlineWrapper>
@@ -45,7 +45,7 @@ export default function Navigation() {
                         >
                             <SimpleIcon
                                 icon={siInstagram}
-                                className="size-4"
+                                className="size-4 md:size-5"
                                 overrideColor="gray"
                             />
                         </UnderlineWrapper>
