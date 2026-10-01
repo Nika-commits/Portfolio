@@ -4,7 +4,6 @@ import { type Variants } from "motion";
 import { motion } from "motion/react";
 import {
     siBlazor,
-    siC,
     siCloudflare,
     siDocker,
     siDotnet,
@@ -21,6 +20,7 @@ import {
     siPython,
     siReact,
     siRust,
+    siSharp,
     siSqlite,
     siSquare,
     siTanstack,
@@ -28,6 +28,7 @@ import {
     siVercel,
     siXml
 } from "simple-icons";
+import { Badge } from "../ui/badge";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 type SimpleIcon = { path: string; hex: string; title: string };
@@ -59,7 +60,7 @@ const SKILL_DOMAINS: SkillDomain[] = [
             },
             {
                 label: "C#",
-                icon: siC,
+                icon: siSharp,
                 description: "My favorite OOP based language. (better than Java lmao)",
             },
             {
@@ -209,7 +210,11 @@ export function SimpleIcon({
         <svg
             role="img"
             viewBox="0 0 24 24"
-            className={cn("size-4 md:size-5 shrink-0", className)}
+            className={cn(
+                "size-5 min-h-5 min-w-5 shrink-0",
+                "md:size-6 md:min-h-4 md:min-w-6",
+                className
+            )}
             fill={overrideColor ?? `#${icon.hex}`}
             aria-label={icon.title}
         >
@@ -257,17 +262,15 @@ export default function Skills() {
                             <CardContent className="flex flex-wrap gap-3 md:gap-4">
                                 {skills.map(({ label, icon, description }) => {
                                     return (
-                                        <Tooltip>
-                                            <TooltipTrigger>
-                                                <span
-                                                    key={label}
-                                                    className={cn("flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-secondary rounded-lg select-none transform-gpu hover:scale-105 transition-all duration-200 cursor-pointer")}
+                                        <Tooltip key={label}>
+                                            <TooltipTrigger asChild>
+                                                <Badge
+                                                    variant="secondary"
+                                                    className="flex items-center justify-start cursor-pointer select-none rounded-lg px-2 py-1 text-xs text-primary/80 transition-all duration-200 hover:scale-105 hover:bg-secondary/80 md:px-2 md:py-3.5"
                                                 >
-                                                    <SimpleIcon
-                                                        icon={icon}
-                                                    />
+                                                    {label === "C#" ? <CSharpIcon /> : <SimpleIcon icon={icon} />}
                                                     {label}
-                                                </span>
+                                                </Badge>
                                             </TooltipTrigger>
                                             <TooltipContent>
                                                 {description}
@@ -277,10 +280,30 @@ export default function Skills() {
                                 })}
                             </CardContent>
                         </Card>
-
                     </motion.div>
                 ))}
             </div>
-        </section>
+        </section >
+    );
+}
+
+function CSharpIcon({
+    className,
+}: {
+    className?: string;
+}) {
+    return (
+        <span
+            className={cn(
+                "flex size-5 shrink-0 items-center justify-center",
+                "rounded-sm bg-[#512BD4]",
+                "tracking-wide",
+                "text-[9px] font-bold leading-none text-white",
+                "[clip-path:polygon(25%_0%,75%_0%,100%_25%,100%_75%,75%_100%,25%_100%,0%_75%,0%_25%)]",
+                className
+            )}
+        >
+            C#
+        </span>
     );
 }
