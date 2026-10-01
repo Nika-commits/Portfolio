@@ -4,6 +4,7 @@ import { type Variants } from "motion";
 import { motion } from "motion/react";
 import {
     siBlazor,
+    siC,
     siCloudflare,
     siDocker,
     siDotnet,
@@ -14,11 +15,12 @@ import {
     siJetpackcompose,
     siKotlin,
     siMongodb,
-    siMysql,
     siNextdotjs,
     siNodedotjs,
     siPostgresql,
+    siPython,
     siReact,
+    siRust,
     siSqlite,
     siSquare,
     siTanstack,
@@ -28,55 +30,168 @@ import {
 } from "simple-icons";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
-
 type SimpleIcon = { path: string; hex: string; title: string };
 
-const SKILL_DOMAINS = [
+type SkillDomain = {
+    domain: string;
+    skills: Skill[];
+};
+
+type Skill = {
+    label: string;
+    icon: SimpleIcon;
+    description?: string;
+};
+
+const SKILL_DOMAINS: SkillDomain[] = [
+    {
+        domain: "Languages",
+        skills: [
+            {
+                label: "TypeScript",
+                icon: siTypescript,
+                description: "My most used language",
+            },
+            {
+                label: "Kotlin",
+                icon: siKotlin,
+                description: "My second most used language mostly for Android development",
+            },
+            {
+                label: "C#",
+                icon: siC,
+                description: "My favorite OOP based language. (better than Java lmao)",
+            },
+            {
+                label: "Go",
+                icon: siGo,
+                description: "My favorite compiled language plus its simple. Still learning",
+            },
+            {
+                label: "Rust",
+                icon: siRust,
+                description: "Hard af. Still learning primarily to build native Linux apps using gtk",
+            },
+            {
+                label: "Python",
+                icon: siPython,
+                description: "Trash",
+            },
+        ],
+    },
     {
         domain: "Frontend",
         skills: [
-            { label: "TypeScript", icon: siTypescript },
-            { label: "React", icon: siReact },
-            { label: "Next.js", icon: siNextdotjs },
-            { label: "TanStack Start", icon: siTanstack },
-            { label: "Blazor", icon: siBlazor },
+            {
+                label: "React",
+                icon: siReact,
+                description: "My favorite frontend library plus its the default ig",
+            },
+            {
+                label: "TanStack Start",
+                icon: siTanstack,
+                description: "My favorite frontend framework. It provides everything and doesn't lock me into a specified way of doing things (Nextjs).",
+            },
+            {
+                label: "Next.js",
+                icon: siNextdotjs,
+                description: "Its fine ig",
+            },
+            {
+                label: "Blazor",
+                icon: siBlazor,
+                description: "Its meh tbh. Learnt it for college",
+            },
         ],
     },
     {
         domain: "Backend",
         skills: [
-            { label: "C# / .NET", icon: siDotnet },
-            { label: "Node.js", icon: siNodedotjs },
-            { label: "FastAPI", icon: siFastapi },
-            { label: "Go", icon: siGo },
+            {
+                label: "Asp.Net",
+                icon: siDotnet,
+                description: "My favorite backend framework. Its fast and simple.",
+            },
+            {
+                label: "Node.js",
+                icon: siNodedotjs,
+                description: "My second favorite backend framework. ",
+            },
+            {
+                label: "FastAPI",
+                icon: siFastapi,
+                description: "Not a fan tbh but used it as a inference layer for my final year project's ML infra.",
+            },
         ],
     },
     {
         domain: "Mobile",
         skills: [
-            { label: "Kotlin", icon: siKotlin },
-            { label: "Jetpack Compose", icon: siJetpackcompose },
-            { label: "XML", icon: siXml },
-            { label: "Retrofit", icon: siSquare },
+            {
+                label: "XML Views",
+                icon: siXml,
+                description: "Liked the separation of concerns between XML and code but after using compose I prefer the declarative nature of it.",
+            },
+            {
+                label: "Jetpack Compose",
+                icon: siJetpackcompose,
+                description: "Way better than XML views. Love it declarative nature",
+            },
+            {
+                label: "Retrofit",
+                icon: siSquare,
+                description: "My favorite mobile networking library.",
+            },
         ],
     },
     {
         domain: "Database and Infrastructure",
         skills: [
-            { label: "Firebase", icon: siFirebase },
-            { label: "Docker", icon: siDocker },
-            { label: "PostgreSQL", icon: siPostgresql },
-            { label: "MySQL", icon: siMysql },
-            { label: "SQLite", icon: siSqlite },
-            { label: "MongoDB", icon: siMongodb },
+            {
+                label: "Firebase",
+                icon: siFirebase,
+                description: "My favorite mobile database and auth handler",
+            },
+            {
+                label: "PostgreSQL",
+                icon: siPostgresql,
+                description: "Best database tbh",
+            },
+            {
+                label: "SQLite",
+                icon: siSqlite,
+                description: "I use it for local storage",
+            },
+            {
+                label: "MongoDB",
+                icon: siMongodb,
+                description: "Fine ig",
+            },
+            {
+                label: "Docker",
+                icon: siDocker,
+                description: "Containerization is my thing",
+            },
         ],
     },
     {
         domain: "Where I Host Generally",
         skills: [
-            { label: "Cloudflare", icon: siCloudflare },
-            { label: "Vercel", icon: siVercel },
-            { label: "Google Cloud ", icon: siGooglecloud },
+            {
+                label: "Cloudflare",
+                icon: siCloudflare,
+                description: "This website is hosted on Cloudflare btw.",
+            },
+            {
+                label: "Vercel",
+                icon: siVercel,
+                description: "Love its ease of use",
+            },
+            {
+                label: "Google Cloud ",
+                icon: siGooglecloud,
+                description: "Damn",
+            },
         ],
     },
 ];
@@ -134,64 +249,30 @@ export default function Skills() {
                         custom={index}
                         initial="hidden"
                         whileInView="visible"
-                    // viewport={{
-                    //     once: true,
-                    //     amount: 0.2,
-                    //     // margin: "-40% 0px -40% 0px",
-                    // }}
                     >
                         <Card>
                             <CardHeader>
                                 <CardTitle className="text-xs md:text-sm">{domain}</CardTitle>
                             </CardHeader>
                             <CardContent className="flex flex-wrap gap-3 md:gap-4">
-                                {skills.map(({ label, icon }) => {
-                                    const isCloudflare = label === "Cloudflare";
-                                    const isTanstack = label === "TanStack Start";
-
-                                    if (isCloudflare) {
-                                        return (
-                                            <Tooltip key={label}>
-                                                <TooltipTrigger>
-                                                    <span
-                                                        className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-lg select-none"
-                                                    >
-                                                        <SimpleIcon icon={icon} />
-                                                        {label}
-                                                    </span>
-                                                </TooltipTrigger>
-                                                <TooltipContent>
-                                                    This is hosted in Cloudflare btw. 😜
-                                                </TooltipContent>
-                                            </Tooltip>
-                                        );
-                                    }
-                                    if (isTanstack) {
-                                        return (
-                                            <Tooltip key={label}>
-                                                <TooltipTrigger>
-                                                    <span
-                                                        className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-primary text-secondary text-pretty rounded-lg select-none"
-                                                    >
-                                                        <SimpleIcon icon={icon} overrideColor={"green"} />
-                                                        {label}
-                                                    </span>
-                                                </TooltipTrigger>
-                                                <TooltipContent>
-                                                    This was built using Tanstack btw. 😜
-                                                </TooltipContent>
-                                            </Tooltip>
-                                        );
-                                    }
-
+                                {skills.map(({ label, icon, description }) => {
                                     return (
-                                        <span
-                                            key={label}
-                                            className="flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-secondary rounded-lg select-none transform-gpu hover:scale-105 transition-all duration-200 cursor-pointer"
-                                        >
-                                            <SimpleIcon icon={icon} />
-                                            {label}
-                                        </span>
+                                        <Tooltip>
+                                            <TooltipTrigger>
+                                                <span
+                                                    key={label}
+                                                    className={cn("flex items-center gap-2 px-2 py-1 md:px-2 md:py-1 text-xs bg-secondary rounded-lg select-none transform-gpu hover:scale-105 transition-all duration-200 cursor-pointer")}
+                                                >
+                                                    <SimpleIcon
+                                                        icon={icon}
+                                                    />
+                                                    {label}
+                                                </span>
+                                            </TooltipTrigger>
+                                            <TooltipContent>
+                                                {description}
+                                            </TooltipContent>
+                                        </Tooltip>
                                     );
                                 })}
                             </CardContent>
