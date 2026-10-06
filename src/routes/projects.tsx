@@ -109,7 +109,7 @@ function RouteComponent() {
                                                 size="xs"
                                                 onClick={() => setOpenReadMore(project)}
                                             >
-                                                <UnderlineWrapper className="flex  items-center gap-1 font-bold ">
+                                                <UnderlineWrapper className="flex  items-center gap-1 font-bold text-xs md:text-base ">
                                                     Learn More <BookOpenTextIcon />
                                                 </UnderlineWrapper>
                                             </Button>
@@ -117,7 +117,7 @@ function RouteComponent() {
                                     </div>
                                 </CardContent>
                                 <CardFooter className="flex justify-between py-2">
-                                    <div className="flex flex-wrap gap-2 md:gap-2">
+                                    <div className="flex flex-wrap space-y-3 md:gap-2">
                                         {project.techStack.map((tech) => (
                                             <span
                                                 key={tech.name}

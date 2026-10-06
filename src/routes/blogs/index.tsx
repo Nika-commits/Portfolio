@@ -7,7 +7,7 @@ import {
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { allPosts } from "content-collections";
 
-export const Route = createFileRoute("/blogs/")({
+export const Route = createFileRoute(`/blogs/`)({
     component: RouteComponent,
 });
 

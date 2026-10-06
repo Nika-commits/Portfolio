@@ -1,33 +1,9 @@
+import { NAV_ENTRIES } from "#/utils/Navlinks.ts";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useLocation, useNavigate } from "@tanstack/react-router";
-import {
-    BriefcaseIcon,
-    FolderKanbanIcon,
-    HomeIcon,
-    NotebookPenIcon,
-} from "lucide-react";
 import { GradientText } from "../animate-ui/primitives/texts/gradient";
 
-const NAV_LINKS = [
-    { label: "Home", path: "/", icon: <HomeIcon className="size-4 shrink-0" /> },
-    {
-        label: "Work",
-        path: "/work",
-        icon: <BriefcaseIcon className="size-4 shrink-0" />,
-    },
-    {
-        label: "Projects",
-        path: "/projects",
-        icon: <FolderKanbanIcon className="size-4 shrink-0" />,
-    },
-    {
-        label: "Blogs",
-        path: "/blogs",
-        icon: <NotebookPenIcon className="size-4 shrink-0" />,
-    },
-];
-
-const PATHS = NAV_LINKS.map((l) => l.path);
+// export const PATHS = NAV_LINKS.map((l) => l.path);
 
 export default function NavigationTabs() {
     const navigate = useNavigate();
@@ -40,33 +16,34 @@ export default function NavigationTabs() {
                 className="bg-background border-2 border-primary/30 rounded-3xl"
             >
                 <TabsList className="p-2 gap-6 rounded-3xl">
-                    {NAV_LINKS.map(({ label, path, icon }) => {
+                    {NAV_ENTRIES.map(([key, { path, icon: Icon }], idx) => {
                         const isActive = pathname === path;
-
                         return (
                             <TabsTrigger
-                                key={label}
+                                key={path}
                                 value={path}
                                 className="h-9 gap-1.5 rounded-3xl cursor-pointer border-2 border-secondary  "
                                 onClick={() => {
-                                    const currentIndex = PATHS.indexOf(pathname);
-                                    const nextIndex = PATHS.indexOf(path);
+                                    const currentIndex = NAV_ENTRIES.findIndex(
+                                        ([, link]) => link.path === pathname
+                                    );
                                     navigate({
                                         to: path,
                                         viewTransition: {
                                             types:
-                                                currentIndex > nextIndex
+                                                currentIndex > idx
                                                     ? ["slide-right"]
                                                     : ["slide-left"],
                                         },
                                     });
                                 }}
                             >
-                                {icon}
+
+                                <Icon />
                                 {isActive && (
                                     <GradientText
                                         // gradient="var(--gradient-primary)"
-                                        text={label}
+                                        text={key}
                                         className="text-sm font-medium whitespace-nowrap"
                                     />
                                 )}
