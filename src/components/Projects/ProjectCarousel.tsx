@@ -46,11 +46,12 @@ export function ProjectCarousel({ images }: { images: string[] }) {
                 <CarouselContent>
                     {images.map((image, index) => (
                         <CarouselItem key={image}>
-                            <div className="aspect-video overflow-hidden rounded-lg">
+                            <div className="h-87.5 sm:h-112.5 lg:h-125 overflow-hidden rounded-lg">
                                 <img
                                     src={image}
+
                                     alt={`Slide ${index + 1}`}
-                                    className="h-full w-full rounded-lg object-cover"
+                                    className="h-full w-full rounded-lg object-contain"
                                     loading="lazy"
                                     decoding="async"
                                 />

@@ -109,7 +109,8 @@ function RouteComponent() {
                                                 size="xs"
                                                 onClick={() => setOpenReadMore(project)}
                                             >
-                                                <UnderlineWrapper className="flex  items-center gap-1 font-bold text-xs md:text-base ">
+                                                <UnderlineWrapper className="flex items-center gap-1 font-bold text-xs md:text-sm ">
+
                                                     Learn More <BookOpenTextIcon />
                                                 </UnderlineWrapper>
                                             </Button>
