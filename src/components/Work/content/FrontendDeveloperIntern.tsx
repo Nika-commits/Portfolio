@@ -83,10 +83,6 @@ const { data: dashboardData } = useQuery({
                                     product.
                                 </li>
                                 <li>Wired up form validation with React Hook Form and Zod,</li>
-                                <li>
-                                    Wrote Cypress tests for dashboard workflows — my introduction
-                                    to E2E testing in a production environment.
-                                </li>
                             </ul>
                         </AccordionContent>
                     </AccordionItem>
@@ -103,6 +99,9 @@ const { data: dashboardData } = useQuery({
                         <AccordionContent className="text-muted-foreground">
                             <ul className="text-muted-foreground list-inside list-disc space-y-3 text-xs md:text-sm">
                                 <li>
+                                    How to  design components with elegant and functional UI and UX, while also keeping them reusable and maintainable.
+                                </li>
+                                <li>
                                     How to read and contribute to an existing codebase without
                                     breaking things.
                                 </li>
@@ -111,10 +110,6 @@ const { data: dashboardData } = useQuery({
                                     problems, and why a dedicated tool like TanStack Query exists.
                                 </li>
                                 <li>How API contracts affect frontend design</li>
-                                <li>
-                                    What it actually means to write a test that will still pass
-                                    after the next UI change.
-                                </li>
                             </ul>
                         </AccordionContent>
                     </AccordionItem>

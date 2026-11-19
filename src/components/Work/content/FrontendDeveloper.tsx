@@ -98,31 +98,33 @@ export default function FrontendDeveloper() {
                         <AccordionContent className="text-muted-foreground">
                             <ul className="text-muted-foreground list-inside list-disc space-y-3 text-xs md:text-sm">
                                 <li>
-                                    Built and maintained scalable, reusable React + TypeScript
-                                    components for the production dashboard.
+                                    Developed and maintained reusable react components
+                                    for production admin and client dashboards.
                                 </li>
                                 <li>
-                                    Eliminated redundant API calls using TanStack Query cache key
-                                    strategies and stale time configuration.
+                                    Optimized server-state management with TanStack Query,
+                                    implementing query caching, stale-time configuration, and
+                                    cache invalidation to reduce redundant API requests.
                                 </li>
                                 <li>
-                                    Worked on new routes and pages - combined Tanstack Router with
-                                    Tanstack Query
+                                    Built dashboard routes and data-driven pages using
+                                    TanStack Router and TanStack Query.
                                 </li>
                                 <li>
-                                    Enforced schema-level form validation with React Hook Form +
-                                    Zod before any data reached the API.
+                                    Implemented complex forms with React Hook Form and Zod,
+                                    including schema-based validation and type-safe form handling.
                                 </li>
                                 <li>
-                                    Collaborated with the backend team to refine API contracts,
-                                    reducing integration friction on both sides.
+                                    Collaborated with backend developers to integrate APIs,
+                                    resolve integration issues, and maintain consistent data contracts.
                                 </li>
                                 <li>
-                                    Wrote Cypress component and E2E tests covering dashboard
-                                    workflows and critical UI paths.
+                                    Developed Cypress component and end-to-end tests to verify
+                                    critical dashboard workflows and UI behavior.
                                 </li>
                             </ul>
                         </AccordionContent>
+
                     </AccordionItem>
 
                     <AccordionItem
@@ -137,48 +139,32 @@ export default function FrontendDeveloper() {
                         <AccordionContent className="text-muted-foreground">
                             <ul className="text-muted-foreground list-inside list-disc space-y-3 text-xs md:text-sm">
                                 <li>
-                                    How to structure a frontend that stays maintainable as the
-                                    product grows.
-                                </li>
-                                <li>That API contract clarity is a frontend problem too.</li>
-                                <li>
-                                    Real caching tradeoffs: stale time, cache invalidation, and
-                                    when optimistic updates hurt more than they help.
+                                    Designing reusable component architectures and organizing
+                                    frontend codebases for long-term maintainability.
                                 </li>
                                 <li>
-                                    How to write tests that survive UI refactors without rewriting
-                                    the entire test suite.
+                                    Managing server state, query caching, cache invalidation,
+                                    and synchronization between client and server data.
+                                </li>
+                                <li>
+                                    Building complex, type-safe forms with schema-driven validation
+                                    and predictable form state management.
+                                </li>
+                                <li>
+                                    Structuring applications with file-based routing, nested routes,
+                                    and integrated data-fetching workflows.
+                                </li>
+                                <li>
+                                    Writing maintainable component and end-to-end tests that
+                                    validate real application workflows.
+                                </li>
+                                <li>
+                                    Understanding the importance of API contracts and
+                                    collaboration between frontend and backend teams.
                                 </li>
                             </ul>
                         </AccordionContent>
                     </AccordionItem>
-
-                    {/*<AccordionItem
-						value="stack"
-						className="bg-transparent border-b last:border-b-0"
-					>
-						<AccordionTrigger className=" hover:no-underline [&>svg]:size-6!">
-							<Badge className="h-6 rounded-sm " variant={"default"}>
-								Stack & Tools
-							</Badge>
-						</AccordionTrigger>
-						<AccordionContent className="text-muted-foreground">
-							<ul className="text-muted-foreground list-inside list-disc space-y-3 text-xs md:text-sm">
-								<li>
-									React, TypeScript — component architecture and type-safe UI
-								</li>
-								<li>
-									TanStack Query — server state management and request caching
-								</li>
-								<li>
-									React Hook Form + Zod — form state and schema validation
-								</li>
-								<li>
-									Cypress — component tests and end-to-end workflow coverage
-								</li>
-							</ul>
-						</AccordionContent>
-					</AccordionItem>*/}
                 </Accordion>
             </div>
         </div>
