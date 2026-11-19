@@ -64,7 +64,6 @@ body {
 }
 
 :root {
-
     --background: oklch(98.5% 0.006 95);
     --card: oklch(99.4% 0.002 95);
     --secondary: oklch(96.7% 0.003 95);

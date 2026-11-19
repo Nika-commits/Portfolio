@@ -7,7 +7,7 @@ import { ThemeToggle } from "./ThemeToggle";
 
 export default function Navigation() {
     return (
-        <nav>
+        <nav className="myNav relative z-50">
             <div className="grid grid-cols-2 lg:grid-cols-8 items-center">
                 {/* Social links */}
                 <div className="lg:col-span-2 flex justify-start items-center">
